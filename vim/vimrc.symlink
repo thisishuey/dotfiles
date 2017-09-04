@@ -26,9 +26,9 @@ color one				" set the color scheme
 set background=dark			" set the background color
 let mapleader = ","     		" set comma as mapleader
 
-let NERDTreeShowHidden = 1		" show hidden files in NERDTree by default (CTRL-I)
-autocmd vimenter * NERDTree		" activate nerdtree automatically
-autocmd stdinreadpre * let s:std_in=1
+let NERDTreeShowHidden=0		" show hidden files in NERDTree by default (CTRL-I)
+" autocmd vimenter * NERDTree		" activate nerdtree automatically
+" autocmd stdinreadpre * let s:std_in=1
 
 nn <leader>nt :NERDTreeToggle<cr>
 
