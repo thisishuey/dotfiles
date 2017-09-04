@@ -16,9 +16,6 @@
 [submodule "vim/vim.symlink/pack/plugins/start/ctrlp.vim"]
 	path = vim/vim.symlink/pack/plugins/start/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
-[submodule "vim/vim.symlink/pack/plugins/start/--force"]
-	path = vim/vim.symlink/pack/plugins/start/--force
-	url = https://github.com/pangloss/vim-javascript.git
 [submodule "vim/vim.symlink/pack/plugins/start/vim-jsx"]
 	path = vim/vim.symlink/pack/plugins/start/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
