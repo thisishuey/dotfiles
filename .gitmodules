@@ -1,0 +1,9 @@
+[submodule "vim/vim.symlink/pack/color-schemes/start/vim-one"]
+	path = vim/vim.symlink/pack/color-schemes/start/vim-one
+	url = https://github.com/rakr/vim-one.git
+[submodule "vim/vim.symlink/pack/color-schemes/start/vim-railscasts-theme"]
+	path = vim/vim.symlink/pack/color-schemes/start/vim-railscasts-theme
+	url = https://github.com/jpo/vim-railscasts-theme.git
+[submodule "vim/vim.symlink/pack/color-schemes/start/onedark.vim"]
+	path = vim/vim.symlink/pack/color-schemes/start/onedark.vim
+	url = https://github.com/joshdick/onedark.vim
