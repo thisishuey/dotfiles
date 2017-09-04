@@ -31,3 +31,6 @@
 [submodule "vim/vim.symlink/pack/plugins/start/lightline.vim"]
 	path = vim/vim.symlink/pack/plugins/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
+[submodule "vim/vim.symlink/pack/plugins/start/vim-javascript"]
+	path = vim/vim.symlink/pack/plugins/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
