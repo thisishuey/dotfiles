@@ -7,3 +7,27 @@
 [submodule "vim/vim.symlink/pack/color-schemes/start/onedark.vim"]
 	path = vim/vim.symlink/pack/color-schemes/start/onedark.vim
 	url = https://github.com/joshdick/onedark.vim
+[submodule "vim/vim.symlink/pack/plugins/start/nerdtree"]
+	path = vim/vim.symlink/pack/plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/vim.symlink/pack/plugins/start/vim-fugitive"]
+	path = vim/vim.symlink/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim/vim.symlink/pack/plugins/start/ctrlp.vim"]
+	path = vim/vim.symlink/pack/plugins/start/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim
+[submodule "vim/vim.symlink/pack/plugins/start/--force"]
+	path = vim/vim.symlink/pack/plugins/start/--force
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/vim.symlink/pack/plugins/start/vim-jsx"]
+	path = vim/vim.symlink/pack/plugins/start/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "vim/vim.symlink/pack/plugins/start/vim-surround"]
+	path = vim/vim.symlink/pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "vim/vim.symlink/pack/plugins/start/vimwiki"]
+	path = vim/vim.symlink/pack/plugins/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
+[submodule "vim/vim.symlink/pack/plugins/start/lightline.vim"]
+	path = vim/vim.symlink/pack/plugins/start/lightline.vim
+	url = https://github.com/itchyny/lightline.vim.git

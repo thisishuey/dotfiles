@@ -1,0 +1,52 @@
+ghtline = {
+	\ 'active': {
+	\	'left': [ [ 'mode', 'paste' ],
+	\		  [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+	\ },
+	\ 'component_function': {
+	\	'gitbranch': 'fugitive#head'
+	\ },
+	\ }
+
+set backspace=indent,eol,start		" allow backspacing over everything in insert mode
+syntax on				" syntax highlighting
+filetype indent on      		" activates indenting for files
+set autoindent				" always set autoindenting on
+set copyindent				" copy the previous indentation on autoindent
+set number              		" line numbers
+set nowrap				" don't wrap lines
+set nobackup            		" get rid of anoying ~file
+set noswapfile				" get rid of swapfile
+set hidden				" hide buffers instead of closing them
+set showmatch				" set show matching parenthesis
+set noshowmode				" don't show mode info
+set ignorecase				" ignore case when searching
+set laststatus=2			" always display the status line
+color one				" set the color scheme
+set background=dark			" set the background color
+let mapleader = ","     		" set comma as mapleader
+
+let NERDTreeShowHidden = 1		" show hidden files in NERDTree by default (CTRL-I)
+autocmd vimenter * NERDTree		" activate nerdtree automatically
+autocmd stdinreadpre * let s:std_in=1
+
+nn <leader>nt :NERDTreeToggle<cr>
+
+nn <leader>ev :vsplit $MYVIMRC<cr>
+nn <leader>sv :source $MYVIMRC<cr>
+
+no <down> <Nop>
+no <left> <Nop>
+no <right> <Nop>
+no <up> <Nop>
+
+ino <down> <Nop>
+ino <left> <Nop>
+ino <right> <Nop>
+ino <up> <Nop>
+
+vno <down> <Nop>
+vno <left> <Nop>
+vno <right> <Nop>
+vno <up> <Nop>
+
