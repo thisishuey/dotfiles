@@ -5,16 +5,16 @@ These are my dotfiles. As I start this repo, things will be a bit manual, but as
 Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with both Ubuntu and Macos when I automate the installs (this will mostly entail automatically switching between apt and brew).
 
 ## Installation
-1. sudo apt install zsh -y
-2. curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.3/install.sh | bash
-3. git clone https://github.com/thisishuey/dotfiles ~/.dotfiles
+1. `sudo apt install zsh -y`
+2. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.3/install.sh | bash`
+3. `git clone https://github.com/thisishuey/dotfiles ~/.dotfiles`
 4. create the following symlinks:
-	a. ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
-	b. ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm
-	c. ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh
-	d. ln -s ~/.dotfiles/vim/vim.symlink ~/.vim
-	e. ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
-	f. ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
+	1. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
+	2. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
+	3. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
+	4. `ln -s ~/.dotfiles/vim/vim.symlink ~/.vim`
+	5. `ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc`
+	6. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
 
 ## Intro to Vim
 http://nvie.com/posts/how-i-boosted-my-vim/
