@@ -17,48 +17,48 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 	6. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
 
 ## Intro to Vim
-http://nvie.com/posts/how-i-boosted-my-vim/
-http://astonj.com/tech/vim-for-ruby-rails-and-a-sexy-theme/
-https://github.com/shawncplus/vim-classes
-http://learnvimscriptthehardway.stevelosh.com
+* http://nvie.com/posts/how-i-boosted-my-vim/
+* http://astonj.com/tech/vim-for-ruby-rails-and-a-sexy-theme/
+* https://github.com/shawncplus/vim-classes
+* http://learnvimscriptthehardway.stevelosh.com
 
 ## Additional Reading
-https://shapeshed.com/vim-packages/
-https://shapeshed.com/vim-netrw/
-http://eseth.org/2007/vim-buffers.html
-http://vim.wikia.com/wiki/Vim_buffer_FAQ
-http://vim.wikia.com/wiki/VimTip686
-http://www.vim.org/
+* https://shapeshed.com/vim-packages/
+* https://shapeshed.com/vim-netrw/
+* http://eseth.org/2007/vim-buffers.html
+* http://vim.wikia.com/wiki/Vim_buffer_FAQ
+* http://vim.wikia.com/wiki/VimTip686
+* http://www.vim.org/
 
 ## Current Plugins
-https://github.com/kien/ctrlp.vim
-https://github.com/itchyny/lightline.vim
-https://github.com/scrooloose/nerdtree
-https://github.com/tpope/vim-fugitive
-https://github.com/pangloss/vim-javascript
-https://github.com/mxw/vim-jsx
-https://github.com/tpope/vim-surround
-https://github.com/vimwiki/vimwiki
+* https://github.com/kien/ctrlp.vim
+* https://github.com/itchyny/lightline.vim
+* https://github.com/scrooloose/nerdtree
+* https://github.com/tpope/vim-fugitive
+* https://github.com/pangloss/vim-javascript
+* https://github.com/mxw/vim-jsx
+* https://github.com/tpope/vim-surround
+* https://github.com/vimwiki/vimwiki
 
 ## Current Color Schemes
-https://github.com/joshdick/onedark.vim
-https://github.com/rakr/vim-one
-https://github.com/jpo/vim-railscasts-theme
+* https://github.com/joshdick/onedark.vim
+* https://github.com/rakr/vim-one
+* https://github.com/jpo/vim-railscasts-theme
 
 ## Dotfiles Information
-https://github.com/shawncplus/dotfiles
-https://github.com/leomao/dotfiles
-https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
+* https://github.com/shawncplus/dotfiles
+* https://github.com/leomao/dotfiles
+* https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 
 ## Misc.
-https://unix.stackexchange.com/questions/202918/how-do-i-remotely-edit-files-via-ssh
-https://github.com/tpope
-https://github.com/powerline/fonts
-https://github.com/Lokaltog/vim-powerline/tree/develop/fontpatcher
-https://github.com/Lokaltog/vim-powerline/blob/09c0cea859a2e0989eea740655b35976d951a84e/autoload/Powerline/Functions/fugitive.vim
-https://github.com/Lokaltog/vim-powerline/blob/09c0cea859a2e0989eea740655b35976d951a84e/autoload/Pl/Parser.vim
-https://github.com/leomao
-http://fideloper.com/mac-vim-tmux
+* https://unix.stackexchange.com/questions/202918/how-do-i-remotely-edit-files-via-ssh
+* https://github.com/tpope
+* https://github.com/powerline/fonts
+* https://github.com/Lokaltog/vim-powerline/tree/develop/fontpatcher
+* https://github.com/Lokaltog/vim-powerline/blob/09c0cea859a2e0989eea740655b35976d951a84e/autoload/Powerline/Functions/fugitive.vim
+* https://github.com/Lokaltog/vim-powerline/blob/09c0cea859a2e0989eea740655b35976d951a84e/autoload/Pl/Parser.vim
+* https://github.com/leomao
+* http://fideloper.com/mac-vim-tmux
 
 ## Additional Resources
 Monoco for Powerline (for iTerm on Mac)
