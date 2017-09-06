@@ -1,12 +1,16 @@
-let g:lightline = {
-	\ 'active': {
-	\	'left': [ [ 'mode', 'paste' ],
-	\		  [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-	\ },
-	\ 'component_function': {
-	\	'gitbranch': 'fugitive#head'
-	\ },
-	\ }
+" let g:lightline = {
+	" l\ 'active': {
+	" l\	'left': [ [ 'mode', 'paste' ],
+	" l\		  [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+	" l\ },
+	" l\ 'component_function': {
+	" l\	'gitbranch': 'fugitive#head'
+	" l\ },
+	" l\ }
+
+python3 from powerline.vim import setup as powerline_setup
+python3 powerline_setup()
+python3 del powerline_setup
 
 set backspace=indent,eol,start		" allow backspacing over everything in insert mode
 syntax on				" syntax highlighting

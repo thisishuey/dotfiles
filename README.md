@@ -34,13 +34,15 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 
 ## Current Plugins
 * https://github.com/kien/ctrlp.vim
-* https://github.com/itchyny/lightline.vim
 * https://github.com/scrooloose/nerdtree
 * https://github.com/tpope/vim-fugitive
 * https://github.com/pangloss/vim-javascript
 * https://github.com/mxw/vim-jsx
 * https://github.com/tpope/vim-surround
 * https://github.com/vimwiki/vimwiki
+
+## Extra Plugins
+* https://github.com/powerline/powerline
 
 ## Current Color Schemes
 * https://github.com/joshdick/onedark.vim
