@@ -5,7 +5,7 @@ These are my dotfiles. As I start this repo, things will be a bit manual, but as
 Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with both Ubuntu and Macos when I automate the installs (this will mostly entail automatically switching between apt and brew).
 
 ## TODO
-1. finish up powerline for tmux setup
+1. finish up powerline for tmux setup (update tmux to 2.2?)
 2. get powerline working with zsh
 3. automation with node (symlinks, install scripts, etc.)
 
