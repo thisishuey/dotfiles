@@ -7,6 +7,7 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 ## TODO
 1. finish up powerline for tmux setup
 2. get powerline working with zsh
+3. automation with node (symlinks, install scripts, etc.)
 
 ## Installation
 1. `sudo apt install zsh -y`
