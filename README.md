@@ -4,6 +4,10 @@ These are my dotfiles. As I start this repo, things will be a bit manual, but as
 ## Use
 Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with both Ubuntu and Macos when I automate the installs (this will mostly entail automatically switching between apt and brew).
 
+## TODO
+1. finish up powerline for tmux setup
+1. get powerline working with zsh
+
 ## Installation
 1. `sudo apt install zsh -y`
 2. `sudo apt install python3-pip -y`
