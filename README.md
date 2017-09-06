@@ -6,9 +6,10 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 
 ## Installation
 1. `sudo apt install zsh -y`
-2. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.3/install.sh | bash`
-3. `git clone https://github.com/thisishuey/dotfiles ~/.dotfiles`
-4. create the following symlinks:
+2. `sudo apt install python3-pip -y`
+3. `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.3/install.sh | bash`
+4. `git clone https://github.com/thisishuey/dotfiles ~/.dotfiles`
+5. create the following symlinks:
 	1. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
 	2. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
 	3. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
