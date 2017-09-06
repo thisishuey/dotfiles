@@ -6,7 +6,7 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 
 ## TODO
 1. finish up powerline for tmux setup
-1. get powerline working with zsh
+2. get powerline working with zsh
 
 ## Installation
 1. `sudo apt install zsh -y`
