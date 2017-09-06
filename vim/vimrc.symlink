@@ -1,13 +1,3 @@
-" let g:lightline = {
-	" l\ 'active': {
-	" l\	'left': [ [ 'mode', 'paste' ],
-	" l\		  [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-	" l\ },
-	" l\ 'component_function': {
-	" l\	'gitbranch': 'fugitive#head'
-	" l\ },
-	" l\ }
-
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
