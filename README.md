@@ -6,6 +6,8 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 
 ## TODO
 1. finish up powerline for tmux setup (update tmux to 2.2?)
+2. https://github.com/joshdick/onedark.vim
+2. https://github.com/odedlaz/tmux-onedark-theme
 2. get powerline working with zsh
 3. automation with node (symlinks, install scripts, etc.)
 
