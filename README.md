@@ -55,6 +55,7 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 * https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789
 
 ## Misc.
+* http://homeonrails.com/2016/05/truecolor-in-gnome-terminal-tmux-and-neovim/
 * https://unix.stackexchange.com/questions/202918/how-do-i-remotely-edit-files-via-ssh
 * https://github.com/tpope
 * https://github.com/powerline/fonts
