@@ -19,9 +19,10 @@ set laststatus=2			" always display the status line
 color one				" set the color scheme
 set background=dark			" set the background color
 let mapleader = ","     		" set comma as mapleader
+let NERDTreeShowHidden=1		" show hidden files in NERDTree
 
 nn <leader>nt :NERDTreeToggle<cr>
-nn <leader>ev :vsplit $MYVIMRC<cr>
+nn <leader>ev :edit $MYVIMRC<cr>
 nn <leader>sv :source $MYVIMRC<cr>
 
 no <down> <Nop>

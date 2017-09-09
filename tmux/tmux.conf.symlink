@@ -3,3 +3,6 @@
 
 # Default terminal is 256 colors
 set -g default-terminal "screen-256color"
+
+run-shell "powerline-daemon -q"
+source "/home/ubuntu/.local/lib/python3.5/site-packages/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf"
