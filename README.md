@@ -4,13 +4,23 @@ These are my dotfiles. As I start this repo, things will be a bit manual, but as
 ## Use
 Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with both Ubuntu and Macos when I automate the installs (this will mostly entail automatically switching between apt and brew).
 
+## TODO
+1. finish up powerline for tmux setup (update tmux to 2.2?)
+2. https://github.com/joshdick/onedark.vim
+2. https://github.com/odedlaz/tmux-onedark-theme
+2. get powerline working with zsh
+3. automation with node (symlinks, install scripts, etc.)
+
 ## Installation
 1. `sudo apt install zsh -y`
 2. `sudo apt install python3-pip -y`
-3. `pip3 install --upgrade pip`
-4. `pip3 install powerline-status [--user]`
-5. `git clone https://github.com/thisishuey/dotfiles ~/.dotfiles`
-6. create the following symlinks:
+3. `sudo apt install rubygems -y`
+4. `pip3 install --upgrade pip`
+5. `pip3 install powerline-status [--user]`
+6. `sudo gem install vimgolf`
+7. `vimgolf setup` (VimGolf key: f9d1d0cd27265cb6b704c920a7d1959b)
+8. `git clone https://github.com/thisishuey/dotfiles ~/.dotfiles`
+9. create the following symlinks:
 	1. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
 	2. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
 	3. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
