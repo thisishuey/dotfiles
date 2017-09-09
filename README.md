@@ -18,7 +18,7 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 4. `pip3 install --upgrade pip`
 5. `pip3 install powerline-status [--user]`
 6. `sudo gem install vimgolf`
-7. `vimgolf setup`
+7. `vimgolf setup` (VimGolf key: f9d1d0cd27265cb6b704c920a7d1959b)
 8. `git clone https://github.com/thisishuey/dotfiles ~/.dotfiles`
 9. create the following symlinks:
 	1. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
