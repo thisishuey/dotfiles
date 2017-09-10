@@ -7,9 +7,9 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 ## TODO
 1. finish up powerline for tmux setup (update tmux to 2.2?)
 2. https://github.com/joshdick/onedark.vim
-2. https://github.com/odedlaz/tmux-onedark-theme
-2. get powerline working with zsh
-3. automation with node (symlinks, install scripts, etc.)
+3. https://github.com/odedlaz/tmux-onedark-theme
+4. get powerline working with zsh
+5. automation with node (symlinks, install scripts, etc.)
 
 ## Installation
 1. `sudo apt install zsh -y`
@@ -76,6 +76,5 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 * http://fideloper.com/mac-vim-tmux
 
 ## Additional Resources
-Monoco for Powerline (for iTerm on Mac)
-https://gist.github.com/baopham/1838072
+Monoco for Powerline (for iTerm on Mac) https://gist.github.com/baopham/1838072
 
