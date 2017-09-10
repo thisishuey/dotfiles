@@ -16,6 +16,7 @@ set showmatch				" set show matching parenthesis
 set noshowmode				" don't show mode info
 set ignorecase				" ignore case when searching
 set laststatus=2			" always display the status line
+set t_Co=256
 color one				" set the color scheme
 set background=dark			" set the background color
 let mapleader = ","     		" set comma as mapleader
