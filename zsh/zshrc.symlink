@@ -108,8 +108,6 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-  .zshrc                       |113
-  .zshrc.pre-oh-my-zsh         |114 export PATH="/usr/local/sbin:$PATH"
 
 if [ -d "$HOME/.local/bin" ]; then
   PATH="$HOME/.local/bin:$PATH"
