@@ -19,16 +19,16 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 5. `pip3 install powerline-status [--user]`
 6. `pip install powerline-gitstatus`
 7. `sudo gem install vimgolf`
-8. `vimgolf setup` (VimGolf key: f9d1d0cd27265cb6b704c920a7d1959b)
-9. `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles ~/.dotfiles`
-10. create the following symlinks:
-	1. `ln -s ~/.dotfiles/zsh/config.symlink ~/.config`
+8. `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles ~/.dotfiles`
+9. create the following symlinks:
+	1. `ln -s ~/.dotfiles/zsh/config/powerline.symlink ~/.config/powerline`
 	2. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
 	3. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
 	4. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
 	5. `ln -s ~/.dotfiles/vim/vim.symlink ~/.vim`
-	6. `ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc`
-	7. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
+	6. `ln -s ~/.dotfiles/vim/vimgolf.symlink ~/.vimgolf`
+	7. `ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc`
+	8. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
 
 ## Mac Powerline
 1. `brew install python`
