@@ -17,16 +17,34 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 3. `sudo apt install rubygems -y`
 4. `pip3 install --upgrade pip`
 5. `pip3 install powerline-status [--user]`
-6. `sudo gem install vimgolf`
-7. `vimgolf setup` (VimGolf key: f9d1d0cd27265cb6b704c920a7d1959b)
-8. `git clone https://github.com/thisishuey/dotfiles ~/.dotfiles`
-9. create the following symlinks:
-	1. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
-	2. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
-	3. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
-	4. `ln -s ~/.dotfiles/vim/vim.symlink ~/.vim`
-	5. `ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc`
-	6. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
+6. `pip install powerline-gitstatus`
+7. `sudo gem install vimgolf`
+8. `vimgolf setup` (VimGolf key: f9d1d0cd27265cb6b704c920a7d1959b)
+9. `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles ~/.dotfiles`
+10. create the following symlinks:
+	1. `ln -s ~/.dotfiles/zsh/config.symlink ~/.config`
+	2. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
+	3. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
+	4. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
+	5. `ln -s ~/.dotfiles/vim/vim.symlink ~/.vim`
+	6. `ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc`
+	7. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
+
+## Mac Powerline
+1. `brew install python`
+2. `brew install vim`
+3. `pip3 install powerline-status`
+4. `pip3 install powerline-gitstatus`
+5. Add following to .zshrc
+	1. `PATH="/usr/local/bin:$PATH"`
+	2. `powerline-daemon -q`
+	3. `. /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh`
+6. Add following to .vimrc
+	1. `set rtp+=/usr/local/lib/python3.6/site-packages/powerline/bindings/vim,nt,nt`
+	2. `let g:minBufExplForceSyntaxEnable = 1`
+	3. `python3 from powerline.vim import setup as powerline_setup`
+	4. `python3 powerline_setup()`
+	5. `python3 del powerline_setup`
 
 ## Intro to Vim
 * http://nvie.com/posts/how-i-boosted-my-vim/
@@ -51,8 +69,9 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 * https://github.com/tpope/vim-surround
 * https://github.com/vimwiki/vimwiki
 
-## Extra Plugins
+## Powerline
 * https://github.com/powerline/powerline
+* https://computers.tutsplus.com/tutorials/getting-spiffy-with-powerline--cms-20740
 
 ## Current Color Schemes
 * https://github.com/joshdick/onedark.vim
@@ -77,4 +96,3 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 
 ## Additional Resources
 Monoco for Powerline (for iTerm on Mac) https://gist.github.com/baopham/1838072
-

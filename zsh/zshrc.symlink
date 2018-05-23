@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/ubuntu/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -116,4 +116,11 @@ if [ -d "/usr/local/sbin" ]; then
   PATH="/usr/local/sbin:$PATH"
 fi
 
-. /home/ubuntu/.local/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+PATH="/usr/local/bin:$PATH"
+powerline-daemon -q
+. /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
