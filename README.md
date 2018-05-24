@@ -20,26 +20,30 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 6. `pip install powerline-gitstatus`
 7. `sudo gem install vimgolf`
 8. `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles ~/.dotfiles`
+	1. https://stackoverflow.com/questions/1030169/easy-way-to-pull-latest-of-all-git-submodules
+	2. `git submodule update --init --recursive` 
 9. create the following symlinks:
 	1. `ln -s ~/.dotfiles/zsh/config/powerline.symlink ~/.config/powerline`
 	2. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
 	3. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
 	4. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
-	5. `ln -s ~/.dotfiles/vim/vim.symlink ~/.vim`
-	6. `ln -s ~/.dotfiles/vim/vimgolf.symlink ~/.vimgolf`
-	7. `ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc`
-	8. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
+	5. `ln -s ~/.dotfiles/tmux/tmux.config.symlink ~/.tmux.conf`
+	6. `ln -s ~/.dotfiles/vim/vim.symlink ~/.vim`
+	7. `ln -s ~/.dotfiles/vim/vimgolf.symlink ~/.vimgolf`
+	8. `ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc`
+	9. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
 
 ## Mac Powerline
 1. `brew install python`
 2. `brew install vim`
-3. `pip3 install powerline-status`
-4. `pip3 install powerline-gitstatus`
-5. Add following to .zshrc
+3. `brew install tmux`
+4. `pip3 install powerline-status`
+5. `pip3 install powerline-gitstatus`
+6. Add following to .zshrc
 	1. `PATH="/usr/local/bin:$PATH"`
 	2. `powerline-daemon -q`
 	3. `. /usr/local/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh`
-6. Add following to .vimrc
+7. Add following to .vimrc
 	1. `set rtp+=/usr/local/lib/python3.6/site-packages/powerline/bindings/vim,nt,nt`
 	2. `let g:minBufExplForceSyntaxEnable = 1`
 	3. `python3 from powerline.vim import setup as powerline_setup`
