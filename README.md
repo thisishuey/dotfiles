@@ -19,10 +19,11 @@ Right now this is an Ubuntu dotfiles repo, I may eventually get it to work with 
 5. `pip3 install powerline-status [--user]`
 6. `pip install powerline-gitstatus`
 7. `sudo gem install vimgolf`
-8. `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles ~/.dotfiles`
+8. `brew install yarn --without-node`
+9. `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles ~/.dotfiles`
 	1. https://stackoverflow.com/questions/1030169/easy-way-to-pull-latest-of-all-git-submodules
 	2. `git submodule update --init --recursive` 
-9. create the following symlinks:
+10. create the following symlinks:
 	1. `ln -s ~/.dotfiles/zsh/config/powerline.symlink ~/.config/powerline`
 	2. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
 	3. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
