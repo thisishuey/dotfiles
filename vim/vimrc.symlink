@@ -18,9 +18,24 @@ color one " set the color scheme
 set background=dark " set the background color
 let mapleader = "," " set comma as mapleader
 
+set tabstop=2       " The width of a TAB is set to 2.
+                    " Still it is a \t. It is just that
+                    " Vim will interpret it to be having
+                    " a width of 2.
+
+set shiftwidth=2    " Indents will have a width of 2
+
+set softtabstop=2   " Sets the number of columns for a TAB
+
+set expandtab       " Expand TABs to spaces
+
 let NERDTreeShowHidden=1 " show hidden files in NERDTree
 " autocmd vimenter * NERDTree
 " autocmd stdinreadpre * let s:std_in=1
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 set rtp+=/usr/local/lib/python3.6/site-packages/powerline/bindings/vim
 let g:minBufExplForceSyntaxEnable = 1
@@ -46,3 +61,50 @@ vno <down> <Nop>
 vno <left> <Nop>
 vno <right> <Nop>
 vno <up> <Nop>
+
+" Prettier Settings
+" max line length that prettier will wrap on
+" Prettier default: 80
+let g:prettier#config#print_width = 80
+
+" number of spaces per indentation level
+" Prettier default: 2
+let g:prettier#config#tab_width = 2
+
+" use tabs over spaces
+" Prettier default: false
+let g:prettier#config#use_tabs = 'false'
+
+" print semicolons
+" Prettier default: true
+let g:prettier#config#semi = 'true'
+
+" single quotes over double quotes
+" Prettier default: false
+let g:prettier#config#single_quote = 'false'
+
+" print spaces between brackets
+" Prettier default: true
+let g:prettier#config#bracket_spacing = 'true'
+
+" put > on the last line instead of new line
+" Prettier default: false
+let g:prettier#config#jsx_bracket_same_line = 'false'
+
+" avoid|always
+" Prettier default: avoid
+let g:prettier#config#arrow_parens = 'avoid'
+
+" none|es5|all
+" Prettier default: none
+let g:prettier#config#trailing_comma = 'none'
+
+" flow|babylon|typescript|css|less|scss|json|graphql|markdown
+" Prettier default: babylon
+let g:prettier#config#parser = 'babylon'
+
+" cli-override|file-override|prefer-file
+let g:prettier#config#config_precedence = 'prefer-file'
+
+" always|never|preserve
+let g:prettier#config#prose_wrap = 'preserve'
