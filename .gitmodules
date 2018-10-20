@@ -37,3 +37,6 @@
 [submodule "vim/vim.symlink/pack/plugins/start/vim-prettier"]
 	path = vim/vim.symlink/pack/plugins/start/vim-prettier
 	url = https://github.com/prettier/vim-prettier
+[submodule "vim/vim.symlink/pack/plugins/start/emmet-vim"]
+	path = vim/vim.symlink/pack/plugins/start/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
