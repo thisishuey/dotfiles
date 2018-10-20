@@ -33,6 +33,10 @@ let NERDTreeShowHidden=1 " show hidden files in NERDTree
 " autocmd vimenter * NERDTree
 " autocmd stdinreadpre * let s:std_in=1
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](node_modules)$',
+  \ }
+
 let g:user_emmet_leader_key='<Tab>'
 let g:user_emmet_settings = {
   \  'javascript.jsx' : {
@@ -72,9 +76,8 @@ vno <up> <Nop>
 " Prettier Settings
 
 " turn off autoformat for files with @format header and turn on autoformatting for certain extensions
-let g:prettier#exec_cmd_async = 1
 let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 " max line length that prettier will wrap on
 " Prettier default: 80
