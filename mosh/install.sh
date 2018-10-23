@@ -22,10 +22,10 @@ cd mosh-$MOSH_VERSION
 make
 make install
 
-echo You can run this to verify the install worked:
-echo   $ export LD_LIBRARY_PATH=$PREFIX/lib
-echo   $ mosh-server
-echo (Running mosh-server should give you a pid and a key to use if you want to connect manually)
+echo "You can run this to verify the install worked:"
+echo "  $ export LD_LIBRARY_PATH=$PREFIX/lib"
+echo "  $ mosh-server"
+echo "(Running mosh-server should give you a pid and a key to use if you want to connect manually)"
 
-echo To connect to the server in the future, run this on your local machine:
-echo   $ mosh --server="LD_LIBRARY_PATH=$PREFIX/lib $PREFIX/bin/mosh-server" $USER@$(hostname -f)
+echo "To connect to the server in the future, run this on your local machine:"
+echo "  $ mosh --server="LD_LIBRARY_PATH=$PREFIX/lib $PREFIX/bin/mosh-server" $USER@$(hostname -f)"
