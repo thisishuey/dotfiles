@@ -1,10 +1,11 @@
 PREFIX=$HOME
-VERSION=1.3.2
+PROTOBUF_VERSION=3.6.1
+MOSH_VERSION=1.3.2
 
 # Install Protocol Buffers
-wget http://protobuf.googlecode.com/files/protobuf-2.4.1.tar.bz2
-tar -xf protobuf-2.4.1.tar.bz2 
-cd protobuf-2.4.1
+wget https://github.com/protocolbuffers/protobuf/releases/download/v$PROTOBUF_VERSION/protobuf-all-$PROTOBUF_VERSION.tar.gz
+tar -xf protobuf-$PROTOBUF_VERSION.tar.bz2 
+cd protobuf-$PROTOBUF_VERSION 
 ./configure --prefix=$PREFIX
 make
 make install
@@ -14,9 +15,9 @@ cd ..
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
 
 # Install mosh
-wget https://github.com/downloads/keithw/mosh/mosh-$VERSION.tar.gz
-tar -xf mosh-$VERSION.tar.gz 
-cd mosh-$VERSION
+wget https://github.com/mobile-shell/mosh/releases/download/$MOSH_VERSION/$MOSH_VERSION.tar.gz
+tar -xf mosh-$MOSH_VERSION.tar.gz 
+cd mosh-$MOSH_VERSION
 ./configure --prefix=$PREFIX
 make
 make install
