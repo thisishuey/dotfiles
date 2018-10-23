@@ -5,7 +5,7 @@ MOSH_VERSION=1.3.2
 # Install Protocol Buffers
 wget https://github.com/protocolbuffers/protobuf/releases/download/v$PROTOBUF_VERSION/protobuf-all-$PROTOBUF_VERSION.tar.gz
 tar -xf protobuf-all-$PROTOBUF_VERSION.tar.gz 
-cd protobuf-all-$PROTOBUF_VERSION 
+cd protobuf-$PROTOBUF_VERSION 
 ./configure --prefix=$PREFIX
 make
 make install
