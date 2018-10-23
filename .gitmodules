@@ -28,3 +28,6 @@
 [submodule "vim/vim.symlink/pack/plugins/start/vim-javascript"]
 	path = vim/vim.symlink/pack/plugins/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/vim.symlink/pack/plugins/start/vim-prettier"]
+	path = vim/vim.symlink/pack/plugins/start/vim-prettier
+	url = https://github.com/prettier/vim-prettier.git
