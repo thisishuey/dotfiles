@@ -4,7 +4,7 @@ MOSH_VERSION=1.3.2
 
 # Install Protocol Buffers
 wget https://github.com/protocolbuffers/protobuf/releases/download/v$PROTOBUF_VERSION/protobuf-all-$PROTOBUF_VERSION.tar.gz
-tar -xf protobuf-$PROTOBUF_VERSION.tar.bz2 
+tar -xf protobuf-$PROTOBUF_VERSION.tar.gz 
 cd protobuf-$PROTOBUF_VERSION 
 ./configure --prefix=$PREFIX
 make
@@ -15,7 +15,7 @@ cd ..
 export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig
 
 # Install mosh
-wget https://github.com/mobile-shell/mosh/releases/download/$MOSH_VERSION/$MOSH_VERSION.tar.gz
+wget https://github.com/mobile-shell/mosh/releases/download/mosh-$MOSH_VERSION/mosh-$MOSH_VERSION.tar.gz
 tar -xf mosh-$MOSH_VERSION.tar.gz 
 cd mosh-$MOSH_VERSION
 ./configure --prefix=$PREFIX
