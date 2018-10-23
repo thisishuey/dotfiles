@@ -2,6 +2,6 @@
 # set-option -ga terminal-overrides ",xterm-256color:Tc"
 
 # run-shell "powerline-daemon -q"
-source "/home/ubuntu/.local/lib/python3.5/site-packages/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf"
+source "/usr/local/lib/python2.7/site-packages/powerline/bindings/tmux/powerline_tmux_2.1_plus.conf"
 set-option -g default-terminal "screen-256color"
 
