@@ -43,11 +43,11 @@ make
 make install
 
 # Post-Install Notes
-echo 'To connect to the mosh server, run this on your local machine:'
+echo "To connect to the mosh server, run this on your local machine:"
 echo "    $ mosh --server=\"LD_LIBRARY_PATH=$PREFIX/lib $PREFIX/bin/mosh-server\" $USER@$(hostname -f)"
 
-echo 'Or add following lines to your ~/.bashrc (or other applicable shell) file:'
+echo "Or add following lines to your ~/.bashrc (or other applicable shell) file:"
 echo "    export LD_LIBRARY_PATH=$PREFIX/lib"
 echo "    export PATH=$PREFIX/bin:\$PATH"
-echo 'Afterwards, you can simply run this on your local machine:'
+echo "Afterwards, you can simply run this on your local machine:"
 echo "    $ mosh $USER@$(hostname -f)"
