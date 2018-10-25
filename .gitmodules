@@ -37,3 +37,9 @@
 [submodule "zsh/oh-my-zsh.symlink"]
 	path = zsh/oh-my-zsh.symlink
 	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vim/vim.symlink/pack/plugins/start/ale"]
+	path = vim/vim.symlink/pack/plugins/start/ale
+	url = https://github.com/w0rp/ale.git
+[submodule "vim/vim.symlink/pack/plugins/start/emmet-vim"]
+	path = vim/vim.symlink/pack/plugins/start/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git

@@ -3,7 +3,6 @@ syntax on " syntax highlighting
 filetype indent on " activates indenting for files
 set autoindent " always set autoindenting on
 set copyindent " copy the previous indentation on autoindent
-set number " line numbers
 set nowrap " don't wrap lines
 set nobackup " get rid of anoying ~file
 set noswapfile " get rid of swapfile
@@ -22,10 +21,25 @@ set shiftwidth=2 " Indents will have a width of 2
 set softtabstop=2 " Sets the number of columns for a TAB
 set expandtab " Expand TABs to spaces
 
+set number relativenumber
+nn <leader>rn :set relativenumber!<cv>
+:augroup numbertoggle
+: autocmd!
+: autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+: autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+:augroup END
+
 set wildmenu
 set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png,*.ico
 set wildignore+=*.pdf,*.psd
 set wildignore+=node_modules/*,bower_components/*
+
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \ 'javascript.jsx': {
+    \ 'extends': 'jsx'
+  \ }
+\ }
 
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"

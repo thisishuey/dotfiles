@@ -118,4 +118,6 @@ if [ -d "/usr/local/sbin" ]; then
   PATH="/usr/local/sbin:$PATH"
 fi
 
-source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+if [[ ! -z "${TMUX}" ]]; then
+  source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
