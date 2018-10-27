@@ -21,12 +21,21 @@ nn <leader>sc :source ~/.config/nvim/init.vim<cr>
 " temp
 nn <leader>ev :edit ~/.vimrc<cr>
 
-
 :augroup relativenumbertoggle
 : autocmd!
 : autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
 : autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 :augroup END
+
+" airline configs
+
+" ale configs
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+  \ '*': ['prettier']
+\ }
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '●'
 
 " emmet configs
 let g:user_emmet_leader_key='<Tab>'
@@ -36,10 +45,15 @@ let g:user_emmet_settings = {
   \ }
 \ }
 
-" prettier configs
+" netrw configs
 
-call plug#begin(~/.config/nvim/plugged')
-
+" packages
+call plug#begin()
+Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'mattn/emmet-vim'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'vim-airline/vim-airline'
 Plug 'w0rp/ale'
-
 call plug#end()

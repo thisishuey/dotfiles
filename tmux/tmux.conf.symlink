@@ -1,1 +1,1 @@
-
+if-shell "test -f ~/.dotfiles/tmux/tmuxline.conf" "source ~/.dotfiles/tmux/tmuxline.conf"

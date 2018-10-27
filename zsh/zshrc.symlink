@@ -118,3 +118,4 @@ if [ -d "/usr/local/sbin" ]; then
   PATH="/usr/local/sbin:$PATH"
 fi
 
+source $HOME/.dotfiles/zsh/promptline.sh
