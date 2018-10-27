@@ -1,45 +1,6 @@
-[submodule "vim/vim.symlink/pack/color-schemes/start/vim-one"]
-	path = vim/vim.symlink/pack/color-schemes/start/vim-one
-	url = https://github.com/rakr/vim-one.git
-[submodule "vim/vim.symlink/pack/color-schemes/start/vim-railscasts-theme"]
-	path = vim/vim.symlink/pack/color-schemes/start/vim-railscasts-theme
-	url = https://github.com/jpo/vim-railscasts-theme.git
-[submodule "vim/vim.symlink/pack/color-schemes/start/onedark.vim"]
-	path = vim/vim.symlink/pack/color-schemes/start/onedark.vim
-	url = https://github.com/joshdick/onedark.vim
-[submodule "vim/vim.symlink/pack/plugins/start/nerdtree"]
-	path = vim/vim.symlink/pack/plugins/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/vim.symlink/pack/plugins/start/vim-fugitive"]
-	path = vim/vim.symlink/pack/plugins/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/vim.symlink/pack/plugins/start/ctrlp.vim"]
-	path = vim/vim.symlink/pack/plugins/start/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
-[submodule "vim/vim.symlink/pack/plugins/start/vim-jsx"]
-	path = vim/vim.symlink/pack/plugins/start/vim-jsx
-	url = https://github.com/mxw/vim-jsx.git
-[submodule "vim/vim.symlink/pack/plugins/start/vim-surround"]
-	path = vim/vim.symlink/pack/plugins/start/vim-surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/vim.symlink/pack/plugins/start/vimwiki"]
-	path = vim/vim.symlink/pack/plugins/start/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
-[submodule "vim/vim.symlink/pack/plugins/start/vim-javascript"]
-	path = vim/vim.symlink/pack/plugins/start/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
-[submodule "vim/vim.symlink/pack/plugins/start/vim-prettier"]
-	path = vim/vim.symlink/pack/plugins/start/vim-prettier
-	url = https://github.com/prettier/vim-prettier.git
 [submodule "node/nvm.symlink"]
 	path = node/nvm.symlink
 	url = https://github.com/creationix/nvm.git
 [submodule "zsh/oh-my-zsh.symlink"]
 	path = zsh/oh-my-zsh.symlink
 	url = https://github.com/robbyrussell/oh-my-zsh.git
-[submodule "vim/vim.symlink/pack/plugins/start/ale"]
-	path = vim/vim.symlink/pack/plugins/start/ale
-	url = https://github.com/w0rp/ale.git
-[submodule "vim/vim.symlink/pack/plugins/start/emmet-vim"]
-	path = vim/vim.symlink/pack/plugins/start/emmet-vim
-	url = https://github.com/mattn/emmet-vim.git
