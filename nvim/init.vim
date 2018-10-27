@@ -1,0 +1,45 @@
+set expandtab
+set hidden
+set ignorecase
+let mapleader=","
+set nojoinspaces
+" set noshowmode
+set noswapfile
+set nowrap
+set number
+set relativenumber
+set shiftwidth=2
+set softtabstop=2
+set splitbelow
+set splitright
+set tabstop=2
+set wildignore+=node_modules/*
+
+nn <leader>ec :edit ~/.config/nvim/init.vim<cr>
+nn <leader>nt :Explore<cr>
+nn <leader>sc :source ~/.config/nvim/init.vim<cr>
+" temp
+nn <leader>ev :edit ~/.vimrc<cr>
+
+
+:augroup relativenumbertoggle
+: autocmd!
+: autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+: autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+:augroup END
+
+" emmet configs
+let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_settings = {
+  \ 'javascript.jsx': {
+    \ 'extends': 'jsx'
+  \ }
+\ }
+
+" prettier configs
+
+call plug#begin(~/.config/nvim/plugged')
+
+Plug 'w0rp/ale'
+
+call plug#end()
