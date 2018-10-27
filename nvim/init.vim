@@ -13,6 +13,7 @@ set splitbelow
 set splitright
 set tabstop=2
 set wildignore+=node_modules/*
+set wildmode=longest:full,full
 
 nn <leader>ec :edit ~/.config/nvim/init.vim<cr>
 nn <leader>nt :Explore<cr>
