@@ -13,8 +13,8 @@ Right now this is an unix dotfiles repo, I may eventually get it to work with bo
 1. `sudo wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim`
 1. `sudo chmod +x /usr/bin/nvim`
 1. `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles.git ~/.dotfiles`
+1. `ln -s ~/.dotfiles/nvim/config_nvim.symlink ~/.config/nvim`
 1. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
-1. `ln -s ~/.dotfiles/nvim ~/.config/nvim`
 1. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
 1. `ln -s ~/.dotfiles/node/nvmrc.symlink ~/.nvmrc`
 1. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
