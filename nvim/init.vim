@@ -28,6 +28,9 @@ nn <leader>ev :edit ~/.vimrc<cr>
 :augroup END
 
 " airline configs
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "powerlineish"
 
 " ale configs
 let g:ale_fix_on_save = 1
