@@ -5,21 +5,24 @@ These are my dotfiles. As I start this repo, things will be a bit manual, but as
 Right now this is an unix dotfiles repo, I may eventually get it to work with both unix and Macos when I automate the installs (this will mostly entail automatically switching between package managers).
 
 ## Installation
-1.  `sudo curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -`
-2.  `sudo curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo`
-3.  `sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg`
-4.  `sudo yum update -y`
-5.  `sudo yum install -y fuse git mosh nodejs tmux yarn zsh`
-6.  `sudo wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim`
-7.  `sudo chmod +x /usr/bin/nvim`
-8.  `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles.git ~/.dotfiles`
-9.  `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
-9.  `ln -s ~/.dotfiles/nvim ~/.config/nvim`
-10. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
-11. `ln -s ~/.dotfiles/node/nvmrc.symlink ~/.nvmrc`
-12. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
-13. `ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf`
-14. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
+1. `sudo curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -`
+1. `sudo curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo`
+1. `sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg`
+1. `sudo yum update -y`
+1. `sudo yum install -y fuse git mosh nodejs tmux yarn zsh`
+1. `sudo wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim`
+1. `sudo chmod +x /usr/bin/nvim`
+1. `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles.git ~/.dotfiles`
+1. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
+1. `ln -s ~/.dotfiles/nvim ~/.config/nvim`
+1. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
+1. `ln -s ~/.dotfiles/node/nvmrc.symlink ~/.nvmrc`
+1. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
+1. `ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf`
+1. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
+
+NOTE: The first time you startup neovim you will need to install the plugins with:
+`:PlugInstall`
 
 NOTE: Once you've created a new ssh key and added it to github, to switch the origin url you can run:
 `git remote set-url origin git@github.com:thisishuey/dotfiles.git`
