@@ -12,18 +12,11 @@ plugins=(git tmux vi-mode)
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR="nvim"
+export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
-export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias ohmyzsh="nvim $HOMe/oh-my-zsh"
 alias vim="nvim"
-alias zshconfig="nvim ~/.zshrc"
+alias zshconfig="nvim $HOMe/.zshrc"
 
 export NVM_DIR="$HOME/.dotfiles/node/nvm.symlink"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
