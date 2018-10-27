@@ -3,7 +3,6 @@ set hidden
 set ignorecase
 let mapleader=","
 set nojoinspaces
-" set noshowmode
 set noswapfile
 set nowrap
 set number
@@ -18,8 +17,8 @@ set wildignore+=node_modules/*
 nn <leader>ec :edit ~/.config/nvim/init.vim<cr>
 nn <leader>nt :Explore<cr>
 nn <leader>sc :source ~/.config/nvim/init.vim<cr>
-" temp
-nn <leader>ev :edit ~/.vimrc<cr>
+
+nnoremap <silent> <Esc><Esc> : let @/=""<cr>
 
 :augroup relativenumbertoggle
 : autocmd!
@@ -61,3 +60,4 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 call plug#end()
+
