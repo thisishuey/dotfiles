@@ -11,8 +11,8 @@ Right now this is an unix dotfiles repo, I may eventually get it to work with bo
 4.  `sudo yum update -y`
 5.  `sudo yum install -y fuse git mosh nodejs tmux yarn zsh`
 6.  `sudo wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim``
-7.  `sudo chmod +x /usr/bin/nvim`
-8.  `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles.git /home/ec2-user/.dotfiles`
+7.  `sudo chmod +x /usr/bin/nvim
+8.  `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles.git ~/.dotfiles`
 9.  `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
 9.  `ln -s ~/.dotfiles/nvim ~/.config/nvim`
 10. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
