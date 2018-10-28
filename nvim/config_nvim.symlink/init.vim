@@ -1,3 +1,18 @@
+" package
+call plug#begin()
+Plug 'edkolev/promptline.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'mattn/emmet-vim'
+Plug 'mxw/vim-jsx'
+Plug 'nanotech/jellybeans.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'w0rp/ale'
+call plug#end()
+
+colors jellybeans
+
 set expandtab
 set hidden
 set ignorecase
@@ -30,35 +45,36 @@ nnoremap <silent> <Esc><Esc> : let @/=""<cr>
 " airline configs
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "powerlineish"
+let g:airline_theme = "jellybeans"
 
 " ale configs
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-  \ '*': ['prettier']
+  \ "*": ["prettier"]
 \ }
-let g:ale_sign_error = '●'
-let g:ale_sign_warning = '●'
+let g:ale_sign_error = "●"
+let g:ale_sign_warning = "●"
 
 " emmet configs
-let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_leader_key = "<Tab>"
 let g:user_emmet_settings = {
-  \ 'javascript.jsx': {
-    \ 'extends': 'jsx'
+  \ "javascript.jsx": {
+    \ "extends": "jsx"
   \ }
 \ }
 
 " netrw configs
 
-" packages
-call plug#begin()
-Plug 'edkolev/promptline.vim'
-Plug 'edkolev/tmuxline.vim'
-Plug 'mattn/emmet-vim'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'w0rp/ale'
-call plug#end()
+" promptline configs
+let g:promptline_preset = {
+  \ "a": [ promptline#slices#user() ],
+  \ "b": [ promptline#slices#cwd() ],
+  \ "c": [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
+  \ "warn": [ promptline#slices#last_exit_code() ],
+  \ "options": {
+    \ "left_sections": [ "a", "b", "c", "warn" ],
+    \ "right_sections": []
+  \ }
+\ }
+let g:promptline_theme = "airline"
 
