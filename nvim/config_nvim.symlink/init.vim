@@ -19,7 +19,7 @@ colors jellybeans
 set expandtab
 set hidden
 set ignorecase
-let mapleader=","
+let mapleader = "\<Space>"
 set nojoinspaces
 set noswapfile
 set nowrap

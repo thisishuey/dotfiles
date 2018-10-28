@@ -14,9 +14,10 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR="nvim"
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
-alias ohmyzsh="nvim $HOMe/oh-my-zsh"
+alias chrome="chrome --headless"
+alias ohmyzsh="nvim $HOME/oh-my-zsh"
 alias vim="nvim"
-alias zshconfig="nvim $HOMe/.zshrc"
+alias zshconfig="nvim $HOME/.zshrc"
 
 export NVM_DIR="$HOME/.dotfiles/node/nvm.symlink"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
