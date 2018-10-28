@@ -1,4 +1,4 @@
-" package
+" packages
 call plug#begin()
 Plug 'edkolev/promptline.vim'
 Plug 'edkolev/tmuxline.vim'
@@ -6,6 +6,9 @@ Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
 Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
@@ -30,8 +33,21 @@ set tabstop=2
 set wildignore+=node_modules/*
 set wildmode=longest:full,full
 
+let g:netrw_is_open = 0
+function! ToggleNetrw()
+  if g:netrw_is_open
+    execute ":bd" 
+    echo "netrw closed"
+    let g:netrw_is_open = 0
+  else
+    execute ":edit ."
+    echo "netrw opened"
+    let g:netrw_is_open = 1
+  endif
+endfunction
+
 nn <leader>ec :edit ~/.config/nvim/init.vim<cr>
-nn <leader>nt :Explore<cr>
+nn <leader>nt :call ToggleNetrw()<cr>
 nn <leader>sc :source ~/.config/nvim/init.vim<cr>
 
 nnoremap <silent> <Esc><Esc> : let @/=""<cr>
