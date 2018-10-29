@@ -47,10 +47,9 @@ function! ToggleNetrw()
 endfunction
 
 nn <leader>ec :edit ~/.config/nvim/init.vim<cr>
-nn <leader>nt :call ToggleNetrw()<cr>
 nn <leader>sc :source ~/.config/nvim/init.vim<cr>
-
-nnoremap <silent> <Esc><Esc> : let @/=""<cr>
+nn <leader>nt :call ToggleNetrw()<cr>
+nn <silent> <Esc><Esc> :let @/=""<cr>:echo "search cleared"<cr>
 
 :augroup relativenumbertoggle
 : autocmd!
