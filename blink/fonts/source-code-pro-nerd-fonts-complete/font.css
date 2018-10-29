@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'Source Code Pro Nerd Font Complete';
+    font-style: normal;
+    font-weight: 200;
+    src:  url('https://github.com/thisishuey/dotfiles/blob/master/blink/fonts/source-code-pro-nerd-fonts-complete/light.otf?raw=true') format('opentype');
+}
+@font-face {
+    font-family: 'Sorce Code Pro Nerd Font Complete';
+    font-style: normal;
+    font-weight: 400;
+    src:  url('https://github.com/thisishuey/dotfiles/blob/master/blink/fonts/source-code-pro-nerd-fonts-complete/regular.otf?raw=true') format('opentype');
+}
+@font-face {
+    font-family: 'Sauce Code Pro Nerd Font Complete';
+    font-weight: 600;
+    src:  url('https://github.com/thisishuey/dotfiles/blob/master/blink/fonts/source-code-pro-nerd-fonts-complete/medium.otf?raw=true') format('opentype');
+}
+@font-face {
+    font-family: 'Sauce Code Pro Nerd Font Complete';
+    font-weight: 800;
+    src: url('https://github.com/thisishuey/dotfiles/blob/master/blink/fonts/source-code-pro-nerd-fonts-complete/bold.otf?raw=true') format('opentype');
+}
