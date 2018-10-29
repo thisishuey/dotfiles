@@ -12,11 +12,11 @@
 }
 @font-face {
     font-family: 'Source Code Pro Nerd Fonts Complete';
-    font-weight: 600;
+    font-weight: 500;
     src:  url('https://github.com/thisishuey/dotfiles/blob/master/blink/fonts/source-code-pro-nerd-fonts-complete/medium.otf?raw=true') format('opentype');
 }
 @font-face {
     font-family: 'Source Code Pro Nerd Fonts Complete';
-    font-weight: 800;
+    font-weight: 700;
     src: url('https://github.com/thisishuey/dotfiles/blob/master/blink/fonts/source-code-pro-nerd-fonts-complete/bold.otf?raw=true') format('opentype');
 }
