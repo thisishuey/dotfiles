@@ -1,0 +1,7 @@
+echo -e '\e[1mbold\e[0m'
+echo -e '\e[3mitalic\e[0m'
+echo -e '\e[4munderline\e[0m'
+echo -e '\e[9mstriketrough\e[0m'
+echo -e '\e[31mred\e[0m'
+echo -e '\ue0b0'
+echo -e '\ue0c0'

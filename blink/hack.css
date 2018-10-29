@@ -8,27 +8,27 @@
   font-family: 'Hack';
   font-style: normal;
   font-weight: 200;
-  src: url('patched/Hack-Regular.ttf') format('ttf');
+  src: url('https://raw.githubusercontent.com/thisishuey/dotfiles/master/blink/patched/Hack-Regular.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Hack';
   font-style: normal;
   font-weight: 700;
-  src: url('patched/Hack-Bold.ttf') format('ttf');
+  src: url('https://raw.githubusercontent.com/thisishuey/dotfiles/master/blink/patched/Hack-Bold.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Hack';
   font-style: italic;
   font-weight: 400;
-  src: url('patched/Hack-Italic.ttf') format('ttf');
+  src: url('https://raw.githubusercontent.com/thisishuey/dotfiles/master/blink/patched/Hack-Italic.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Hack';
   font-style: italic;
   font-weight: 700;
-  src: url('patched/Hack-BoldItalic.ttf') format('ttf');
+  src: url('https://raw.githubusercontent.com/thisishuey/dotfiles/master/blink/patched/Hack-BoldItalic.ttf') format('ttf');
 }
 
