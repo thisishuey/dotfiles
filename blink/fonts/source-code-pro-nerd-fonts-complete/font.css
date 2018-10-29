@@ -5,10 +5,3 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Source Code Pro Nerd Fonts Complete';
-    src: url('https://github.com/thisishuey/dotfiles/blob/master/blink/fonts/source-code-pro-nerd-fonts-complete/bold.otf?raw=true') format('opentype');
-    font-weight: bold;
-    font-style: normal;
-}
-
