@@ -1,0 +1,35 @@
+/*!
+ *  Hack typeface https://github.com/source-foundry/Hack
+ *  License: https://github.com/source-foundry/Hack/blob/master/LICENSE.md
+ */
+/* FONT PATHS
+ * -------------------------- */
+@font-face {
+  font-family: 'Hack';
+  font-style: normal;
+  font-weight: 200;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-regular.woff2?sha=3114f1256') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-regular.woff?sha=3114f1256') format('woff');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Hack';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-bold.woff2?sha=3114f1256') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-bold.woff?sha=3114f1256') format('woff');
+}
+
+@font-face {
+  font-family: 'Hack';
+  font-style: italic;
+  font-weight: 400;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-italic.woff2?sha=3114f1256') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-italic.woff?sha=3114f1256') format('woff');
+}
+
+@font-face {
+  font-family: 'Hack';
+  font-style: italic;
+  font-weight: 700;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-bolditalic.woff2?sha=3114f1256') format('woff2'), url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-bolditalic.woff?sha=3114f1256') format('woff');
+}
+
