@@ -14,7 +14,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 call plug#end()
 
-colors jellybeans
+" colors jellybeans
 
 set expandtab
 set hidden
