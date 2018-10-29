@@ -8,27 +8,27 @@
   font-family: 'Hack';
   font-style: normal;
   font-weight: 200;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-regular.woff?sha=3114f1256') format('woff');
+  src: url('patched/Hack-Regular.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Hack';
   font-style: normal;
   font-weight: 700;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-bold.woff?sha=3114f1256') format('woff');
+  src: url('patched/Hack-Bold.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Hack';
   font-style: italic;
   font-weight: 400;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-italic.woff?sha=3114f1256') format('woff');
+  src: url('patched/Hack-Italic.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Hack';
   font-style: italic;
   font-weight: 700;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/hack-font/3.003/web/fonts/hack-bolditalic.woff?sha=3114f1256') format('woff');
+  src: url('patched/Hack-BoldItalic.ttf') format('ttf');
 }
 
