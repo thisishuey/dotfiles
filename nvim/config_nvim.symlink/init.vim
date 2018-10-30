@@ -61,7 +61,7 @@ nn <silent> <Esc><Esc> :let @/=""<cr>:echo "search cleared"<cr>
 " airline configs
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "base16_chalk"
+let g:airline_theme = "base16_vim"
 
 " ale configs
 let g:ale_fix_on_save = 1
