@@ -44,8 +44,8 @@ load-nvmrc() {
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
-if [ -d "hash yarn 2>/dev/null" ]; then
-  PATH="$(yarn global bin):$PATH"
+if [ -d "$(yarn global bin)" ]; then
+  PATH="$PATH:$(yarn global bin)"
 fi
 if [ -d "$HOME/.local/bin" ]; then
   PATH="$HOME/.local/bin:$PATH"
