@@ -27,6 +27,12 @@ NOTE: The first time you startup neovim you will need to install the plugins wit
 NOTE: Once you've created a new ssh key and added it to github, to switch the origin url you can run:
 `git remote set-url origin git@github.com:thisishuey/dotfiles.git`
 
+## Current Theme: Base 16 Chalk
+* Blink Base16 Themes: https://github.com/niklaas/base16-blink
+* Some Base16 Themes are available for Airline: https://github.com/vim-airline/vim-airline-themes/tree/master/autoload/airline/themes
+* Base16 Plugin for Vim: https://github.com/chriskempson/base16-vim
+* More info on Base16: http://chriskempson.com/projects/base16/
+
 ## Intro to Vim
 * http://nvie.com/posts/how-i-boosted-my-vim/
 * http://astonj.com/tech/vim-for-ruby-rails-and-a-sexy-theme/
