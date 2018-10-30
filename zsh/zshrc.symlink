@@ -15,7 +15,6 @@ export EDITOR="nvim"
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 alias chrome="google-chrome-stable --headless"
-alias exit='if [[ $TMUX = "" ]]; then exit; else tmux detach; fi'
 alias ohmyzsh="nvim ~/oh-my-zsh"
 alias vim="nvim"
 alias zshconfig="nvim ~/.zshrc"
