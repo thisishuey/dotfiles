@@ -1,10 +1,10 @@
 " packages
 call plug#begin()
+Plug 'chriskempson/base16-vim'
 Plug 'edkolev/promptline.vim'
 Plug 'edkolev/tmuxline.vim'
 Plug 'mattn/emmet-vim'
 Plug 'mxw/vim-jsx'
-Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
@@ -14,8 +14,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'w0rp/ale'
 call plug#end()
 
-" colors jellybeans
-
+let base16colorspace = 256
 set expandtab
 set hidden
 set ignorecase
@@ -32,6 +31,8 @@ set splitright
 set tabstop=2
 set wildignore+=node_modules/*
 set wildmode=longest:full,full
+
+colors base16-chalk
 
 let g:netrw_is_open = 0
 function! ToggleNetrw()
@@ -60,7 +61,7 @@ nn <silent> <Esc><Esc> :let @/=""<cr>:echo "search cleared"<cr>
 " airline configs
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline_theme = "jellybeans"
+let g:airline_theme = "base16_chalk"
 
 " ale configs
 let g:ale_fix_on_save = 1
