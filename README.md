@@ -1,25 +1,11 @@
 # Huey's dotfiles
-These are my dotfiles. As I start this repo, things will be a bit manual, but as it evolves we will get more and more automated (hopefully using node). For the time being, I will add the steps to get this environment up and running in this readme.
+These is my dotfiles. There are many others like it, but this one is mine.
 
 ## Use
-Right now this is an unix dotfiles repo, I may eventually get it to work with both unix and Macos when I automate the installs (this will mostly entail automatically switching between package managers).
+See https://dotfiles.github.io for more information.
 
 ## Installation
-1. `sudo curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -`
-1. `sudo curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | tee /etc/yum.repos.d/yarn.repo`
-1. `sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg`
-1. `sudo yum update -y`
-1. `sudo yum install -y fuse git mosh nodejs tmux yarn zsh`
-1. `sudo wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim`
-1. `sudo chmod +x /usr/bin/nvim`
-1. `git clone --recurse-submodules -j8 https://github.com/thisishuey/dotfiles.git ~/.dotfiles`
-1. `ln -s ~/.dotfiles/nvim/config_nvim.symlink ~/.config/nvim`
-1. `ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig`
-1. `ln -s ~/.dotfiles/node/nvm.symlink ~/.nvm`
-1. `ln -s ~/.dotfiles/node/nvmrc.symlink ~/.nvmrc`
-1. `ln -s ~/.dotfiles/zsh/oh-my-zsh.symlink ~/.oh-my-zsh`
-1. `ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf`
-1. `ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc`
+`wget -qO- https://raw.githubusercontent.com/thisishuey/dotfiles/master/setup.sh | bash`
 
 NOTE: The first time you startup neovim you will need to install the plugins with:
 `:PlugInstall`
