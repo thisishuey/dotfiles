@@ -1,0 +1,9 @@
+# dotfiles-symlink=~/.gitconfig
+
+[core]
+  editor = nvim
+[push]
+  default = simple
+[user]
+  email = huey@carpetelam.com
+  name = Jeff \"Huey\" Huelsbeck

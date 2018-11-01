@@ -1,0 +1,3 @@
+" dotfiles-symlink=~/.vim/after/syntax/xml.vim
+
+syn region xmlTagName matchgroup=xmlTag start=+</+ end=+>+

@@ -1,0 +1,98 @@
+" dotfiles-symlink=~/.vimrc
+
+if empty(glob("~/.vim/autoload/plug.vim"))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin("~/.vim/plugged")
+
+  Plug 'chriskempson/base16-vim'
+  Plug 'edkolev/promptline.vim'
+  Plug 'edkolev/tmuxline.vim'
+  Plug 'mattn/emmet-vim'
+  Plug 'mxw/vim-jsx'
+  Plug 'pangloss/vim-javascript'
+  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-surround'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
+  Plug 'w0rp/ale'
+
+call plug#end()
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace = 256
+  source ~/.vimrc_background
+endif
+
+let mapleader = " "
+
+set expandtab
+set hidden
+set ignorecase
+set nojoinspaces
+set noshowmode
+set noswapfile
+set nowrap
+set number
+set relativenumber
+set shiftwidth=2
+set shortmess=I
+set softtabstop=2
+set splitbelow
+set splitright
+set tabstop=2
+
+nn <leader>ev :edit ~/.vimrc<cr>
+nn <leader>sv :source ~/.vimrc<cr>
+nn <silent> <ESC><ESC> :let @/ = ""<cr>
+
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
+:augroup relativenumbertoggle
+: autocmd!
+: autocmd InsertLeave * set relativenumber
+: autocmd InsertEnter * set norelativenumber
+:augroup END
+
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "base16_vim"
+
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+  \ "*": [ "prettier" ]
+\ }
+let g:ale_sign_error = "●"
+let g:ale_sign_warning = "●"
+
+let g:user_emmet_leader_key = "<Tab>"
+let g:user_emmet_settings = {
+  \ "javascript.jsx": {
+    \ "extends": "jsx"
+  \ }
+\ }
+
+let g:promptline_preset = {
+  \ "a": [ promptline#slices#user() ],
+  \ "b": [ promptline#slices#cwd() ],
+  \ "c": [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
+  \ "warn": [ promptline#slices#last_exit_code() ],
+  \ "options": {
+    \ "left_sections": [ "a", "b", "c", "warn" ],
+    \ "right_sections": []
+  \ }
+\ }
+let g:promptline_theme = "airline"
+
+hi xmlTag ctermfg=07
+hi xmlTagName ctermfg=01
+hi link xmlEndTag xmlTag
+
