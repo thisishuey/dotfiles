@@ -12,19 +12,31 @@ function __promptline_ps1 {
   local slice_prefix slice_empty_prefix slice_joiner slice_suffix is_prompt_empty=1
 
   # section "a" header
-  slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
+  if [ $vim_mode = $vim_ins_mode ]; then
+    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
+  else
+    slice_prefix="${a_cmd_bg}${sep}${a_cmd_fg}${a_cmd_bg}${space}" slice_suffix="$space${a_sep_cmd_fg}" slice_joiner="${a_cmd_fg}${a_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${a_cmd_fg}${a_cmd_bg}${space}"
+  fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "a" slices
-  __promptline_wrapper "$(if [[ -n ${ZSH_VERSION-} ]]; then print %n; elif [[ -n ${FISH_VERSION-} ]]; then printf "%s" "$USER"; else printf "%s" \\u; fi )" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
+  __promptline_wrapper "$vim_mode" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "b" header
-  slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
+  if [ $vim_mode = $vim_ins_mode ]; then
+    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
+  else
+    slice_prefix="${b_cmd_bg}${sep}${b_cmd_fg}${b_cmd_bg}${space}" slice_suffix="$space${b_sep_cmd_fg}" slice_joiner="${b_cmd_fg}${b_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${b_cmd_fg}${b_cmd_bg}${space}"
+  fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "b" slices
   __promptline_wrapper "$(__promptline_cwd)" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "c" header
-  slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
+  if [ $vim_mode = $vim_ins_mode ]; then
+    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
+  else
+    slice_prefix="${c_cmd_bg}${sep}${c_cmd_fg}${c_cmd_bg}${space}" slice_suffix="$space${c_sep_cmd_fg}" slice_joiner="${c_cmd_fg}${c_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${c_cmd_fg}${c_cmd_bg}${space}"
+  fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "c" slices
   __promptline_wrapper "$(__promptline_vcs_branch)" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
@@ -87,19 +99,31 @@ function __promptline_left_prompt {
   local slice_prefix slice_empty_prefix slice_joiner slice_suffix is_prompt_empty=1
 
   # section "a" header
-  slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
+  if [ $vim_mode = $vim_ins_mode ]; then
+    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
+  else
+    slice_prefix="${a_cmd_bg}${sep}${a_cmd_fg}${a_cmd_bg}${space}" slice_suffix="$space${a_sep_cmd_fg}" slice_joiner="${a_cmd_fg}${a_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${a_cmd_fg}${a_cmd_bg}${space}"
+  fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "a" slices
-  __promptline_wrapper "$(if [[ -n ${ZSH_VERSION-} ]]; then print %n; elif [[ -n ${FISH_VERSION-} ]]; then printf "%s" "$USER"; else printf "%s" \\u; fi )" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
+  __promptline_wrapper "$vim_mode" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "b" header
-  slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
+  if [ $vim_mode = $vim_ins_mode ]; then
+    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
+  else
+    slice_prefix="${b_cmd_bg}${sep}${b_cmd_fg}${b_cmd_bg}${space}" slice_suffix="$space${b_sep_cmd_fg}" slice_joiner="${b_cmd_fg}${b_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${b_cmd_fg}${b_cmd_bg}${space}"
+  fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "b" slices
   __promptline_wrapper "$(__promptline_cwd)" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "c" header
-  slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
+  if [ $vim_mode = $vim_ins_mode ]; then
+    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
+  else
+    slice_prefix="${c_cmd_bg}${sep}${c_cmd_fg}${c_cmd_bg}${space}" slice_suffix="$space${c_sep_cmd_fg}" slice_joiner="${c_cmd_fg}${c_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${c_cmd_fg}${c_cmd_bg}${space}"
+  fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "c" slices
   __promptline_wrapper "$(__promptline_vcs_branch)" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
@@ -201,6 +225,15 @@ function __promptline {
   local c_fg="${wrap}38;5;7${end_wrap}"
   local c_bg="${wrap}48;5;18${end_wrap}"
   local c_sep_fg="${wrap}38;5;18${end_wrap}"
+  local a_cmd_fg="${wrap}38;5;18${end_wrap}"
+  local a_cmd_bg="${wrap}48;5;2${end_wrap}"
+  local a_sep_cmd_fg="${wrap}38;5;2${end_wrap}"
+  local b_cmd_fg="${wrap}38;5;2${end_wrap}"
+  local b_cmd_bg="${wrap}48;5;0${end_wrap}"
+  local b_sep_cmd_fg="${wrap}38;5;0${end_wrap}"
+  local c_cmd_fg="${wrap}38;5;7${end_wrap}"
+  local c_cmd_bg="${wrap}48;5;18${end_wrap}"
+  local c_sep_cmd_fg="${wrap}38;5;18${end_wrap}"
   local warn_fg="${wrap}38;5;0${end_wrap}"
   local warn_bg="${wrap}48;5;1${end_wrap}"
   local warn_sep_fg="${wrap}38;5;1${end_wrap}"

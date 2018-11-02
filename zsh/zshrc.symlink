@@ -67,5 +67,6 @@ if [ -d "$(yarn global bin)" ]; then
   PATH="$PATH:$(yarn global bin)"
 fi
 
+source ~/.dotfiles/zsh/promptline-vi-mode.sh
 source ~/.dotfiles/zsh/promptline.sh
 
