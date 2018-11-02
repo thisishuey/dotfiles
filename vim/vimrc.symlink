@@ -40,12 +40,14 @@ set noswapfile
 set nowrap
 set number
 set relativenumber
+set path+=**
 set shiftwidth=2
 set shortmess=I
 set softtabstop=2
 set splitbelow
 set splitright
 set tabstop=2
+set wildmenu
 
 nn <leader>ev :edit ~/.vimrc<cr>
 nn <leader>sv :source ~/.vimrc<cr>
@@ -74,6 +76,7 @@ let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 
 let g:user_emmet_leader_key = "<Tab>"
+let g:user_emmet_prev_key = "<Tab>p"
 let g:user_emmet_settings = {
   \ "javascript.jsx": {
     \ "extends": "jsx"
