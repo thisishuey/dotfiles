@@ -13,9 +13,9 @@ function __promptline_ps1 {
 
   # section "a" header
   if [ $vim_mode = $vim_ins_mode ]; then
-    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
+    slice_prefix="${a_ins_bg}${sep}${a_ins_fg}${a_ins_bg}${space}" slice_suffix="$space${a_sep_ins_fg}" slice_joiner="${a_ins_fg}${a_ins_bg}${alt_sep}${space}" slice_empty_prefix="${a_ins_fg}${a_ins_bg}${space}"
   else
-    slice_prefix="${a_cmd_bg}${sep}${a_cmd_fg}${a_cmd_bg}${space}" slice_suffix="$space${a_sep_cmd_fg}" slice_joiner="${a_cmd_fg}${a_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${a_cmd_fg}${a_cmd_bg}${space}"
+    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "a" slices
@@ -23,9 +23,9 @@ function __promptline_ps1 {
 
   # section "b" header
   if [ $vim_mode = $vim_ins_mode ]; then
-    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
+    slice_prefix="${b_ins_bg}${sep}${b_ins_fg}${b_ins_bg}${space}" slice_suffix="$space${b_sep_ins_fg}" slice_joiner="${b_ins_fg}${b_ins_bg}${alt_sep}${space}" slice_empty_prefix="${b_ins_fg}${b_ins_bg}${space}"
   else
-    slice_prefix="${b_cmd_bg}${sep}${b_cmd_fg}${b_cmd_bg}${space}" slice_suffix="$space${b_sep_cmd_fg}" slice_joiner="${b_cmd_fg}${b_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${b_cmd_fg}${b_cmd_bg}${space}"
+    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "b" slices
@@ -33,9 +33,9 @@ function __promptline_ps1 {
 
   # section "c" header
   if [ $vim_mode = $vim_ins_mode ]; then
-    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
+    slice_prefix="${c_ins_bg}${sep}${c_ins_fg}${c_ins_bg}${space}" slice_suffix="$space${c_sep_ins_fg}" slice_joiner="${c_ins_fg}${c_ins_bg}${alt_sep}${space}" slice_empty_prefix="${c_ins_fg}${c_ins_bg}${space}"
   else
-    slice_prefix="${c_cmd_bg}${sep}${c_cmd_fg}${c_cmd_bg}${space}" slice_suffix="$space${c_sep_cmd_fg}" slice_joiner="${c_cmd_fg}${c_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${c_cmd_fg}${c_cmd_bg}${space}"
+    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "c" slices
@@ -100,9 +100,9 @@ function __promptline_left_prompt {
 
   # section "a" header
   if [ $vim_mode = $vim_ins_mode ]; then
-    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
+    slice_prefix="${a_ins_bg}${sep}${a_ins_fg}${a_ins_bg}${space}" slice_suffix="$space${a_sep_ins_fg}" slice_joiner="${a_ins_fg}${a_ins_bg}${alt_sep}${space}" slice_empty_prefix="${a_ins_fg}${a_ins_bg}${space}"
   else
-    slice_prefix="${a_cmd_bg}${sep}${a_cmd_fg}${a_cmd_bg}${space}" slice_suffix="$space${a_sep_cmd_fg}" slice_joiner="${a_cmd_fg}${a_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${a_cmd_fg}${a_cmd_bg}${space}"
+    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "a" slices
@@ -110,9 +110,9 @@ function __promptline_left_prompt {
 
   # section "b" header
   if [ $vim_mode = $vim_ins_mode ]; then
-    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
+    slice_prefix="${b_ins_bg}${sep}${b_ins_fg}${b_ins_bg}${space}" slice_suffix="$space${b_sep_ins_fg}" slice_joiner="${b_ins_fg}${b_ins_bg}${alt_sep}${space}" slice_empty_prefix="${b_ins_fg}${b_ins_bg}${space}"
   else
-    slice_prefix="${b_cmd_bg}${sep}${b_cmd_fg}${b_cmd_bg}${space}" slice_suffix="$space${b_sep_cmd_fg}" slice_joiner="${b_cmd_fg}${b_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${b_cmd_fg}${b_cmd_bg}${space}"
+    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "b" slices
@@ -120,9 +120,9 @@ function __promptline_left_prompt {
 
   # section "c" header
   if [ $vim_mode = $vim_ins_mode ]; then
-    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
+    slice_prefix="${c_ins_bg}${sep}${c_ins_fg}${c_ins_bg}${space}" slice_suffix="$space${c_sep_ins_fg}" slice_joiner="${c_ins_fg}${c_ins_bg}${alt_sep}${space}" slice_empty_prefix="${c_ins_fg}${c_ins_bg}${space}"
   else
-    slice_prefix="${c_cmd_bg}${sep}${c_cmd_fg}${c_cmd_bg}${space}" slice_suffix="$space${c_sep_cmd_fg}" slice_joiner="${c_cmd_fg}${c_cmd_bg}${alt_sep}${space}" slice_empty_prefix="${c_cmd_fg}${c_cmd_bg}${space}"
+    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "c" slices
@@ -225,15 +225,15 @@ function __promptline {
   local c_fg="${wrap}38;5;7${end_wrap}"
   local c_bg="${wrap}48;5;18${end_wrap}"
   local c_sep_fg="${wrap}38;5;18${end_wrap}"
-  local a_cmd_fg="${wrap}38;5;18${end_wrap}"
-  local a_cmd_bg="${wrap}48;5;2${end_wrap}"
-  local a_sep_cmd_fg="${wrap}38;5;2${end_wrap}"
-  local b_cmd_fg="${wrap}38;5;2${end_wrap}"
-  local b_cmd_bg="${wrap}48;5;18${end_wrap}"
-  local b_sep_cmd_fg="${wrap}38;5;18${end_wrap}"
-  local c_cmd_fg="${wrap}38;5;20${end_wrap}"
-  local c_cmd_bg="${wrap}48;5;0${end_wrap}"
-  local c_sep_cmd_fg="${wrap}38;5;0${end_wrap}"
+  local a_ins_fg="${wrap}38;5;18${end_wrap}"
+  local a_ins_bg="${wrap}48;5;2${end_wrap}"
+  local a_sep_ins_fg="${wrap}38;5;2${end_wrap}"
+  local b_ins_fg="${wrap}38;5;2${end_wrap}"
+  local b_ins_bg="${wrap}48;5;18${end_wrap}"
+  local b_sep_ins_fg="${wrap}38;5;18${end_wrap}"
+  local c_ins_fg="${wrap}38;5;20${end_wrap}"
+  local c_ins_bg="${wrap}48;5;0${end_wrap}"
+  local c_sep_ins_fg="${wrap}38;5;0${end_wrap}"
   local warn_fg="${wrap}38;5;0${end_wrap}"
   local warn_bg="${wrap}48;5;1${end_wrap}"
   local warn_sep_fg="${wrap}38;5;1${end_wrap}"
