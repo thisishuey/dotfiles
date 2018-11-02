@@ -1,21 +1,21 @@
-vim_ins_mode="INSERT"
-vim_cmd_mode="NORMAL"
-vim_mode=$vim_ins_mode
+vi_mode_ins="INSERT"
+vi_mode_cmd="NORMAL"
+vi_mode=$vi_mode_ins
 
 function zle-keymap-select {
-  vim_mode="${${KEYMAP/vicmd/${vim_cmd_mode}}/(main|viins)/${vim_ins_mode}}"
+  vi_mode="${${KEYMAP/vicmd/${vi_mode_cmd}}/(main|viins)/${vi_mode_ins}}"
   __promptline
   zle reset-prompt
 }
 zle -N zle-keymap-select
 
 function zle-line-finish {
-  vim_mode=$vim_ins_mode
+  vi_mode=$vi_mode_ins
 }
 zle -N zle-line-finish
 
 function TRAPINT {
-  vim_mode=$vim_ins_mode
+  vi_mode=$vi_mode_ins
   return $(( 128 + $1 ))
 }
 
