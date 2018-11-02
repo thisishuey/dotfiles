@@ -16,7 +16,7 @@
   rm -rf .bash*
 
   # create support directories
-  mkdir -p ~/.config
+  mkdir -p ~/.config/nvim
   mkdir -p ~/.vim/after/syntax
 
   # install config apps
