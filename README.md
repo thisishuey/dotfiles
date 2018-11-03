@@ -19,7 +19,8 @@ NOTE: Once you've created a new ssh key and added it to github, to switch the or
 NOTE: When you fork another project you can use the following command to rename origin to upstream and set your fork as the new origin:
 ```
 git remote rename origin upstream
-git add remote origin git@github.com:user/fork.git
+git remote add origin clone-url
+git push --set-upstream origin master
 ```
 
 ## Current Theme: Base 16 Chalk
