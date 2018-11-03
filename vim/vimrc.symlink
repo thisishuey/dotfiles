@@ -55,6 +55,9 @@ nn <leader>ev :edit ~/.vimrc<cr>
 nn <leader>sv :source ~/.vimrc<cr>
 nn <silent> <ESC><ESC> :let @/ = ""<cr>
 
+noremap <silent> k gk
+noremap <silent> j gj
+
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
