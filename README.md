@@ -16,6 +16,12 @@ NOTE: The first time you startup neovim you will need to install the plugins wit
 NOTE: Once you've created a new ssh key and added it to github, to switch the origin url you can run:
 `git remote set-url origin git@github.com:thisishuey/dotfiles.git`
 
+NOTE: When you fork another project you can use the following command to rename origin to upstream and set your fork as the new origin:
+```
+git remote rename origin upstream
+git add remote origin git@github.com:user/fork.git
+```
+
 ## Current Theme: Base 16 Chalk
 
 - Blink Base16 Themes: https://github.com/niklaas/base16-blink
