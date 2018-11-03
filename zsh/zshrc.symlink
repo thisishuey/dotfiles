@@ -4,17 +4,24 @@ source ~/.config/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
+antigen bundle hchbaw/opp.zsh
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
+
+# history-substring-search must come after syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
 
 antigen apply
 
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTFILE=~/.history
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
+setopt HIST_FIND_NO_DUPS
 setopt appendhistory autocd beep extendedglob nomatch notify
 bindkey -v
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
