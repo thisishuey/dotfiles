@@ -19,9 +19,6 @@ HISTSIZE=100000
 SAVEHIST=$HISTSIZE
 setopt HIST_FIND_NO_DUPS
 setopt appendhistory autocd beep extendedglob nomatch notify
-bindkey -v
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
@@ -35,10 +32,15 @@ alias vim="nvim"
 
 export BASE16_SHELL="$HOME/.config/base16-shell/"
 export EDITOR="nvim"
+export KEYTIMEOUT=1
 export NVM_DIR="$HOME/.nvm"
 export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
 export VISUAL="$EDITOR"
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=4"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=red"
+
+bindkey -v
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 [ -n "$PS1" ] && \
   [ -s "$BASE16_SHELL/profile_helper.sh" ] && \

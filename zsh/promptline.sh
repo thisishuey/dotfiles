@@ -12,30 +12,30 @@ function __promptline_ps1 {
   local slice_prefix slice_empty_prefix slice_joiner slice_suffix is_prompt_empty=1
 
   # section "a" header
-  if [ $vi_mode = $vi_mode_cmd ]; then
-    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
-  else
+  if [ $vi_mode = $vi_mode_ins ]; then
     slice_prefix="${alt_a_bg}${sep}${alt_a_fg}${alt_a_bg}${space}" slice_suffix="$space${alt_a_sep_fg}" slice_joiner="${alt_a_fg}${alt_a_bg}${alt_sep}${space}" slice_empty_prefix="${alt_a_fg}${alt_a_bg}${space}"
+  else
+    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "a" slices
   __promptline_wrapper "$(if [[ -n ${ZSH_VERSION-} ]]; then print %n; elif [[ -n ${FISH_VERSION-} ]]; then printf "%s" "$USER"; else printf "%s" \\u; fi )" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "b" header
-  if [ $vi_mode = $vi_mode_cmd ]; then
-    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
-  else
+  if [ $vi_mode = $vi_mode_ins ]; then
     slice_prefix="${alt_b_bg}${sep}${alt_b_fg}${alt_b_bg}${space}" slice_suffix="$space${alt_b_sep_fg}" slice_joiner="${alt_b_fg}${alt_b_bg}${alt_sep}${space}" slice_empty_prefix="${alt_b_fg}${alt_b_bg}${space}"
+  else
+    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "b" slices
   __promptline_wrapper "$(__promptline_cwd)" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "c" header
-  if [ $vi_mode = $vi_mode_cmd ]; then
-    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
-  else
+  if [ $vi_mode = $vi_mode_ins ]; then
     slice_prefix="${alt_c_bg}${sep}${alt_c_fg}${alt_c_bg}${space}" slice_suffix="$space${alt_c_sep_fg}" slice_joiner="${alt_c_fg}${alt_c_bg}${alt_sep}${space}" slice_empty_prefix="${alt_c_fg}${alt_c_bg}${space}"
+  else
+    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "c" slices
@@ -43,10 +43,10 @@ function __promptline_ps1 {
   __promptline_wrapper "$(__promptline_git_status)" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "warn" header
-  if [ $vi_mode = $vi_mode_cmd ]; then
-    slice_prefix="${warn_bg}${sep}${warn_fg}${warn_bg}${space}" slice_suffix="$space${warn_sep_fg}" slice_joiner="${warn_fg}${warn_bg}${alt_sep}${space}" slice_empty_prefix="${warn_fg}${warn_bg}${space}"
-  else
+  if [ $vi_mode = $vi_mode_ins ]; then
     slice_prefix="${alt_warn_bg}${sep}${alt_warn_fg}${alt_warn_bg}${space}" slice_suffix="$space${alt_warn_sep_fg}" slice_joiner="${alt_warn_fg}${alt_warn_bg}${alt_sep}${space}" slice_empty_prefix="${alt_warn_fg}${alt_warn_bg}${space}"
+  else
+    slice_prefix="${warn_bg}${sep}${warn_fg}${warn_bg}${space}" slice_suffix="$space${warn_sep_fg}" slice_joiner="${warn_fg}${warn_bg}${alt_sep}${space}" slice_empty_prefix="${warn_fg}${warn_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "warn" slices
@@ -103,30 +103,30 @@ function __promptline_left_prompt {
   local slice_prefix slice_empty_prefix slice_joiner slice_suffix is_prompt_empty=1
 
   # section "a" header
-  if [ $vi_mode = $vi_mode_cmd ]; then
-    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
-  else
+  if [ $vi_mode = $vi_mode_ins ]; then
     slice_prefix="${alt_a_bg}${sep}${alt_a_fg}${alt_a_bg}${space}" slice_suffix="$space${alt_a_sep_fg}" slice_joiner="${alt_a_fg}${alt_a_bg}${alt_sep}${space}" slice_empty_prefix="${alt_a_fg}${alt_a_bg}${space}"
+  else
+    slice_prefix="${a_bg}${sep}${a_fg}${a_bg}${space}" slice_suffix="$space${a_sep_fg}" slice_joiner="${a_fg}${a_bg}${alt_sep}${space}" slice_empty_prefix="${a_fg}${a_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "a" slices
   __promptline_wrapper "$(if [[ -n ${ZSH_VERSION-} ]]; then print %n; elif [[ -n ${FISH_VERSION-} ]]; then printf "%s" "$USER"; else printf "%s" \\u; fi )" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "b" header
-  if [ $vi_mode = $vi_mode_cmd ]; then
-    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
-  else
+  if [ $vi_mode = $vi_mode_ins ]; then
     slice_prefix="${alt_b_bg}${sep}${alt_b_fg}${alt_b_bg}${space}" slice_suffix="$space${alt_b_sep_fg}" slice_joiner="${alt_b_fg}${alt_b_bg}${alt_sep}${space}" slice_empty_prefix="${alt_b_fg}${alt_b_bg}${space}"
+  else
+    slice_prefix="${b_bg}${sep}${b_fg}${b_bg}${space}" slice_suffix="$space${b_sep_fg}" slice_joiner="${b_fg}${b_bg}${alt_sep}${space}" slice_empty_prefix="${b_fg}${b_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "b" slices
   __promptline_wrapper "$(__promptline_cwd)" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "c" header
-  if [ $vi_mode = $vi_mode_cmd ]; then
-    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
-  else
+  if [ $vi_mode = $vi_mode_ins ]; then
     slice_prefix="${alt_c_bg}${sep}${alt_c_fg}${alt_c_bg}${space}" slice_suffix="$space${alt_c_sep_fg}" slice_joiner="${alt_c_fg}${alt_c_bg}${alt_sep}${space}" slice_empty_prefix="${alt_c_fg}${alt_c_bg}${space}"
+  else
+    slice_prefix="${c_bg}${sep}${c_fg}${c_bg}${space}" slice_suffix="$space${c_sep_fg}" slice_joiner="${c_fg}${c_bg}${alt_sep}${space}" slice_empty_prefix="${c_fg}${c_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "c" slices
@@ -134,10 +134,10 @@ function __promptline_left_prompt {
   __promptline_wrapper "$(__promptline_git_status)" "$slice_prefix" "$slice_suffix" && { slice_prefix="$slice_joiner"; is_prompt_empty=0; }
 
   # section "warn" header
-  if [ $vi_mode = $vi_mode_cmd ]; then
-    slice_prefix="${warn_bg}${sep}${warn_fg}${warn_bg}${space}" slice_suffix="$space${warn_sep_fg}" slice_joiner="${warn_fg}${warn_bg}${alt_sep}${space}" slice_empty_prefix="${warn_fg}${warn_bg}${space}"
-  else
+  if [ $vi_mode = $vi_mode_ins ]; then
     slice_prefix="${alt_warn_bg}${sep}${alt_warn_fg}${alt_warn_bg}${space}" slice_suffix="$space${alt_warn_sep_fg}" slice_joiner="${alt_warn_fg}${alt_warn_bg}${alt_sep}${space}" slice_empty_prefix="${alt_warn_fg}${alt_warn_bg}${space}"
+  else
+    slice_prefix="${warn_bg}${sep}${warn_fg}${warn_bg}${space}" slice_suffix="$space${warn_sep_fg}" slice_joiner="${warn_fg}${warn_bg}${alt_sep}${space}" slice_empty_prefix="${warn_fg}${warn_bg}${space}"
   fi
   [ $is_prompt_empty -eq 1 ] && slice_prefix="$slice_empty_prefix"
   # section "warn" slices

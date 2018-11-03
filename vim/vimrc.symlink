@@ -47,6 +47,8 @@ set softtabstop=2
 set splitbelow
 set splitright
 set tabstop=2
+set timeoutlen=1000
+set ttimeoutlen=0
 set wildmenu
 
 nn <leader>ev :edit ~/.vimrc<cr>
