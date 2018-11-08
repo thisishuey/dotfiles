@@ -32,6 +32,7 @@ endif
 
 let mapleader = " "
 
+set cursorline
 set expandtab
 set hidden
 set ignorecase
@@ -50,6 +51,7 @@ set splitright
 set tabstop=2
 set timeoutlen=1000
 set ttimeoutlen=0
+set wildignore+=*/node_modules/*
 set wildmenu
 
 nn <leader>ev :edit ~/.vimrc<cr>
@@ -74,10 +76,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "base16"
 
+hi ALEError cterm = none ctermfg = 00 ctermbg = 01
+hi ALEWarning cterm = none ctermfg = 00 ctermbg = 03
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
   \ "*": [ "prettier" ]
 \ }
+let g:ale_sign_column_always = 1
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 
@@ -101,7 +106,8 @@ let g:promptline_preset = {
 \ }
 let g:promptline_theme = "airline"
 
-hi xmlTag ctermfg=07
-hi xmlTagName ctermfg=01
+hi MatchParen cterm = bold ctermfg = 15 ctermbg = 19
+hi xmlTag ctermfg = 07
+hi xmlTagName ctermfg = 01
 hi link xmlEndTag xmlTag
 
