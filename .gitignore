@@ -57,11 +57,5 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
-
-# netrw history
-.netrwhist
-
-# vim-plug plugins
-plugged
+# ctags
+tags

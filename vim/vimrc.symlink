@@ -11,6 +11,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'edkolev/tmuxline.vim'
+  Plug 'ludovicchabant/vim-gutentags'
   Plug 'mattn/emmet-vim'
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
@@ -56,15 +57,10 @@ set wildmenu
 
 nn <leader>ev :edit ~/.vimrc<cr>
 nn <leader>sv :source ~/.vimrc<cr>
-nn <silent> <ESC><ESC> :let @/ = ""<cr>
+nn <silent> <esc><esc> :let @/ = ""<cr>
 
 noremap <silent> k gk
 noremap <silent> j gj
-
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
 
 :augroup relativenumbertoggle
 : autocmd!
@@ -72,10 +68,12 @@ noremap <Right> <Nop>
 : autocmd InsertEnter * set norelativenumber
 :augroup END
 
+" airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "base16"
 
+" ale
 hi ALEError cterm = none ctermfg = 00 ctermbg = 01
 hi ALEWarning cterm = none ctermfg = 00 ctermbg = 03
 let g:ale_fix_on_save = 1
@@ -86,6 +84,7 @@ let g:ale_sign_column_always = 1
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 
+" emmet
 let g:user_emmet_leader_key = "<Tab>"
 let g:user_emmet_prev_key = "<Tab>p"
 let g:user_emmet_settings = {
@@ -94,6 +93,11 @@ let g:user_emmet_settings = {
   \ }
 \ }
 
+" netrw
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+
+" promptline
 let g:promptline_preset = {
   \ "a": [ promptline#slices#user() ],
   \ "b": [ promptline#slices#cwd() ],

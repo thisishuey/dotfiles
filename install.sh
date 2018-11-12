@@ -23,6 +23,16 @@
   git clone https://github.com/zsh-users/antigen.git ~/.config/antigen
   git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
+  # install ctags
+  git clone https://github.com/universal-ctags/ctags.git
+  cd ctags
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+  cd ..
+  rm -rf ctags
+
   # install mosh
   git clone https://github.com/mobile-shell/mosh.git
   cd mosh
