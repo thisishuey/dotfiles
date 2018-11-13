@@ -54,7 +54,8 @@ set splitright
 set tabstop=2
 set timeoutlen=1000
 set ttimeoutlen=0
-set wildignore+=*/node_modules/*
+set wildignore+=.git/**,*/.git/*
+set wildignore+=node_modules/**,*/node_modules/*
 set wildmenu
 
 nn <leader>ev :edit ~/.vimrc<cr>
@@ -107,6 +108,9 @@ let g:promptline_preset = {
   \ }
 \ }
 let g:promptline_theme = "airline"
+
+" netrw
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
 
 hi MatchParen cterm = bold ctermfg = 15 ctermbg = 19
 hi xmlTag ctermfg = 07
