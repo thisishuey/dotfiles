@@ -95,9 +95,6 @@ let g:user_emmet_settings = {
   \ }
 \ }
 
-" netrw
-let g:netrw_liststyle = 3
-
 " promptline
 let g:promptline_preset = {
   \ "a": [ promptline#slices#user() ],
