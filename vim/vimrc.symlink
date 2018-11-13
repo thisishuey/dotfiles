@@ -45,7 +45,6 @@ set noswapfile
 set nowrap
 set number
 set relativenumber
-set path+=**
 set shiftwidth=2
 set shortmess=I
 set softtabstop=2
@@ -54,8 +53,7 @@ set splitright
 set tabstop=2
 set timeoutlen=1000
 set ttimeoutlen=0
-set wildignore+=.git/**,*/.git/*
-set wildignore+=node_modules/**,*/node_modules/*
+set wildignore+=node_modules/*
 set wildmenu
 
 nn <leader>ev :edit ~/.vimrc<cr>
