@@ -59,9 +59,10 @@ set wildmenu
 
 imap ;; <esc>
 
-nn <leader>ev :edit ~/.vimrc<cr>
-nn <leader>sv :source ~/.vimrc<cr>
-nn <silent> <esc><esc> :let @/ = ""<cr>
+nnoremap <leader>ev :edit ~/.vimrc<cr>
+nnoremap <leader>sv :source ~/.vimrc<cr>
+nnoremap <silent> <cr> :nohlsearch<cr>
+nnoremap <silent> <C-L> :nohlsearch<cr><C-L>
 
 noremap <silent> k gk
 noremap <silent> j gj
