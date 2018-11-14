@@ -57,6 +57,8 @@ set ttimeoutlen=0
 set wildignore+=node_modules/*
 set wildmenu
 
+imap ;; <esc>
+
 nn <leader>ev :edit ~/.vimrc<cr>
 nn <leader>sv :source ~/.vimrc<cr>
 nn <silent> <esc><esc> :let @/ = ""<cr>
