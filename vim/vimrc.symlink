@@ -57,12 +57,9 @@ set ttimeoutlen=0
 set wildignore+=node_modules/*
 set wildmenu
 
-imap ;; <esc>
-
 nnoremap <leader>ev :edit ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
 nnoremap <silent> <cr> :nohlsearch<cr>
-nnoremap <silent> <C-L> :nohlsearch<cr><C-L>
 
 noremap <silent> k gk
 noremap <silent> j gj

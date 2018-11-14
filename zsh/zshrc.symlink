@@ -40,9 +40,9 @@ export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
 export VISUAL="$EDITOR"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=red"
 
-bindkey -v
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+bindkey -v
 
 [ -n "$PS1" ] && \
   [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
