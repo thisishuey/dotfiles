@@ -37,12 +37,12 @@ if filereadable(expand("~/.vimrc_background"))
   source ~/.vimrc_background
 endif
 
-let mapleader = " "
-
 set cursorline
 set expandtab
 set hidden
 set ignorecase
+set list
+set listchars=tab:→\ ,nbsp:␣,trail:•,precedes:«,extends:»
 set nojoinspaces
 set noshowmode
 set noswapfile
@@ -61,10 +61,10 @@ set ttimeoutlen=0
 set wildignore+=node_modules/*
 set wildmenu
 
-nnoremap <leader>ev :edit ~/.vimrc<cr>
-nnoremap <leader>sv :source ~/.vimrc<cr>
+nnoremap <space>ev :edit ~/.vimrc<cr>
+nnoremap <space>sv :source ~/.vimrc<cr>
 nnoremap <silent> <cr> :nohlsearch<cr>
-nnoremap <silent> <leader>bd :%bd<cr><C-o>:bd#<cr>
+nnoremap <silent> <space>bd :%bd<cr><C-o>:bd#<cr>
 
 noremap <silent> k gk
 noremap <silent> j gj
@@ -118,7 +118,7 @@ let g:promptline_theme = "airline"
 
 " sessions
 let g:session_autoload = "no"
-let g:session_default_name = "-- Default --"
+let g:session_default_name = "** Default **"
 let g:session_default_overwrite = 1
 let g:session_directory = "~/.vim/session"
 let g:session_extension = ""
