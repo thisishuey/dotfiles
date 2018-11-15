@@ -27,6 +27,8 @@ call plug#begin("~/.vim/plugged")
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'w0rp/ale'
+  Plug 'xolox/vim-misc'
+  Plug 'xolox/vim-session'
 
 call plug#end()
 
@@ -113,23 +115,31 @@ let g:promptline_preset = {
 \ }
 let g:promptline_theme = "airline"
 
+" sessions
+let g:session_autoload = "no"
+let g:session_default_name = "-- Default --"
+let g:session_default_overwrite = 1
+let g:session_directory = "~/.vim/session"
+let g:session_extension = ""
+let g:session_autosave = "yes"
+
 " startify
 let g:startify_change_to_vcs_root = 1
 let g:startify_custom_header = [
-  \ '   -------------------------------------------------------   ',
-  \ '    C A R P E   T E L A M   -   S E I Z E   T H E   W E B    ', 
-  \ '   -------------------------------------------------------   ',
-  \ '     __   __  __   __  _______  __   __            ____      ', 
-  \ '    |  | |  ||  | |  ||       ||  | |  |    ____  |_   |     ', 
-  \ '    |  |_|  ||  | |  ||    ___||  |_|  |   |____|   |   |    ', 
-  \ '    |       ||  |_|  ||   |___ |       |    ____    |   |    ', 
-  \ '    |       ||       ||    ___||_     _|   |____|   |   |    ', 
-  \ '    |   _   ||       ||   |___   |   |             _|   |    ', 
-  \ '    |__| |__||_______||_______|  |___|            |____|     ', 
-  \ '                                                             ',
-  \ '   -------------------------------------------------------   ',
-  \ '         Jeff "Huey" Huelsbeck - huey@carpetelam.com         ', 
-  \ '   -------------------------------------------------------   ',
+  \ '   -----------------------------------------------------------   ',
+  \ '      C A R P E   T E L A M   -   S E I Z E   T H E   W E B      ', 
+  \ '   -----------------------------------------------------------   ',
+  \ '       __   __  __   __  _______  __   __            ____        ', 
+  \ '      |  | |  ||  | |  ||       ||  | |  |    ____  |_   |       ', 
+  \ '      |  |_|  ||  | |  ||    ___||  |_|  |   |____|   |   |      ', 
+  \ '      |       ||  |_|  ||   |___ |       |    ____    |   |      ', 
+  \ '      |       ||       ||    ___||_     _|   |____|   |   |      ', 
+  \ '      |   _   ||       ||   |___   |   |             _|   |      ', 
+  \ '      |__| |__||_______||_______|  |___|            |____|       ', 
+  \ '                                                                 ',
+  \ '   -----------------------------------------------------------   ',
+  \ '           Jeff "Huey" Huelsbeck - huey@carpetelam.com           ', 
+  \ '   -----------------------------------------------------------   ',
 \ ]
 let g:startify_lists = [
   \ { "type": "sessions", "header": [ "   Sessions" ] },
@@ -137,7 +147,6 @@ let g:startify_lists = [
   \ { "type": "bookmarks", "header": [ "   Bookmarks" ] },
   \ { "type": "commands", "header": [ "   Commands" ] }
 \ ]
-let g:startify_session_persistence = 1
 
 hi MatchParen cterm = bold ctermfg = 15 ctermbg = 19
 hi xmlTag ctermfg = 07
