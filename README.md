@@ -23,11 +23,20 @@ git remote add origin clone-url
 git push --set-upstream origin master
 ```
 
-## Current Theme: Base 16 Chalk
+## Font
+
+- For my current airline/promptline/tmuxline setup a powerline patched font is needed to display special characters.
+- I've used the Nerd Fonts complete patched version `hack` for blink and it can be found here:
+    - https://raw.githubusercontent.com/thisishuey/dotfiles/master/terminal/fonts
+- The TTF version can be found here:
+    - https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
+
+## Current Theme: Base 16 Tomorrow Night
 
 - Blink Base16 Themes: https://github.com/niklaas/base16-blink
 - Some Base16 Themes are available for Airline: https://github.com/vim-airline/vim-airline-themes/tree/master/autoload/airline/themes
 - Base16 Plugin for Vim: https://github.com/chriskempson/base16-vim
+- Base16 Plugin for shell: https://github.com/chriskempson/base16-shell
 - More info on Base16: http://chriskempson.com/projects/base16/
 
 ## Intro to Vim
