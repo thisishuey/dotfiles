@@ -8,6 +8,7 @@ endif
 
 call plug#begin("~/.vim/plugged")
 
+  Plug 'airblade/vim-gitgutter'
   Plug 'benmills/vimux'
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
@@ -32,11 +33,6 @@ call plug#begin("~/.vim/plugged")
 
 call plug#end()
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace = 256
-  source ~/.vimrc_background
-endif
-
 set cursorline
 set expandtab
 set hidden
@@ -52,6 +48,7 @@ set path=$PWD/**
 set relativenumber
 set shiftwidth=2
 set shortmess=I
+set signcolumn=yes
 set softtabstop=2
 set splitbelow
 set splitright
@@ -93,7 +90,6 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {
   \ "*": [ "prettier" ]
 \ }
-let g:ale_sign_column_always = 1
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 
