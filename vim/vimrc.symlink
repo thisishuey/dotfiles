@@ -14,12 +14,14 @@ call plug#begin("~/.vim/plugged")
   Plug 'edkolev/tmuxline.vim'
   Plug 'ludovicchabant/vim-gutentags'
   Plug 'mattn/emmet-vim'
+  Plug 'mhinz/vim-startify'
   Plug 'mxw/vim-jsx'
   Plug 'pangloss/vim-javascript'
   Plug 'thisishuey/promptline.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-vinegar'
   Plug 'vim-airline/vim-airline'
@@ -95,6 +97,9 @@ let g:user_emmet_settings = {
   \ }
 \ }
 
+" netrw
+let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+
 " promptline
 let g:promptline_preset = {
   \ "a": [ promptline#slices#user() ],
@@ -108,8 +113,31 @@ let g:promptline_preset = {
 \ }
 let g:promptline_theme = "airline"
 
-" netrw
-let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
+" startify
+let g:startify_change_to_vcs_root = 1
+let g:startify_custom_header = [
+  \ '   -------------------------------------------------------   ',
+  \ '    C A R P E   T E L A M   -   S E I Z E   T H E   W E B    ', 
+  \ '   -------------------------------------------------------   ',
+  \ '     __   __  __   __  _______  __   __            ____      ', 
+  \ '    |  | |  ||  | |  ||       ||  | |  |    ____  |_   |     ', 
+  \ '    |  |_|  ||  | |  ||    ___||  |_|  |   |____|   |   |    ', 
+  \ '    |       ||  |_|  ||   |___ |       |    ____    |   |    ', 
+  \ '    |       ||       ||    ___||_     _|   |____|   |   |    ', 
+  \ '    |   _   ||       ||   |___   |   |             _|   |    ', 
+  \ '    |__| |__||_______||_______|  |___|            |____|     ', 
+  \ '                                                             ',
+  \ '   -------------------------------------------------------   ',
+  \ '         Jeff "Huey" Huelsbeck - huey@carpetelam.com         ', 
+  \ '   -------------------------------------------------------   ',
+\ ]
+let g:startify_lists = [
+  \ { "type": "sessions", "header": [ "   Sessions" ] },
+  \ { "type": "files", "header": [ "   Recent Files" ] },
+  \ { "type": "bookmarks", "header": [ "   Bookmarks" ] },
+  \ { "type": "commands", "header": [ "   Commands" ] }
+\ ]
+let g:startify_session_persistence = 1
 
 hi MatchParen cterm = bold ctermfg = 15 ctermbg = 19
 hi xmlTag ctermfg = 07
