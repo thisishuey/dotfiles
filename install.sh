@@ -11,6 +11,9 @@
   sudo yum update -y
   sudo yum install -y automake fuse gcc-c++ git ncurses-devel nodejs openssl-devel protobuf-devel tmux yarn zlib-devel zsh
 
+  # pip update
+  sudo pip install --upgrade pip
+
   # enable zsh & clean up bash
   sudo chsh -s /bin/zsh $(whoami)
   rm -rf .bash*
@@ -52,6 +55,9 @@
 
   # install prettier
   yarn global add prettier
+
+  # install tmuxp
+  pip install --user tmuxp
 
   # ssh-keygen
   instanceId=$(curl --silent http://169.254.169.254/latest/meta-data/instance-id)
