@@ -56,9 +56,6 @@
   # install prettier
   yarn global add prettier
 
-  # install tmuxp
-  pip install --user tmuxp
-
   # ssh-keygen
   instanceId=$(curl --silent http://169.254.169.254/latest/meta-data/instance-id)
   ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N "" -C "$instanceId"
@@ -68,7 +65,6 @@
 
   # symlinks
   ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
-  ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
   ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
   ln -s ~/.dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim
   ln -s ~/.dotfiles/vim/xml.vim.symlink ~/.vim/after/syntax/xml.vim

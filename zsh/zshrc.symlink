@@ -77,6 +77,12 @@ load-nvmrc
 if [ -d "$(yarn global bin)" ]; then
   PATH="$PATH:$(yarn global bin)"
 fi
+if [ -d "$HOME/.local/bin" ]; then
+  PATH="$HOME/.local/bin:$PATH"
+fi
+if [ -d "/usr/local/sbin" ]; then
+  PATH="/usr/local/sbin:$PATH"
+fi
 
 source ~/.dotfiles/zsh/promptline-vi-mode.sh
 source ~/.dotfiles/zsh/promptline.sh
