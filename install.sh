@@ -2,7 +2,7 @@
 
 {
 
-  COMMAND_PREFIX=sudo
+  COMMAND_PREFIX= sudo
 
   # initialize node & yarn repos
   curl --silent --location https://rpm.nodesource.com/setup_8.x | $COMMAND_PREFIX bash -
@@ -44,7 +44,7 @@
   cd ~/libevent-2.1.8-stable
   ./configure && make
   $COMMAND_PREFIX make install
-  ln -s /usr/local/lib/libevent-2.1.so.6 /usrl/lib64/libevent-2.1.so.6
+  ln -s /usr/local/lib/libevent-2.1.so.6 /usr/lib64/libevent-2.1.so.6
   cd ~
   rm libevent-2.1.8-stable.tar.gz && rm -rf libevent-2.1.8-stable
 
