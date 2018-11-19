@@ -2,7 +2,8 @@
 
 {
 
-  if ["$(whoami)" != "root" ]; then
+  COMMAND_PREFIX=""
+  if [ $(whoami) != "root" ]; then
     COMMAND_PREFIX=sudo
   fi
 
