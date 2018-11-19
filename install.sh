@@ -1,21 +1,23 @@
 #!/usr/bin/env bash
 
 {
-  
+
+  COMMAND_PREFIX = sudo
+
   # initialize node & yarn repos
-  curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
-  curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
-  sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
+  curl --silent --location https://rpm.nodesource.com/setup_8.x | $COMMAND_PREFIX bash -
+  curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | $COMMAND_PREFIX tee /etc/yum.repos.d/yarn.repo
+  $COMMAND_PREFIX rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
 
   # yum update & install
-  sudo yum update -y
-  sudo yum install -y automake fuse gcc-c++ git ncurses-devel nodejs openssl-devel protobuf-devel tmux yarn zlib-devel zsh
+  $COMMAND_PREFIX yum update -y
+  $COMMAND_PREFIX yum install -y automake fuse gcc-c++ git ncurses-devel nodejs openssl-devel protobuf-devel yarn zlib-devel zsh
 
   # pip update
-  sudo pip install --upgrade pip
+  $COMMAND_PREFIX pip install --upgrade pip
 
   # enable zsh & clean up bash
-  sudo chsh -s /bin/zsh $(whoami)
+  $COMMAND_PREFIX chsh -s /bin/zsh $(whoami)
   rm -rf .bash*
 
   # create support directories
@@ -28,27 +30,45 @@
 
   # install ctags
   git clone https://github.com/universal-ctags/ctags.git
-  cd ctags
+  cd ~/ctags
   ./autogen.sh
   ./configure
   make
-  sudo make install
-  cd ..
+  $COMMAND_PREFIX make install
+  cd ~
   rm -rf ctags
 
+  # install libevent
+  wget https://github.com/libevent/libevent/releases/download/release-2.1.8-stable/libevent-2.1.8-stable.tar.gz
+  tar xzvf libevent-2.1.8-stable.tar.gz
+  cd ~/libevent-2.1.8-stable
+  ./configure && make
+  $COMMAND_PREFIX make install
+  ln -s /usr/local/lib/libevent-2.1.so.6 /usrl/lib64/libevent-2.1.so.6
+  cd ~
+  rm libevent-2.1.8-stable.tar.gz && rm -rf libevent-2.1.8-stable
+
   # install mosh
-  git clone https://github.com/mobile-shell/mosh.git
-  cd mosh
-  ./autogen.sh
-  ./configure
-  make
-  sudo make install
-  cd ..
-  rm -rf mosh
+  wget https://github.com/mobile-shell/mosh/releases/download/mosh-1.3.2/mosh-1.3.2.tar.gz
+  tar xzvf mosh-1.3.2.tar.gz
+  cd ~/mosh-1.3.2
+  ./configure && make
+  $COMMAND_PREFIX make install
+  cd ~
+  rm mosh-1.3.2.tar.gz && rm -rf mosh-1.3.2
+
+  # install tmux
+  wget https://github.com/tmux/tmux/releases/download/2.8/tmux-2.8.tar.gz
+  tar xzvf tmux-2.8.tar.gz
+  cd ~/tmux-2.8
+  ./configure && make
+  $COMMAND_PREFIX make install
+  cd ~
+  rm tmux-2.8.tar.gz && rm -rf tmux-2.8
 
   # install neovim
-  sudo wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim
-  sudo chmod +x /usr/bin/nvim
+  $COMMAND_PREFIX wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim
+  $COMMAND_PREFIX chmod +x /usr/bin/nvim
 
   # install nvm
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
