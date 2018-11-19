@@ -2,7 +2,7 @@
 
 {
 
-  COMMAND_PREFIX = sudo
+  COMMAND_PREFIX=sudo
 
   # initialize node & yarn repos
   curl --silent --location https://rpm.nodesource.com/setup_8.x | $COMMAND_PREFIX bash -
