@@ -347,6 +347,19 @@ Mappings:
 Resources:
   EC2Instance:
     Type: "AWS::EC2::Instance"
+    Metadata:
+      AWS::CloudFormation::Init:
+        configSets:
+          deafult:
+            - "install"
+        install:
+          commands:
+            0010-run-dotfiles-install:
+              command: "wget -qO- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install.sh | bash"
+              env: { "HOME": "/home/ec2-user" }
+            0020-change-permissions:
+              command: "chown -R ec2-user:ec2-user ~"
+              env: { "HOME": "/home/ec2-user" }
     Properties:
       InstanceType:
         Ref: "InstanceType"
@@ -362,6 +375,11 @@ Resources:
               - "AWSInstanceType2Arch"
               - Ref: "InstanceType"
               - "Arch"
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash -xe
+          yum install -y aws-cfn-bootstrap
+          /opt/aws/bin/cfn-init -v --stack ${AWS::StackName} --resource EC2Instance --region ${AWS::Region}
   InstanceSecurityGroup:
     Type: "AWS::EC2::SecurityGroup"
     Properties:
