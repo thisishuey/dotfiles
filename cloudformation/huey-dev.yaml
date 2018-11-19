@@ -354,11 +354,8 @@ Resources:
             - "install"
         install:
           commands:
-            0010-run-dotfiles-install:
-              command: "wget -qO- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install.sh | bash"
-              env: { "HOME": "/home/ec2-user" }
-            0020-change-permissions:
-              command: "chown -R ec2-user:ec2-user ~"
+            0010-example-command:
+              command: "echo $HOME"
               env: { "HOME": "/home/ec2-user" }
     Properties:
       InstanceType:

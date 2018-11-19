@@ -2,25 +2,20 @@
 
 {
 
-  COMMAND_PREFIX=""
-  if [ $(whoami) != "root" ]; then
-    COMMAND_PREFIX=sudo
-  fi
-
   # initialize node & yarn repos
-  curl --silent --location https://rpm.nodesource.com/setup_8.x | $COMMAND_PREFIX bash -
-  curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | $COMMAND_PREFIX tee /etc/yum.repos.d/yarn.repo
-  $COMMAND_PREFIX rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
+  curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+  curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+  sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
 
   # yum update & install
-  $COMMAND_PREFIX yum update -y
-  $COMMAND_PREFIX yum install -y automake fuse gcc-c++ git ncurses-devel nodejs openssl-devel protobuf-devel yarn zlib-devel zsh
+  sudo yum update -y
+  sudo yum install -y automake fuse gcc-c++ git ncurses-devel nodejs openssl-devel protobuf-devel yarn zlib-devel zsh
 
   # pip update
-  $COMMAND_PREFIX pip install --upgrade pip
+  sudo pip install --upgrade pip
 
   # enable zsh & clean up bash
-  $COMMAND_PREFIX chsh -s /bin/zsh $(whoami)
+  sudo chsh -s /bin/zsh $(whoami)
   rm -rf .bash*
 
   # create support directories
@@ -37,7 +32,7 @@
   ./autogen.sh
   ./configure
   make
-  $COMMAND_PREFIX make install
+  sudo make install
   cd ~
   rm -rf ctags
 
@@ -46,8 +41,8 @@
   tar xzvf libevent-2.1.8-stable.tar.gz
   cd ~/libevent-2.1.8-stable
   ./configure && make
-  $COMMAND_PREFIX make install
-  $COMMAND_PREFIX ln -s /usr/local/lib/libevent-2.1.so.6 /usr/lib64/libevent-2.1.so.6
+  sudo make install
+  sudo ln -s /usr/local/lib/libevent-2.1.so.6 /usr/lib64/libevent-2.1.so.6
   cd ~
   rm libevent-2.1.8-stable.tar.gz && rm -rf libevent-2.1.8-stable
 
@@ -56,7 +51,7 @@
   tar xzvf mosh-1.3.2.tar.gz
   cd ~/mosh-1.3.2
   ./configure && make
-  $COMMAND_PREFIX make install
+  sudo make install
   cd ~
   rm mosh-1.3.2.tar.gz && rm -rf mosh-1.3.2
 
@@ -65,13 +60,13 @@
   tar xzvf tmux-2.8.tar.gz
   cd ~/tmux-2.8
   ./configure && make
-  $COMMAND_PREFIX make install
+  sudo make install
   cd ~
   rm tmux-2.8.tar.gz && rm -rf tmux-2.8
 
   # install neovim
-  $COMMAND_PREFIX wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim
-  $COMMAND_PREFIX chmod +x /usr/bin/nvim
+  sudo wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim
+  sudo chmod +x /usr/bin/nvim
 
   # install nvm
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
