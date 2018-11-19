@@ -44,7 +44,7 @@
   cd ~/libevent-2.1.8-stable
   ./configure && make
   $COMMAND_PREFIX make install
-  ln -s /usr/local/lib/libevent-2.1.so.6 /usr/lib64/libevent-2.1.so.6
+  $COMMAND_PREFIX ln -s /usr/local/lib/libevent-2.1.so.6 /usr/lib64/libevent-2.1.so.6
   cd ~
   rm libevent-2.1.8-stable.tar.gz && rm -rf libevent-2.1.8-stable
 
