@@ -2,7 +2,9 @@
 
 {
 
-  COMMAND_PREFIX=sudo
+  if ["$(whoami)" != "root" ]; then
+    COMMAND_PREFIX=sudo
+  fi
 
   # initialize node & yarn repos
   curl --silent --location https://rpm.nodesource.com/setup_8.x | $COMMAND_PREFIX bash -
