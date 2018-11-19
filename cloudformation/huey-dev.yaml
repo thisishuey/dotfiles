@@ -350,7 +350,7 @@ Resources:
     Metadata:
       AWS::CloudFormation::Init:
         configSets:
-          deafult:
+          default:
             - "install"
         install:
           commands:
