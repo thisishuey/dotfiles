@@ -19,8 +19,8 @@
   rm -rf .bash*
 
   # configure docker
-  service start docker
-  usermod -a -G docker ec2-user
+  sudo service start docker
+  sudo usermod -a -G docker ec2-user
 
   # create support directories
   mkdir -p ~/.config/nvim
