@@ -19,17 +19,13 @@ USER huey
 RUN \
   git clone https://github.com/zsh-users/antigen.git ~/.config/antigen && \
   git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell && \
-  sudo wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim && \
-  sudo chmod +x /usr/bin/nvim && \
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash && \
   yarn global add prettier && \
   git clone https://github.com/thisishuey/dotfiles.git ~/.dotfiles && \
-  mkdir -p ~/.config/nvim && \
   mkdir -p ~/.vim/after/syntax && \
   ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig && \
   ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf && \
   ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc && \
-  ln -s ~/.dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim && \
   ln -s ~/.dotfiles/vim/xml.vim.symlink ~/.vim/after/syntax/xml.vim && \
   ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 
