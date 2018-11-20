@@ -11,6 +11,10 @@ RUN \
   echo "huey ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/huey && \
   chmod 0440 /etc/sudoers.d/huey
 
+COPY dockder-entrypoint.sh /bin/docker-entrypoint.sh
+RUN chmod +x /bin/docker-entrypoint.sh
+ENTRYPOINT ["/bin/docker-entrypoint.sh"]
+
 COPY xterm-256color-italic.terminfo /root
 RUN tic /root/xterm-256color-italic.terminfo
 ENV TERM=xterm-256color-italic
