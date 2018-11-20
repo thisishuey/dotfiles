@@ -3,16 +3,19 @@
 {
 
   # initialize node & yarn repos
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+  curl --silent --location https://rpm.nodesource.com/setup_8.x | sudo bash -
+  curl --silent --location https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+  sudo rpm --import https://dl.yarnpkg.com/rpm/pubkey.gpg
 
-  # apt update & install
-  apt update -y
-  apt install -y automake curl fuse gcc-c++ git ncurses-devel openssl-devel protobuf-devel wget zlib-devel zsh
-  apt install --no-install-recommends yarn
+  # yum update & install
+  sudo yum update -y
+  sudo yum install -y automake fuse gcc-c++ git ncurses-devel nodejs openssl-devel protobuf-devel yarn zlib-devel zsh
+
+  # pip update
+  sudo pip install --upgrade pip
 
   # enable zsh & clean up bash
-  chsh -s /bin/zsh
+  sudo chsh -s /bin/zsh $(whoami)
   rm -rf .bash*
 
   # create support directories
@@ -29,7 +32,7 @@
   ./autogen.sh
   ./configure
   make
-  make install
+  sudo make install
   cd ~
   rm -rf ctags
 
@@ -38,8 +41,8 @@
   tar xzvf libevent-2.1.8-stable.tar.gz
   cd ~/libevent-2.1.8-stable
   ./configure && make
-  make install
-  ln -s /usr/local/lib/libevent-2.1.so.6 /usr/lib64/libevent-2.1.so.6
+  sudo make install
+  sudo ln -s /usr/local/lib/libevent-2.1.so.6 /usr/lib64/libevent-2.1.so.6
   cd ~
   rm libevent-2.1.8-stable.tar.gz && rm -rf libevent-2.1.8-stable
 
@@ -48,7 +51,7 @@
   tar xzvf mosh-1.3.2.tar.gz
   cd ~/mosh-1.3.2
   ./configure && make
-  make install
+  sudo make install
   cd ~
   rm mosh-1.3.2.tar.gz && rm -rf mosh-1.3.2
 
@@ -57,13 +60,13 @@
   tar xzvf tmux-2.8.tar.gz
   cd ~/tmux-2.8
   ./configure && make
-  make install
+  sudo make install
   cd ~
   rm tmux-2.8.tar.gz && rm -rf tmux-2.8
 
   # install neovim
-  wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim
-  chmod +x /usr/bin/nvim
+  sudo wget --quiet https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage --output-document /usr/bin/nvim
+  sudo chmod +x /usr/bin/nvim
 
   # install nvm
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
@@ -88,4 +91,3 @@
   ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 
 }
-
