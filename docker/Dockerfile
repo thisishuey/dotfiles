@@ -20,8 +20,7 @@ RUN \
   ln -s /root/.dotfiles/vim/xml.vim.symlink /root/.vim/after/syntax/xml.vim && \
   ln -s /root/.dotfiles/zsh/zshrc.symlink /root/.zshrc
 
-COPY xterm-256color-italic.terminfo /root
-RUN tic /root/xterm-256color-italic.terminfo
+RUN tic ~/.dotfile/zsh/xterm-256color-italic.terminfo
 ENV TERM=xterm-256color-italic
 
 ENV LANG=en_US.UTF-8
