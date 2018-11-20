@@ -28,10 +28,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-alias vim="nvim"
-
 export BASE16_SHELL="$HOME/.config/base16-shell/"
-export EDITOR="nvim"
+export EDITOR="vim"
 export KEYTIMEOUT=1
 export LANG=en_US.UTF-8
 export LC_TYPE=en_US.UTF-8
