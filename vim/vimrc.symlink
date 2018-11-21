@@ -127,11 +127,6 @@ let g:promptline_preset = {
 \ }
 let g:promptline_theme = "airline"
 
-" sensible
-if &t_Co == 8 && $TERM !~# '^linux'
-  set t_Co=16
-endif
-
 " sessions
 let g:session_autoload = "no"
 let g:session_default_name = "** Default **"
@@ -165,8 +160,10 @@ let g:startify_lists = [
   \ { "type": "commands", "header": [ "   Commands" ] }
 \ ]
 
-hi MatchParen cterm = bold ctermfg = 15 ctermbg = 19
-hi xmlTag ctermfg = 07
-hi xmlTagName ctermfg = 01
-hi link xmlEndTag xmlTag
+runtime! plugin/sensible.vim
+
+highlight MatchParen cterm = bold ctermfg = 15 ctermbg = 19
+highlight xmlTag ctermfg = 07
+highlight xmlTagName ctermfg = 01
+highlight link xmlEndTag xmlTag
 
