@@ -87,6 +87,8 @@ noremap <silent> j gj
 : autocmd InsertEnter * set nolist
 :augroup END
 
+:autocmd Syntax * highlight MatchParen cterm = bold ctermfg = 15 ctermbg = 19
+
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
