@@ -33,8 +33,6 @@ call plug#begin("~/.vim/plugged")
 
 call plug#end()
 
-runtim! plugin/sensible.vim
-
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace = 256
   source ~/.vimrc_background
@@ -161,9 +159,4 @@ let g:startify_lists = [
   \ { "type": "bookmarks", "header": [ "   Bookmarks" ] },
   \ { "type": "commands", "header": [ "   Commands" ] }
 \ ]
-
-highlight MatchParen cterm = bold ctermfg = 15 ctermbg = 19
-highlight xmlTag ctermfg = 07
-highlight xmlTagName ctermfg = 01
-highlight link xmlEndTag xmlTag
 
