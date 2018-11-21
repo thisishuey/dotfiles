@@ -13,7 +13,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'edkolev/tmuxline.vim'
-  Plug 'ludovicchabant/vim-gutentags'
+  " Plug 'ludovicchabant/vim-gutentags'
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-startify'
   Plug 'mxw/vim-jsx'
@@ -126,6 +126,11 @@ let g:promptline_preset = {
   \ }
 \ }
 let g:promptline_theme = "airline"
+
+" sensible
+if &t_Co == 8 && $TERM !~# '^linux'
+  set t_Co=16
+endif
 
 " sessions
 let g:session_autoload = "no"
