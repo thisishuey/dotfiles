@@ -1,42 +1,7 @@
-" dotfiles-symlink=~/.vimrc
-
-if empty(glob("~/.vim/autoload/plug.vim"))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin("~/.vim/plugged")
-
-  Plug 'airblade/vim-gitgutter'
-  Plug 'benmills/vimux'
-  Plug 'chriskempson/base16-vim'
-  Plug 'christoomey/vim-tmux-navigator'
-  Plug 'edkolev/tmuxline.vim'
-  Plug 'ludovicchabant/vim-gutentags'
-  Plug 'mattn/emmet-vim'
-  Plug 'mhinz/vim-startify'
-  Plug 'mxw/vim-jsx'
-  Plug 'pangloss/vim-javascript'
-  Plug 'thisishuey/promptline.vim'
-  Plug 'tpope/vim-commentary'
-  Plug 'tpope/vim-fugitive'
-  Plug 'tpope/vim-repeat'
-  Plug 'tpope/vim-sensible'
-  Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-vinegar'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'w0rp/ale'
-  Plug 'xolox/vim-misc'
-  Plug 'xolox/vim-session'
-
-call plug#end()
-
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace = 256
-  source ~/.vimrc_background
-endif
+" iVim specific configs
+execute pathogen#infect()
+colorscheme base16-tomorrow-night
+let base16colorspace = 256
 
 let mapleader = " "
 
@@ -55,7 +20,6 @@ set path=$PWD/**
 set relativenumber
 set shiftwidth=2
 set shortmess=I
-set signcolumn=yes
 set softtabstop=2
 set splitbelow
 set splitright
@@ -68,9 +32,7 @@ set wildmenu
 nnoremap <leader>ev :edit ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
 nnoremap <silent> <cr> :nohlsearch<cr>
-nnoremap <silent> <leader>bd :bd<cr>
-nnoremap <silent> <leader>bda :%bd<cr>
-nnoremap <silent> <leader>bdo :%bd<cr><C-o>:bd#<cr>
+nnoremap <silent> <leader>bd :%bd<cr><C-o>:bd#<cr>
 
 noremap <silent> k gk
 noremap <silent> j gj
@@ -92,16 +54,6 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "base16"
 
-" ale
-hi ALEError cterm = none ctermfg = 00 ctermbg = 01
-hi ALEWarning cterm = none ctermfg = 00 ctermbg = 03
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-  \ "*": [ "prettier" ]
-\ }
-let g:ale_sign_error = "●"
-let g:ale_sign_warning = "●"
-
 " emmet
 let g:user_emmet_leader_key = "<Tab>"
 let g:user_emmet_prev_key = "<Tab>p"
@@ -113,19 +65,6 @@ let g:user_emmet_settings = {
 
 " netrw
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-
-" promptline
-let g:promptline_preset = {
-  \ "a": [ promptline#slices#user() ],
-  \ "b": [ promptline#slices#cwd() ],
-  \ "c": [ promptline#slices#vcs_branch(), promptline#slices#git_status() ],
-  \ "warn": [ promptline#slices#last_exit_code() ],
-  \ "options": {
-    \ "left_sections": [ "a", "b", "c", "warn" ],
-    \ "right_sections": []
-  \ }
-\ }
-let g:promptline_theme = "airline"
 
 " sessions
 let g:session_autoload = "no"
