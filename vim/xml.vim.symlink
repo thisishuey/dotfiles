@@ -1,7 +1,7 @@
 " dotfiles-symlink=~/.vim/after/syntax/xml.vim
 
-highlight xmlTag ctermfg = 07
-highlight xmlTagName ctermfg = 01
-highlight link xmlEndTag xmlTag
+highlight link xmlTag htmlTag
+highlight link xmlTagName Statement
+highlight link xmlEndTag htmlEndTag
 
 syn region xmlTagName matchgroup=xmlTag start=+</+ end=+>+

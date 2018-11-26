@@ -1,7 +1,5 @@
 # dotfiles-symlink=~/.tmux.conf
 
-source ~/.dotfiles/tmux/tmuxline.conf
-
 set -g allow-rename off
 set -g base-index 1
 set -s escape-time 0
