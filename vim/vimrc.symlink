@@ -68,8 +68,8 @@ set wildmenu
 nnoremap <leader>ev :edit ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
 nnoremap <silent> <cr> :nohlsearch<cr>
-nnoremap <silent> <leader>bd :bd<cr>
 nnoremap <silent> <leader>bda :%bd<cr>
+nnoremap <silent> <leader>bdc :bd<cr>
 nnoremap <silent> <leader>bdo :%bd<cr><C-o>:bd#<cr>
 
 noremap <silent> k gk
