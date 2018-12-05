@@ -11,7 +11,7 @@ RUN \
   git clone https://github.com/zsh-users/antigen.git /root/.config/antigen && \
   git clone https://github.com/chriskempson/base16-shell.git /root/.config/base16-shell && \
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash && \
-  git clone https://github.com/universal-ctags.git && \
+  git clone https://github.com/universal-ctags/ctags.git && \
   cd ~/ctags && \
   ./autogen.sh && \
   ./configure && \
