@@ -22,10 +22,12 @@ RUN \
   rm -rf /root/ctags && \
   yarn global add prettier && \
   git clone https://github.com/thisishuey/dotfiles.git /root/.dotfiles && \
+  mkdir -p /root/.config/nvim && \
   mkdir -p /root/.vim/after/syntax && \
   ln -s /root/.dotfiles/git/gitconfig.symlink /root/.gitconfig && \
   ln -s /root/.dotfiles/tmux/tmux.conf.symlink /root/.tmux.conf && \
   ln -s /root/.dotfiles/vim/vimrc.symlink /root/.vimrc && \
+  ln -s /root/dotfiles/vim/init.vim.symlink /root/.config/nvim/init.vim && \
   ln -s /root/.dotfiles/vim/xml.vim.symlink /root/.vim/after/syntax/xml.vim && \
   ln -s /root/.dotfiles/zsh/zshrc.symlink /root/.zshrc
 
