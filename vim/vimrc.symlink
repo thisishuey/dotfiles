@@ -123,9 +123,6 @@ let g:user_emmet_settings = {
   \ }
 \ }
 
-" netrw
-" let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+'
-
 " promptline
 let g:promptline_preset = {
   \ "a": [ promptline#slices#user() ],
