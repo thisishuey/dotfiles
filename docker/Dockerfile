@@ -9,6 +9,9 @@ RUN \
   apt-get update && \
   apt-get install -y autoconf git locales neovim pkg-config sudo tmux vim wget yarn zsh && \
   chsh -s /bin/zsh && \
+  update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60 && \
+  update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60 && \
+  update-alternatives --install /user/bin/editor editor /usr/bin/nvim 60 && \
   git clone https://github.com/zsh-users/antigen.git /root/.config/antigen && \
   git clone https://github.com/chriskempson/base16-shell.git /root/.config/base16-shell && \
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash && \
