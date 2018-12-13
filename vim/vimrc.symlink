@@ -64,7 +64,16 @@ set timeoutlen=1000
 set ttimeoutlen=0
 set wildignore+=node_modules/*
 set wildmenu
+set wildmode=list:longest,list:full
 
+inoremap <Tab> <C-r>=CleverTab()<cr>
+inoremap <S-Tab> <C-n>
+
+map <leader>vir :VimuxInspectRunner<cr>
+map <leader>vlc :VimuxRunLastCommand<cr>
+map <leader>vpc :VimuxPromptCommand<cr>
+
+nnoremap <leader><leader> <C-^>
 nnoremap <leader>ev :edit ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
 nnoremap <silent> <cr> :nohlsearch<cr>
@@ -77,6 +86,15 @@ noremap <silent> j gj
 
 nmap <leader>sp :call <sid>SynStack()<cr>
 nmap <leader>ht :so $VIMRUNTIME/syntax/hitest.vim<cr>
+
+function! CleverTab()
+  let col = col(".") - 1
+  if !col || getline(".")[col - 1] !~ "\k"
+    return "\<Tab>"
+  else
+    return "\<C-p>"
+  endif
+endfunction
 
 function! <sid>SynStack()
   if !exists("*synstack")
@@ -115,8 +133,6 @@ let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
 
 " emmet
-let g:user_emmet_leader_key = "<Tab>"
-let g:user_emmet_prev_key = "<Tab>p"
 let g:user_emmet_settings = {
   \ "javascript.jsx": {
     \ "extends": "jsx"
