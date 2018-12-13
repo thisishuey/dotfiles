@@ -32,7 +32,6 @@ RUN \
   ln -s /root/.dotfiles/vim/vimrc.symlink /root/.vimrc && \
   ln -s /root/.dotfiles/vim/init.vim.symlink /root/.config/nvim/init.vim && \
   ln -s /root/.dotfiles/vim/xml.vim.symlink /root/.vim/after/syntax/xml.vim && \
-  ln -s /root/.dotfiles/zsh/inputrc.symlink /root/.inputrc
   ln -s /root/.dotfiles/zsh/zshrc.symlink /root/.zshrc
 
 COPY xterm-256color-italic.terminfo /root/.config

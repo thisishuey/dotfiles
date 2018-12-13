@@ -92,7 +92,6 @@
   ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
   ln -s ~/.dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim
   ln -s ~/.dotfiles/vim/xml.vim.symlink ~/.vim/after/syntax/xml.vim
-  ln -s ~/.dotfiles/zsh/inputrc.symlink ~/.inputrc
   ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 
 }
