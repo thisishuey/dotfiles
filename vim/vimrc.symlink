@@ -45,6 +45,7 @@ set cursorline
 set expandtab
 set hidden
 set ignorecase
+set linebreak
 set list
 set listchars=tab:→\ ,nbsp:␣,trail:•,precedes:«,extends:»
 set nojoinspaces
