@@ -23,7 +23,6 @@ RUN \
   sudo make install && \
   cd /root && \
   rm -rf /root/ctags && \
-  yarn global add prettier && \
   git clone https://github.com/thisishuey/dotfiles.git /root/.dotfiles && \
   mkdir -p /root/.config/nvim && \
   mkdir -p /root/.vim/after/syntax && \
