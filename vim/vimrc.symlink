@@ -14,6 +14,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'edkolev/tmuxline.vim'
   Plug 'ludovicchabant/vim-gutentags'
+  Plug 'majutsushi/tagbar'
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-startify'
   Plug 'mxw/vim-jsx'
@@ -78,6 +79,7 @@ map <leader>vpc :VimuxPromptCommand<cr>
 nnoremap <leader><leader> <C-^>
 nnoremap <leader>ev :edit ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
+nnoremap <leader>tb :TagbarToggle<cr>
 nnoremap <silent> <cr> :nohlsearch<cr>
 nnoremap <silent> <leader>bda :%bd<cr>
 nnoremap <silent> <leader>bdc :bd<cr>
