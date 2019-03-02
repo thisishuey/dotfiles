@@ -71,6 +71,8 @@ set wildmode=list:longest,list:full
 
 inoremap <Tab> <C-r>=CleverTab()<cr>
 inoremap <S-Tab> <C-n>
+inoremap jk <Esc>
+inoremap kj <Esc>
 
 map <leader>vir :VimuxInspectRunner<cr>
 map <leader>vlc :VimuxRunLastCommand<cr>
