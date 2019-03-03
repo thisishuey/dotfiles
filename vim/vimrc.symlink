@@ -71,6 +71,7 @@ set wildmode=list:longest,list:full
 
 inoremap <Tab> <C-r>=CleverTab()<cr>
 inoremap <S-Tab> <C-n>
+inoremap jj <Esc>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
