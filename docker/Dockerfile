@@ -8,6 +8,7 @@ RUN \
   add-apt-repository ppa:neovim-ppa/stable && \
   apt-get update && \
   apt-get install -y autoconf git locales neovim pkg-config sudo tmux vim wget yarn zsh && \
+  apt-get install -y libasound2 libgconf-2-4 libgtk2.0-0 libnotify-dev libnss3 libxss1 xvfb && \
   chsh -s /bin/zsh && \
   update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60 && \
   update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60 && \
