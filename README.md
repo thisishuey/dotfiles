@@ -36,7 +36,7 @@ git push --set-upstream origin master
 - The TTF version can be found here:
   - https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
 
-## Current Theme: Base 16 Tomorrow Night
+## Current Theme: Base16 Default Dark
 
 - Blink Base16 Themes: https://github.com/niklaas/base16-blink
 - Some Base16 Themes are available for Airline: https://github.com/vim-airline/vim-airline-themes/tree/master/autoload/airline/themes
