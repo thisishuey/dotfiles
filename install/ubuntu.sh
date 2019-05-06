@@ -3,23 +3,24 @@
 {
 
   # apt-get update & install
-  apt-get update
-  apt-get install -y build-essentials curl software-properties-common
+  sudo apt-get update
+  sudo apt-get install -y build-essentials software-properties-common
 
   # initialize yarn
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-  echo "dev http://dl.yarnpkg.com/debian stable main" | tee /etc/apt/sources.list.d/yarn.list
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  echo "dev http://dl.yarnpkg.com/debian stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 
   # add mosh repo
-  add-apt-repository ppa:keithw/mosh
+  sudo add-apt-repository ppa:keithw/mosh
 
   # add neovim repo
-  add-apt-repository ppa:neovim-ppa/stable
+  sudo add-apt-repository ppa:neovim-ppa/stable
 
   # apt-get update & install
-  apt-get update
-  apt-get install -y autoconf docker git locales mosh neovim pkg-config sudo tmux vim wget yarn zsh
-  apt-get install -y libasound2 libgconf-2-4 libgtk2.0-0 libnotify-dev libnss3 libxss1 xvfb
+  sudo apt-get update
+  # stock: git sudo tmux vim
+  sudo apt-get install -y autoconf locales mosh neovim pkg-config yarn zsh
+  sudo apt-get install -y libasound2 libgconf-2-4 libgtk2.0-0 libnotify-dev libnss3 libxss1 xvfb
 
   # configure neovim
   update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
