@@ -5,7 +5,7 @@ source ~/.config/antigen/antigen.zsh
 antigen use oh-my-zsh
 
 antigen bundle hchbaw/opp.zsh
-antigen bundle zsh-users/zsh-autosuggestions
+# antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # history-substring-search must come after syntax-highlighting
