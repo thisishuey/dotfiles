@@ -25,7 +25,7 @@ curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ub
 **NOTE:** Once you've created a new ssh key and added it to github, to switch the origin url you can run:
 
 ```
-git remote set-url <clone-url>
+git remote set-url origin <clone-url>
 ```
 
 
