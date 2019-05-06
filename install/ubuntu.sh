@@ -18,6 +18,7 @@
   sudo apt-get install -y mosh
   
   # install docker
+  sudo apt-get update
   sudo apt-get install -y docker.io
   sudo usermod -a -G docker $USER
 
