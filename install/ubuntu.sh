@@ -16,6 +16,9 @@
   sudo add-apt-repository ppa:keithw/mosh
   sudo apt-get update
   sudo apt-get install -y mosh
+  
+  # install docker
+  sudo snap install docker
 
   # install neovim
   sudo add-apt-repository ppa:neovim-ppa/stable
