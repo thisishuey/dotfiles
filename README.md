@@ -9,10 +9,10 @@ See https://dotfiles.github.io for more information.
 ## Installation
 
 **Amazon**
-`wget -qO- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/amazon.sh | bash`
+`curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/amazon.sh | bash`
 
 **Ubuntu**
-`wget -qO- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ubuntu.sh | bash`
+`curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ubuntu.sh | bash`
 
 **NOTE:** The first time you startup neovim you will need to install the plugins with:
 `:PlugInstall`
