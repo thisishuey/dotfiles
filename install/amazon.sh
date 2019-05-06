@@ -29,6 +29,7 @@
   # install config apps
   git clone https://github.com/zsh-users/antigen.git ~/.config/antigen
   git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+  ln -s ~/.config/base16-shell/scripts/base16-default-dark.sh ~/.base16_theme
 
   # install ctags
   git clone https://github.com/universal-ctags/ctags.git
