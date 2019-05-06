@@ -193,3 +193,16 @@ let g:startify_lists = [
   \ { "type": "commands", "header": [ "   Commands" ] }
 \ ]
 let g:startify_session_dir = '~/.vim/session'
+
+" tmuxline
+let g:tmuxline_preset = {
+  \'a': '#S',
+  \'win': '#I:#W#F',
+  \'cwin': '#I:#W#F',
+  \'x': '%Y-%m-%d',
+  \'y': ['%H:%M'],
+  \'z': 'huey@carpetelam.com',
+  \'options': {
+    \'status-justify': 'left'
+  \}
+\}
