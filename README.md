@@ -44,8 +44,9 @@ git push --set-upstream origin master
   - https://raw.githubusercontent.com/thisishuey/dotfiles/master/terminal/fonts
 - The TTF version can be found here:
   - https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
+- I've actually switched to Blink's built in Fira Code with ligature and patched font support
 
-## Current Theme: Base16 Default Dark
+## Current Theme: base16_default-dark
 
 - Blink Base16 Themes: https://github.com/niklaas/base16-blink
 - Some Base16 Themes are available for Airline: https://github.com/vim-airline/vim-airline-themes/tree/master/autoload/airline/themes
