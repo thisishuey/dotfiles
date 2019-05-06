@@ -10,15 +10,24 @@ See https://dotfiles.github.io for more information.
 
 **Amazon**
 
-```curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/amazon.sh | bash```
+```
+curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/amazon.sh | bash
+```
+
 
 **Ubuntu**
 
-```curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ubuntu.sh | bash```
+```
+curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ubuntu.sh | bash
+```
+
 
 **NOTE:** Once you've created a new ssh key and added it to github, to switch the origin url you can run:
 
-```git remote set-url <clone-url>```
+```
+git remote set-url <clone-url>
+```
+
 
 **NOTE:** When you fork another project you can use the following command to rename origin to upstream and set your fork as the new origin:
 
