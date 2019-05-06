@@ -18,7 +18,8 @@
   sudo apt-get install -y mosh
   
   # install docker
-  sudo snap install docker
+  sudo apt-get install -y docker.io
+  sudo usermod -a -G docker $USER
 
   # install neovim
   sudo add-apt-repository ppa:neovim-ppa/stable
