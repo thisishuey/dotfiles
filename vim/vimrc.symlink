@@ -200,7 +200,7 @@ let g:tmuxline_preset = {
   \'win': '#I:#W#F',
   \'cwin': '#I:#W#F',
   \'x': '%Y-%m-%d',
-  \'y': ['%H:%M'],
+  \'y': '%H:%M',
   \'z': 'huey@carpetelam.com',
   \'options': {
     \'status-justify': 'left'
