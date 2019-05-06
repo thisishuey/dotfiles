@@ -8,15 +8,20 @@ See https://dotfiles.github.io for more information.
 
 ## Installation
 
-`wget -qO- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install.sh | bash`
+**Amazon**
+`wget -qO- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/amazon.sh | bash`
 
-NOTE: The first time you startup neovim you will need to install the plugins with:
+**Ubuntu**
+`wget -qO- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ubuntu.sh | bash`
+
+**NOTE:** The first time you startup neovim you will need to install the plugins with:
 `:PlugInstall`
 
-NOTE: Once you've created a new ssh key and added it to github, to switch the origin url you can run:
+**NOTE:** Once you've created a new ssh key and added it to github, to switch the origin url you can run:
 `git remote set-url origin git@github.com:thisishuey/dotfiles.git`
 
-NOTE: When you fork another project you can use the following command to rename origin to upstream and set your fork as the new origin:
+**NOTE:** When you fork another project you can use the following command to rename origin to upstream and set your fork as the new origin:
+
 ```
 git remote rename origin upstream
 git remote add origin clone-url
@@ -27,9 +32,9 @@ git push --set-upstream origin master
 
 - For my current airline/promptline/tmuxline setup a powerline patched font is needed to display special characters.
 - I've used the Nerd Fonts complete patched version `hack` for blink and it can be found here:
-    - https://raw.githubusercontent.com/thisishuey/dotfiles/master/terminal/fonts
+  - https://raw.githubusercontent.com/thisishuey/dotfiles/master/terminal/fonts
 - The TTF version can be found here:
-    - https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
+  - https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Hack
 
 ## Current Theme: Base 16 Tomorrow Night
 
