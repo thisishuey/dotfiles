@@ -36,7 +36,9 @@
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 
   # install ctags
-  sudo apt-get install -y ctags
+  sudo add-apt-repository ppa:hnakamur/universal-ctags
+  sudo apt-get update
+  sudo apt-get install -y universal-ctags
 
   # install base16-shell
   git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell

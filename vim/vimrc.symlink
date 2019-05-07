@@ -14,7 +14,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'edkolev/tmuxline.vim'
-  " Plug 'ludovicchabant/vim-gutentags'
+  Plug 'ludovicchabant/vim-gutentags'
   Plug 'majutsushi/tagbar'
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-startify'
