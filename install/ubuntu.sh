@@ -50,9 +50,6 @@
   # install antigen
   git clone https://github.com/zsh-users/antigen.git ~/.config/antigen
 
-  # install prettier
-  yarn global add prettier
-
   # ssh-keygen
   instanceId=$(curl --silent http://169.254.169.254/latest/meta-data/instance-id)
   ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N "" -C "$instanceId"

@@ -51,6 +51,7 @@ After initial install you should be able to use mosh to access the site (be sure
 sudo apt update
 sudo apt upgrade
 base16_default-dark
+yarn global add prettier
 ```
 
 
