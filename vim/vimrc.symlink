@@ -91,6 +91,7 @@ map <leader>vir :VimuxInspectRunner<cr>
 map <leader>vlc :VimuxRunLastCommand<cr>
 map <leader>vpc :VimuxPromptCommand<cr>
 
+nnoremap <C-p> :Files<cr>
 nnoremap <leader><leader> <C-^>
 nnoremap <leader>ev :edit ~/.vimrc<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
