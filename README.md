@@ -14,13 +14,11 @@ See https://dotfiles.github.io for more information.
 curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/amazon.sh | bash
 ```
 
-
 **Ubuntu**
 
 ```
 curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ubuntu.sh | bash
 ```
-
 
 **NOTE:** Once you've created a new ssh key and added it to github, to switch the origin url you can run:
 
@@ -28,13 +26,19 @@ curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ub
 git remote set-url origin <clone-url>
 ```
 
-
 **NOTE:** When you fork another project you can use the following command to rename origin to upstream and set your fork as the new origin:
 
 ```
 git remote rename origin upstream
 git remote add origin <clone-url>
 git push --set-upstream origin master
+```
+
+**NOTE:** After opening Neovim for the first time you will need to install the dependencies for phpactor by running the following:
+
+```
+cd <path to phpactor>
+docker run -rm -it -v $(pwd):/app composer install
 ```
 
 ## Font
