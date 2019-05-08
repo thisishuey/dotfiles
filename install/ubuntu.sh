@@ -27,7 +27,7 @@
   sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 
   # install php
-  sudo apt install php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php
+  sudo apt install -y php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php
 
   # install composer
   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
