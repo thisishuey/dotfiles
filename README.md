@@ -22,7 +22,11 @@ curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/am
 
 ### SSH Key for Github
 
-A new SSH key was generated in the install scripts, run the following command and copy and paste the key into https://github.com/settings/ssh/new, don't worry about title, it will be automatically set to the instance name of your server with info from the SSH Key.
+A new SSH key was generated in the install scripts, run the following command and copy and paste the key into https://github.com/settings/ssh/new, don't worry about title, it will be automatically set to the instance name of your server with info from the SSH Key:
+
+```
+cat ~/.ssh/id_rsa.pub
+```
 
 Once you've added the key to github, to switch the origin url you can run:
 
