@@ -54,14 +54,6 @@ base16_default-dark
 yarn global add prettier
 ```
 
-
-**NOTE:** After opening Neovim for the first time you will need to install the dependencies for phpactor by running the following:
-
-```
-cd ~/.vim/plugged/phpactor
-docker run --rm -it -v $(pwd):/app composer install
-```
-
 ## Font
 
 - For my current airline/promptline/tmuxline setup a powerline patched font is needed to display special characters.

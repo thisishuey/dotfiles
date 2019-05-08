@@ -23,7 +23,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'mxw/vim-jsx'
   Plug 'ncm2/ncm2'
   Plug 'pangloss/vim-javascript'
-  Plug 'phpactor/phpactor'
+  Plug 'phpactor/phpactor', { 'do': 'composer install', 'for': 'php' }
   Plug 'phpactor/ncm2-phpactor'
   Plug 'reasonml-editor/vim-reason-plus'
   Plug 'roxma/nvim-yarp'
