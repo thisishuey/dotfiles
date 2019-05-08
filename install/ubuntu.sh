@@ -26,6 +26,9 @@
   sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
   sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 
+  # install PHP
+  sudo apt install -y php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php unzip
+
   # install zsh
   sudo apt-get install -y zsh
   sudo chsh -s /bin/zsh $(whoami)
