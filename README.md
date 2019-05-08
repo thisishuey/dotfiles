@@ -8,7 +8,7 @@ See https://dotfiles.github.io for more information.
 
 ## Installation
 
-**Amazon**
+**Amazon** (deprecated)
 
 ```
 curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/amazon.sh | bash
@@ -34,11 +34,20 @@ git remote add origin <clone-url>
 git push --set-upstream origin master
 ```
 
+**NOTE:** After initial install you should be able to use mosh to access the site (be sure that you've opened UDP ports 60000-61000 for mosh access). Once you've connected via mosh you can run the following to finish setup:
+
+```
+sudo apt update
+sudo apt upgrade
+base16_default-dark
+```
+
+
 **NOTE:** After opening Neovim for the first time you will need to install the dependencies for phpactor by running the following:
 
 ```
-cd <path to phpactor>
-docker run -rm -it -v $(pwd):/app composer install
+cd ~/.vim/plugged/phpactor
+docker run --rm -it -v $(pwd):/app composer install
 ```
 
 ## Font
