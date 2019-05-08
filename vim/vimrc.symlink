@@ -21,8 +21,12 @@ call plug#begin("~/.vim/plugged")
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-startify'
   Plug 'mxw/vim-jsx'
+  Plug 'ncm2/ncm2'
   Plug 'pangloss/vim-javascript'
+  Plug 'phpactor/phpactor', { 'do': 'composer install', 'for': 'php' }
+  Plug 'phpactor/ncm2-phpactor'
   Plug 'reasonml-editor/vim-reason-plus'
+  Plug 'roxma/nvim-yarp'
   Plug 'scrooloose/nerdtree'
   Plug 'thisishuey/promptline.vim'
   Plug 'tpope/vim-commentary'
@@ -46,6 +50,7 @@ endif
 
 let mapleader = " "
 
+set completeopt=menuone,noinsert,noselect
 set cursorline
 set expandtab
 set hidden
@@ -150,6 +155,9 @@ let g:user_emmet_settings = {
     \ "extends": "jsx"
   \ }
 \ }
+
+" ncm2
+autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " promptline
 let g:promptline_preset = {
