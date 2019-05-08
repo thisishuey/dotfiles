@@ -8,19 +8,23 @@ See https://dotfiles.github.io for more information.
 
 ## Installation
 
-**Amazon** (deprecated)
-
-```
-curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/amazon.sh | bash
-```
-
 **Ubuntu**
 
 ```
 curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ubuntu.sh | bash
 ```
 
-**NOTE:** Once you've created a new ssh key and added it to github, to switch the origin url you can run:
+**Amazon** (deprecated)
+
+```
+curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/amazon.sh | bash
+```
+
+### SSH Key for Github
+
+A new SSH key was generated in the install scripts, run the following command and copy and paste the key into https://github.com/settings/ssh/new, don't worry about title, it will be automatically set to the instance name of your server with info from the SSH Key.
+
+Once you've added the key to github, to switch the origin url you can run:
 
 ```
 git remote set-url origin <clone-url>
@@ -34,7 +38,9 @@ git remote add origin <clone-url>
 git push --set-upstream origin master
 ```
 
-**NOTE:** After initial install you should be able to use mosh to access the site (be sure that you've opened UDP ports 60000-61000 for mosh access). Once you've connected via mosh you can run the following to finish setup:
+### Mosh & finishing setup
+
+After initial install you should be able to use mosh to access the site (be sure that you've opened UDP ports 60000-61000 for mosh access). Once you've connected via mosh you can run the following to finish setup:
 
 ```
 sudo apt update
