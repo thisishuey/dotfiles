@@ -28,9 +28,10 @@ A new SSH key was generated in the install scripts, run the following command an
 cat ~/.ssh/id_rsa.pub
 ```
 
-Once you've added the key to github, to switch the origin url you can run:
+Once you've added the key to github, to switch the origin url for the dotfiles repo you can run:
 
 ```
+cd ~/.dotfiles
 git remote set-url origin <clone-url>
 ```
 
