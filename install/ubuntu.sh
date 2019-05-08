@@ -26,6 +26,17 @@
   sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
   sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 
+  # install php
+  sudo apt install php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php
+
+  # install composer
+  php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+  php -r "if (hash_file('sha384', 'composer-setup.php') === '48e3236262b34d30969dca3c37281b3b4bbe3221bda826ac6a9a62d6444cdb0dcd0615698a5cbe587c3f0fe57a54d8f5') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+  php composer-setup.php
+  php -r "unlink('composer-setup.php');"
+  sudo mv composer.phar /usr/local/bin/composer
+  sudo chmod +x /usr/local/bin/composer
+
   # install zsh
   sudo apt-get install -y zsh
   sudo chsh -s /bin/zsh $(whoami)
