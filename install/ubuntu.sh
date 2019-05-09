@@ -34,6 +34,7 @@
 
   # install PHP
   sudo apt install -y php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php unzip
+  sudo systemctl disable apache2
 
   # install composer
   php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
