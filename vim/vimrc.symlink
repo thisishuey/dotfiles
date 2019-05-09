@@ -20,6 +20,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'majutsushi/tagbar'
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-startify'
+  Plug 'moll/vim-bbye'
   Plug 'mxw/vim-jsx'
   Plug 'ncm2/ncm2'
   Plug 'pangloss/vim-javascript'
