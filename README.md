@@ -54,6 +54,17 @@ base16_default-dark
 yarn global add prettier
 ```
 
+### Docker Login
+
+Once installation is complete you will want to log into docker but to do so securely you will need to use the `pass` keystore installed with docker. Use the following commands to generate a new key and log into docker using the keystore:
+
+```
+sed -i '0,/{/s/{/{\n\t"credsStore": "pass",/' ~/.docker/config.json
+gpg2 --gen-key
+pass init "<name-used-in-gpg2>"
+docker login
+```
+
 ## Font
 
 - For my current airline/promptline/tmuxline setup a powerline patched font is needed to display special characters.
