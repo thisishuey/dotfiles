@@ -59,9 +59,9 @@ yarn global add prettier
 Once installation is complete you will want to log into docker but to do so securely you will need to use the `pass` keystore installed with docker. Use the following commands to generate a new key and log into docker using the keystore:
 
 ```
-sed -i '0,/{/s/{/{\n\t"credsStore": "pass",/' ~/.docker/config.json
 gpg2 --gen-key
 pass init "<name-used-in-gpg2>"
+ed -i '0,/{/s/{/{\n\t"credsStore": "pass",/' ~/.docker/config.json
 docker login
 ```
 
