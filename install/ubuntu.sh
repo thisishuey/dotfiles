@@ -23,6 +23,8 @@
   sudo usermod -a -G docker $USER
   sudo curl -L https://github.com/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
   sudo chmod +x /usr/local/bin/docker-compose
+  curl https://github.com/docker/docker-credential-helpers/releases/download/v0.6.2/docker-credential-pass-v0.6.2-amd64.tar.gz | sudo tar -xz -C /usr/local/bin/docker-credential-pass
+  sudo chmod +x /usr/local/bin/docker-credential-pass
 
   # install neovim
   sudo add-apt-repository ppa:neovim-ppa/stable
