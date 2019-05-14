@@ -52,6 +52,8 @@ sudo apt update
 sudo apt upgrade
 base16_default-dark
 yarn global add prettier
+sudo systemctl disable apache2
+sudo reboot
 ```
 
 ### Docker Login
