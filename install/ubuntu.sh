@@ -19,12 +19,23 @@
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   sudo apt-get update
-  sudo apt-get install -y docker-ce docker-ce-cli containerd.io pass
+  sudo apt-get install -y docker-ce docker-ce-cli containerd.io
   sudo usermod -a -G docker $USER
-  sudo curl -L https://github.com/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-  sudo chmod +x /usr/local/bin/docker-compose
+
+  # install docker-credential-pass
+  sudo apt-get update
+  sudo apt-get install -y pass
   curl -L https://github.com/docker/docker-credential-helpers/releases/download/v0.6.2/docker-credential-pass-v0.6.2-amd64.tar.gz | sudo tar -xz -C /usr/local/bin/
   sudo chmod +x /usr/local/bin/docker-credential-pass
+
+  # install docker-compose
+  sudo curl -L https://github.com/docker/compose/releases/download/1.24.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+  sudo chmod +x /usr/local/bin/docker-compose
+
+  # install docker-machine
+  base=https://github.com/docker/machine/releases/download/v0.16.0 &&
+  curl -L $base/docker-machine-$(uname -s)-$(uname -m) >/tmp/docker-machine &&
+  sudo install /tmp/docker-machine /usr/local/bin/docker-machine
 
   # install neovim
   sudo add-apt-repository ppa:neovim-ppa/stable
