@@ -32,7 +32,7 @@ Once you've added the key to github, to switch the origin url for the dotfiles r
 
 ```
 cd ~/.dotfiles
-git remote set-url origin <clone-url>
+git remote set-url origin git@github.com:thisishuey/dotfiles.git
 ```
 
 **NOTE:** When you fork another project you can use the following command to rename origin to upstream and set your fork as the new origin:
