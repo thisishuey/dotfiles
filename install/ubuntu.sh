@@ -97,6 +97,7 @@
   ln -s ~/.dotfiles/node/nvmrc.symlink ~/.nvmrc
   ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
   ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
+  ln -s ~/.dotfiles/vim/vimrc_background.symlink ~/.vimrc_background
   ln -s ~/.dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim
   ln -s ~/.dotfiles/vim/xml.vim.symlink ~/.vim/after/syntax/xml.vim
   ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
