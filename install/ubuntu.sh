@@ -46,7 +46,8 @@
   sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 
   # install PHP
-  sudo apt install -y php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php unzip
+  sudo apt-get update
+  sudo apt-get install -y php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php unzip
   sudo systemctl disable apache2
 
   # install composer
@@ -58,6 +59,7 @@
   sudo chmod +x /usr/local/bin/composer
 
   # install zsh
+  sudo apt-get update
   sudo apt-get install -y zsh
   sudo chsh -s /bin/zsh $(whoami)
   zsh
@@ -65,6 +67,9 @@
 
   # install nvm
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  sudo apt-get update
+  sudo apt-get install -y libcap2-bin
+  sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
 
   # install ctags
   sudo apt-get update
