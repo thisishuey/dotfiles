@@ -101,6 +101,7 @@
   ln -s ~/.dotfiles/git/gitconfig.symlink ~/.gitconfig
   ln -s ~/.dotfiles/node/nvmrc.symlink ~/.nvmrc
   ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
+  ln -s ~/.dotfiles/vim/editorconfig ~/.editorconfig
   ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
   ln -s ~/.dotfiles/vim/vimrc_background.symlink ~/.vimrc_background
   ln -s ~/.dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim
