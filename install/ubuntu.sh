@@ -60,7 +60,7 @@
 
   # install zsh
   sudo apt-get update
-  sudo apt-get install -y zsh
+  sudo apt-get install -y zsh silversearcher-ag
   sudo chsh -s /bin/zsh $(whoami)
   zsh
   rm -rf ~/.bash*
