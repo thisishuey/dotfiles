@@ -2,16 +2,21 @@
 
 {
 
-  # install yarn
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  # update apt
   sudo apt-get update
-  sudo apt-get install -y --no-install-recommends yarn
+  sudo apt-get upgrade
 
   # install mosh
   sudo add-apt-repository ppa:keithw/mosh
   sudo apt-get update
   sudo apt-get install -y mosh
+
+  # install zsh
+  sudo apt-get update
+  sudo apt-get install -y zsh silversearcher-ag
+  sudo chsh -s /bin/zsh $(whoami)
+  zsh
+  rm -rf ~/.bash*
 
   # install docker
   sudo apt-get update
@@ -45,6 +50,34 @@
   sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
   sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
 
+  # install ctags
+  sudo apt-get update
+  sudo apt-get install -y pkg-config
+  git clone https://github.com/universal-ctags/ctags.git
+  cd ctags
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+  cd ..
+  rm -rf ctags
+
+  # install base16-shell
+  git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+  ln -s ~/.config/base16-shell/scripts/base16-default-dark.sh ~/.base16_theme
+
+  # install nvm
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  sudo apt-get update
+  sudo apt-get install -y libcap2-bin
+  sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
+
+  # install yarn
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  sudo apt-get update
+  sudo apt-get install -y --no-install-recommends yarn
+
   # install PHP
   sudo apt-get update
   sudo apt-get install -y php php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php unzip
@@ -62,35 +95,6 @@
   gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
   curl -sSL https://get.rvm.io | bash -s stable --ruby
   gem install rails haml
-
-  # install zsh
-  sudo apt-get update
-  sudo apt-get install -y zsh silversearcher-ag
-  sudo chsh -s /bin/zsh $(whoami)
-  zsh
-  rm -rf ~/.bash*
-
-  # install nvm
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-  sudo apt-get update
-  sudo apt-get install -y libcap2-bin
-  sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
-
-  # install ctags
-  sudo apt-get update
-  sudo apt-get install -y pkg-config
-  git clone https://github.com/universal-ctags/ctags.git
-  cd ctags
-  ./autogen.sh
-  ./configure
-  make
-  sudo make install
-  cd ..
-  rm -rf ctags
-
-  # install base16-shell
-  git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-  ln -s ~/.config/base16-shell/scripts/base16-default-dark.sh ~/.base16_theme
 
   # install antigen
   git clone https://github.com/zsh-users/antigen.git ~/.config/antigen
@@ -112,5 +116,9 @@
   ln -s ~/.dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim
   ln -s ~/.dotfiles/vim/xml.vim.symlink ~/.vim/after/syntax/xml.vim
   ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
+  
+  # reboot
+  sudo systemctl disable apache2
+  sudo reboot
 
 }
