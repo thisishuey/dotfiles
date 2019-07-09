@@ -39,6 +39,9 @@ export NVM_DIR="$HOME/.nvm"
 export SSH_KEY_PATH="$HOME/.ssh/id_rsa"
 export VISUAL="$EDITOR"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=red"
+export LDFLAGS="-L/home/linuxbrew/.linuxbrew/opt/isl@0.18/lib"
+export CPPFLAGS="-I/home/linuxbrew/.linuxbrew/opt/isl@0.18/include"
+export PKG_CONFIG_PATH="/home/linuxbrew/.linuxbrew/opt/isl@0.18/lib/pkgconfig"
 
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
@@ -93,3 +96,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Linuxbrew configs
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
+# ASDF configs
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib=$HOME/perl5)"
