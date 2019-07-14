@@ -4,7 +4,7 @@
 
   # install linuxbrew
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-  sudo apt-get install build-essential
+  sudo apt-get install -y build-essential
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
   # install dev tools
