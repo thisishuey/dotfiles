@@ -8,16 +8,15 @@
   echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ~/.zshrc
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
-  # install zsh
-  brew install zsh
-  sudo chsh -s /home/linuxbrew/.linuxbrew/bin/zsh $(whoami)
-  rm -rf ~/.bash ~/.profile
-
   # install dev tools
-  brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher
+  brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher zsh
   
   # install docker
   # brew install docker docker-compose docker-machine
+
+  # configure zsh as default shell
+  sudo chsh -s /home/linuxbrew/.linuxbrew/bin/zsh $(whoami)
+  rm -rf ~/.bash ~/.profile
 
   # configure neovim as default editor
   sudo update-alternatives --install /usr/bin/vi vi /home/linuxbrew/.linuxbrew/bin/nvim 60
