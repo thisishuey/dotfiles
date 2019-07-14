@@ -11,7 +11,7 @@ See https://dotfiles.github.io for more information.
 **Linuxbrew**
 
 ```
-sudo apt update && sudo apt upgrade && sudo apt reboot
+sudo apt update && sudo apt upgrade && sudo reboot
 ```
 
 ```
