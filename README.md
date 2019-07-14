@@ -12,6 +12,7 @@ See https://dotfiles.github.io for more information.
 
 ```
 sudo apt update && sudo apt upgrade && sudo apt reboot
+```
 
 ```
 curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/linuxbrew.sh | bash 2>&1 | tee ~/dotfiles.log
