@@ -58,3 +58,5 @@ source ~/.dotfiles/zsh/promptline.sh
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
