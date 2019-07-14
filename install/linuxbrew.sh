@@ -14,7 +14,10 @@
   rm -rf ~/.bash ~/.profile
 
   # install dev tools
-  brew install asdf docker docker-compose docker-machine hub imagemagick mosh neovim postgres redis the_silver_searcher
+  brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher
+  
+  # install docker
+  # brew install docker docker-compose docker-machine
 
   # configure neovim as default editor
   sudo update-alternatives --install /usr/bin/vi vi /home/linuxbrew/.linuxbrew/bin/nvim 60
