@@ -8,7 +8,7 @@
   eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
   # install dev tools
-  brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher zsh
+  brew install zsh asdf hub imagemagick mosh neovim postgres redis the_silver_searcher
   
   # install docker
   # brew install docker docker-compose docker-machine
