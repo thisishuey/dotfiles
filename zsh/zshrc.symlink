@@ -13,6 +13,8 @@ antigen bundle zsh-users/zsh-history-substring-search
 
 antigen apply
 
+eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.history
 HISTSIZE=100000
@@ -59,4 +61,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
