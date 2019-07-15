@@ -2,28 +2,26 @@
 
 {
 
-  # install linuxbrew
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
-  sudo apt-get install -y build-essential
-  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  # prereqs
+  # sudo apt update
+  # sudo apt upgrade
+  # sudo apt install -y build-essential
+  # sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
+  # eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+  # brew install fish
+  # sudo chsh -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
+  # rm -rf ~/.bash ~/.profile
 
   # install dev tools
-  brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher zsh
-  
+  brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher
+
   # install docker
   # brew install docker docker-compose docker-machine
-
-  # configure zsh as default shell
-  sudo chsh -s /home/linuxbrew/.linuxbrew/bin/zsh $(whoami)
-  rm -rf ~/.bash ~/.profile
 
   # configure neovim as default editor
   sudo update-alternatives --install /usr/bin/vi vi /home/linuxbrew/.linuxbrew/bin/nvim 60
   sudo update-alternatives --install /usr/bin/vim vim /home/linuxbrew/.linuxbrew/bin/nvim 60
   sudo update-alternatives --install /usr/bin/editor editor /home/linuxbrew/.linuxbrew/bin/nvim 60
-
-  # install antigen
-  git clone https://github.com/zsh-users/antigen.git ~/.config/antigen
 
   # install base16-shell
   git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
@@ -48,8 +46,7 @@
   # sudo chmod +x /usr/local/bin/docker-credential-pass
 
   # ssh-keygen
-  instanceId=$(curl --silent http://169.254.169.254/latest/meta-data/instance-id)
-  ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N "" -C "$instanceId"
+  ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N "" -C (curl --silent http://169.254.169.254/latest/meta-data/instance-id)
 
   # setup dotfiles
   git clone https://github.com/thisishuey/dotfiles.git ~/.dotfiles
@@ -62,7 +59,6 @@
   ln -s ~/.dotfiles/vim/vimrc_background.symlink ~/.vimrc_background
   ln -s ~/.dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim
   ln -s ~/.dotfiles/vim/xml.vim.symlink ~/.vim/after/syntax/xml.vim
-  ln -s ~/.dotfiles/zsh/zshrc.symlink ~/.zshrc
 
   # install node
   # install php
