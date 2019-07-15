@@ -18,22 +18,18 @@ call plug#begin("~/.vim/plugged")
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'kchmck/vim-coffee-script'
-  Plug 'ludovicchabant/vim-gutentags'
+  " Plug 'ludovicchabant/vim-gutentags'
   Plug 'majutsushi/tagbar'
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-startify'
   Plug 'moll/vim-bbye'
   Plug 'mxw/vim-jsx'
-  Plug 'ncm2/ncm2'
+  " Plug 'ncm2/ncm2'
   Plug 'pangloss/vim-javascript'
-  Plug 'phpactor/phpactor', { 'do': 'composer install', 'for': 'php' }
-  Plug 'phpactor/ncm2-phpactor'
   Plug 'raimondi/delimitmate'
   Plug 'reasonml-editor/vim-reason-plus'
-  Plug 'roxma/nvim-yarp'
+  " Plug 'roxma/nvim-yarp'
   Plug 'scrooloose/nerdtree'
-  Plug 'stanangeloff/php.vim'
-  Plug 'stephpy/vim-php-cs-fixer'
   Plug 'thisishuey/promptline.vim'
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-fugitive'
@@ -163,7 +159,7 @@ let g:user_emmet_settings = {
 \ }
 
 " ncm2
-autocmd BufEnter * call ncm2#enable_for_buffer()
+" autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " promptline
 let g:promptline_preset = {
