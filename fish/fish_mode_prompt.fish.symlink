@@ -23,12 +23,12 @@ function fish_mode_prompt --description 'Displays the current mode'
         set_color --bold $text_color -b $replace_color
         echo ' NORMAL '
         set_color $replace_color -b $background_color
-        echo ''
+        echo $separator
       case visual
         set_color --bold $text_color -b $visual_color
         echo ' VISUAL '
         set_color $visual_color -b $background_color
-        echo ''
+        echo $separator
     end
     set_color normal
   end
