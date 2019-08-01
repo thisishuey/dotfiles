@@ -16,7 +16,7 @@ function fish_mode_prompt --description 'Displays the current mode'
         echo $separator
       case insert
         set_color --bold $text_color -b $insert_color
-        echo ' INSERT '
+        echo " $USER "
         set_color $insert_color -b $background_color
         echo $separator
       case replace_one
