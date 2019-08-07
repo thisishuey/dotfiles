@@ -2,7 +2,7 @@
 
 {
 
-  # prereqs
+  # pre install
   # tmux new -A -s dotfiles-setup
   # sudo apt update
   # sudo apt upgrade
@@ -77,5 +77,10 @@
   # php -r "unlink('composer-setup.php');"
   # sudo mv composer.phar /usr/local/bin/composer
   # sudo chmod +x /usr/local/bin/composer
+  
+  # post install
+  # sudo reboot
+  # pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
+  # redis-server /home/linuxbrew/.linuxbrew/etc/redis.conf &
 
 }
