@@ -82,5 +82,7 @@
   # sudo reboot
   # pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   # redis-server /home/linuxbrew/.linuxbrew/etc/redis.conf &
+  # sudo apt install -y zlib1g-dev
+  # asdf install ruby 2.4.1
 
 }
