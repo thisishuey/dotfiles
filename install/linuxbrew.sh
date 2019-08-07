@@ -83,9 +83,11 @@
   # sudo reboot
   # pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
   # redis-server /home/linuxbrew/.linuxbrew/etc/redis.conf &
+  # asdf plugin-add nodejs
+  # asdf plugin-add ruby
+  # asdf plugin-add yarn
   # sudo apt install -y zlib1g-dev
-  # asdf install ruby 2.4.1
   # bash /home/linuxbrew/.linuxbrew/opt/asdf/plugins/nodejs/bin/import-release-team-keyring
-  # asdf install nodejs 12.8.0
+  # asdf install
 
 }
