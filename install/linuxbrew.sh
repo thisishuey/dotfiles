@@ -85,5 +85,7 @@
   # redis-server /home/linuxbrew/.linuxbrew/etc/redis.conf &
   # sudo apt install -y zlib1g-dev
   # asdf install ruby 2.4.1
+  # bash /home/linuxbrew/.linuxbrew/opt/asdf/plugins/nodejs/bin/import-release-team-keyring
+  # asdf install nodejs 12.8.0
 
 }
