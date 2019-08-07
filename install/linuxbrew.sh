@@ -12,6 +12,7 @@
   # brew install fish
   # sudo chsh -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
   # rm -rf ~/.bash* ~/.profile
+  # sudo reboot
 
   # install dev tools
   brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher
