@@ -11,7 +11,7 @@
   # eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   # brew install fish
   # sudo chsh -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
-  # rm -rf ~/.bash ~/.profile
+  # rm -rf ~/.bash* ~/.profile
 
   # install dev tools
   brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher
