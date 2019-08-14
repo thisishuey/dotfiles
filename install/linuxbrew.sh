@@ -2,7 +2,8 @@
 
 {
 
-  # prereqs
+  # pre install
+  # tmux new -A -s dotfiles-setup
   # sudo apt update
   # sudo apt upgrade
   # sudo apt install -y build-essential
@@ -10,7 +11,8 @@
   # eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   # brew install fish
   # sudo chsh -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
-  # rm -rf ~/.bash ~/.profile
+  # rm -rf ~/.bash* ~/.profile
+  # sudo reboot
 
   # install dev tools
   brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher
@@ -76,5 +78,16 @@
   # php -r "unlink('composer-setup.php');"
   # sudo mv composer.phar /usr/local/bin/composer
   # sudo chmod +x /usr/local/bin/composer
+  
+  # post install
+  # sudo reboot
+  # pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start
+  # redis-server /home/linuxbrew/.linuxbrew/etc/redis.conf &
+  # asdf plugin-add nodejs
+  # asdf plugin-add ruby
+  # asdf plugin-add yarn
+  # sudo apt install -y zlib1g-dev
+  # bash /home/linuxbrew/.linuxbrew/opt/asdf/plugins/nodejs/bin/import-release-team-keyring
+  # asdf install
 
 }
