@@ -150,7 +150,8 @@ hi ALEError cterm = none ctermfg = 00 ctermbg = 01
 hi ALEWarning cterm = none ctermfg = 00 ctermbg = 03
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
-  \ "*": [ "prettier" ]
+  \ "*": [ "prettier" ],
+  \ "ruby": [ "rubocop" ]
 \ }
 let g:ale_sign_error = "●"
 let g:ale_sign_warning = "●"
