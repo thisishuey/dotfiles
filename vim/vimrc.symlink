@@ -9,6 +9,7 @@ endif
 call plug#begin("~/.vim/plugged")
 
   Plug 'airblade/vim-gitgutter'
+  Plug 'ap/vim-css-color'
   Plug 'benmills/vimux'
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
@@ -16,6 +17,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'edkolev/tmuxline.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
+  Plug 'kchmck/vim-coffee-script'
   Plug 'ludovicchabant/vim-gutentags'
   Plug 'majutsushi/tagbar'
   Plug 'mattn/emmet-vim'

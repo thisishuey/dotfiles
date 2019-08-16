@@ -50,7 +50,6 @@ After initial install you should be able to use mosh to access the site (be sure
 ```
 sudo apt update
 sudo apt upgrade
-yarn global add prettier
 sudo systemctl disable apache2
 sudo reboot
 ```
