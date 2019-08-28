@@ -9,13 +9,16 @@
   # sudo apt install -y build-essential
   # sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
   # eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-  # brew install fish
+  # brew install fish mosh
   # sudo chsh -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
   # rm -rf ~/.bash* ~/.profile
   # sudo reboot
 
   # install dev tools
-  brew install asdf hub imagemagick mosh neovim postgres redis the_silver_searcher
+  brew install asdf hub imagemagick neovim the_silver_searcher
+  
+  # install rails
+  # brew install postgres redis
 
   # install docker
   # brew install docker docker-compose docker-machine
