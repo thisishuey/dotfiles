@@ -17,7 +17,7 @@
   # install dev tools
   brew install asdf hub imagemagick neovim the_silver_searcher
   
-  # install rails
+  # install rails dependencies
   # brew install postgres redis
 
   # install docker
