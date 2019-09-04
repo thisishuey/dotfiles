@@ -138,7 +138,7 @@ endfunc
 : autocmd InsertEnter * set nolist
 :augroup END
 
-:autocmd Syntax * highlight MatchParen cterm = bold ctermfg = 15 ctermbg = 19
+:autocmd Syntax * highlight MatchParen cterm=bold ctermfg=15 ctermbg=19
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -146,8 +146,8 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = "base16"
 
 " ale
-hi ALEError cterm = none ctermfg = 00 ctermbg = 01
-hi ALEWarning cterm = none ctermfg = 00 ctermbg = 03
+highlight ALEError cterm=none ctermfg=00 ctermbg=01
+highlight ALEWarning cterm=none ctermfg=00 ctermbg=03
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
   \ "*": [ "prettier" ],
@@ -178,6 +178,10 @@ let g:promptline_preset = {
   \ }
 \ }
 let g:promptline_theme = "airline"
+
+" search
+highlight IncSearch cterm=bold ctermfg=19 ctermbg=15
+highlight Search cterm=bold ctermfg=15 ctermbg=19
 
 " sessions
 let g:session_autoload = "no"
