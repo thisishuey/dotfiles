@@ -13,6 +13,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'benmills/vimux'
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
+  Plug 'dense-analysis/ale'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'edkolev/promptline.vim'
   Plug 'edkolev/tmuxline.vim'
@@ -45,7 +46,6 @@ call plug#begin("~/.vim/plugged")
   Plug 'tpope/vim-vinegar'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'w0rp/ale'
   Plug 'xolox/vim-misc'
   Plug 'xolox/vim-session'
 
