@@ -98,9 +98,12 @@ map <leader>vpc :VimuxPromptCommand<cr>
 nnoremap <C-p> :Files<cr>
 nnoremap <leader><leader> <C-^>
 nnoremap <leader>ev :edit ~/.vimrc<cr>
+nnoremap <leader>f :Ag<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
 nnoremap <leader>tb :TagbarToggle<cr>
 nnoremap <silent> <cr> :nohlsearch<cr>
+nnoremap <silent> <leader>bn :bn<cr>
+nnoremap <silent> <leader>bp :bp<cr>
 nnoremap <silent> <leader>bda :%bd<cr>
 nnoremap <silent> <leader>bdc :bd<cr>
 nnoremap <silent> <leader>bdo :%bd<cr><C-o>:bd#<cr>
@@ -166,6 +169,13 @@ let g:user_emmet_settings = {
 
 " ncm2
 " autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" NERDTree
+let NERDTreeDeleteBuffer = 1
+let NERDTreeDirArrows = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden = 1
 
 " promptline
 let g:promptline_preset = {
