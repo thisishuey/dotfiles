@@ -29,6 +29,7 @@ call plug#begin("~/.vim/plugged")
   Plug 'mxw/vim-jsx'
   " Plug 'ncm2/ncm2'
   Plug 'pangloss/vim-javascript'
+  Plug 'peitalin/vim-jsx-typescript'
   Plug 'raimondi/delimitmate'
   Plug 'reasonml-editor/vim-reason-plus'
   " Plug 'roxma/nvim-yarp'
@@ -96,9 +97,9 @@ map <leader>vlc :VimuxRunLastCommand<cr>
 map <leader>vpc :VimuxPromptCommand<cr>
 
 nnoremap <C-p> :Files<cr>
+nnoremap <C-f> :Ag<cr>
 nnoremap <leader><leader> <C-^>
 nnoremap <leader>ev :edit ~/.vimrc<cr>
-nnoremap <leader>f :Ag<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
 nnoremap <leader>tb :TagbarToggle<cr>
 nnoremap <silent> <cr> :nohlsearch<cr>
@@ -167,6 +168,12 @@ let g:user_emmet_settings = {
   \ }
 \ }
 
+" jsx-typescript
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+highlight tsxTagName ctermfg=01
+highlight tsxCloseTagName ctermfg=01
+highlight tsxAttributeBraces ctermfg=02
+
 " ncm2
 " autocmd BufEnter * call ncm2#enable_for_buffer()
 
@@ -176,6 +183,7 @@ let NERDTreeDirArrows = 1
 let NERDTreeMinimalUI = 1
 let NERDTreeQuitOnOpen = 1
 let NERDTreeShowHidden = 1
+let NERDTreeShowLineNumbers = 1
 
 " promptline
 let g:promptline_preset = {
