@@ -61,6 +61,7 @@ let mapleader = " "
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 
+set backspace=indent,eol,start
 set completeopt=menuone,noinsert,noselect
 set cursorline
 set expandtab
