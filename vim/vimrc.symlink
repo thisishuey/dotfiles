@@ -142,8 +142,17 @@ endfunc
 
 :autocmd Syntax * highlight MatchParen cterm=bold ctermfg=15 ctermbg=19
 
+" jsx & typescript syntax
 autocmd BufNewFile,BufRead *.ts,*.js setlocal filetype=typescript
 autocmd BufNewFile,BufRead *.tsx,*.jsx setlocal filetype=typescript.tsx
+
+" search
+highlight IncSearch cterm=bold ctermfg=19 ctermbg=15
+highlight Search cterm=bold ctermfg=15 ctermbg=19
+
+" html tags match vim-jsx-pretty syntax
+highlight htmlTag ctermfg=08
+highlight htmlEndTag ctermfg=08
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -191,10 +200,6 @@ let g:promptline_preset = {
   \ }
 \ }
 let g:promptline_theme = "airline"
-
-" search
-highlight IncSearch cterm=bold ctermfg=19 ctermbg=15
-highlight Search cterm=bold ctermfg=15 ctermbg=19
 
 " sessions
 let g:session_autoload = "no"
