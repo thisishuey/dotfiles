@@ -20,18 +20,13 @@ call plug#begin("~/.vim/plugged")
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'kchmck/vim-coffee-script'
-  Plug 'leafgarland/typescript-vim'
   " Plug 'ludovicchabant/vim-gutentags'
   Plug 'majutsushi/tagbar'
   Plug 'mattn/emmet-vim'
   Plug 'mhinz/vim-startify'
   Plug 'moll/vim-bbye'
-  Plug 'mxw/vim-jsx'
   " Plug 'ncm2/ncm2'
-  Plug 'pangloss/vim-javascript'
-  Plug 'peitalin/vim-jsx-typescript'
   Plug 'raimondi/delimitmate'
-  Plug 'reasonml-editor/vim-reason-plus'
   " Plug 'roxma/nvim-yarp'
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-bundler'
@@ -145,6 +140,9 @@ endfunc
 
 :autocmd Syntax * highlight MatchParen cterm=bold ctermfg=15 ctermbg=19
 
+autocmd BufNewFile,BufRead *.ts,*.js setlocal filetype=typescript
+autocmd BufNewFile,BufRead *.tsx,*.jsx setlocal filetype=typescript.tsx
+
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -167,12 +165,6 @@ let g:user_emmet_settings = {
     \ "extends": "jsx"
   \ }
 \ }
-
-" jsx-typescript
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
-highlight tsxTagName ctermfg=01
-highlight tsxCloseTagName ctermfg=01
-highlight tsxAttributeBraces ctermfg=02
 
 " ncm2
 " autocmd BufEnter * call ncm2#enable_for_buffer()
