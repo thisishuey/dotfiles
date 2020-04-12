@@ -23,6 +23,7 @@ call plug#begin("~/.vim/plugged")
   " Plug 'ludovicchabant/vim-gutentags'
   Plug 'majutsushi/tagbar'
   Plug 'mattn/emmet-vim'
+  Plug 'maxmellon/vim-jsx-pretty'
   Plug 'mhinz/vim-startify'
   Plug 'moll/vim-bbye'
   " Plug 'ncm2/ncm2'
