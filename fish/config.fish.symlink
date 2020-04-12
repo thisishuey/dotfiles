@@ -1,6 +1,11 @@
 fish_vi_key_bindings
 
-eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+switch (uname)
+case Linux
+  eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+case Darwin
+  eval (/usr/local/bin/brew shellenv)
+end
 
 if status --is-interactive
   set BASE16_SHELL "$HOME/.config/base16-shell"
@@ -19,3 +24,6 @@ set PATH /snap/bin $PATH
 
 export ASDF_DATA_DIR=(brew --prefix asdf)
 source $ASDF_DATA_DIR/asdf.fish
+
+alias vim="nvim"
+alias vi="nvim"
