@@ -29,8 +29,8 @@
   sudo update-alternatives --install /usr/bin/editor editor /home/linuxbrew/.linuxbrew/bin/nvim 60
 
   # install base16-shell
-  git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-  ln -s ~/.config/base16-shell/scripts/base16-default-dark.sh ~/.base16_theme
+  curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+  fisher add tomyun/base16-fish
 
   # install ctags
   # sudo apt-get update
