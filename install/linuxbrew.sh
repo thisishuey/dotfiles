@@ -9,7 +9,7 @@
   # sudo apt install -y build-essential
   # sh -c "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install.sh)"
   # eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-  # brew install fish
+  # brew install fish gcc
   # sudo chsh -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
   # rm -rf ~/.bash* ~/.profile
   # sudo reboot
