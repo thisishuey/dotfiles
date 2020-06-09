@@ -15,6 +15,7 @@
   # sudo reboot
 
   # install dev tools
+  eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   brew install asdf hub imagemagick mosh neovim the_silver_searcher
 
   # install rails dependencies
