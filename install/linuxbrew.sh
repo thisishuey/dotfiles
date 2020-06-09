@@ -57,9 +57,7 @@
 
   # setup dotfiles
   git clone https://github.com/thisishuey/dotfiles.git ~/.dotfiles
-  mkdir -p ~/.config/fish/functions
   mkdir -p ~/.config/nvim
-  mkdir -p ~/.vim/after/syntax
   ln -s ~/.dotfiles/asdf/tool-versions.symlink ~/.tool-versions
   ln -s ~/.dotfiles/fish/config.fish.symlink ~/.config/fish/config.fish
   ln -s ~/.dotfiles/fish/fish_mode_prompt.fish.symlink ~/.config/fish/functions/fish_mode_prompt.fish
@@ -67,10 +65,7 @@
   ln -s ~/.dotfiles/tmux/tmux.conf.symlink ~/.tmux.conf
   ln -s ~/.dotfiles/vim/editorconfig.symlink ~/.editorconfig
   ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
-  ln -s ~/.dotfiles/vim/vimrc_background.symlink ~/.vimrc_background
-  ln -s ~/.dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim
-  ln -s ~/.dotfiles/vim/xml.vim.symlink ~/.vim/after/syntax/xml.vim
-
+  
   # install node
   # install php
   # install ruby
