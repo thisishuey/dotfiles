@@ -16,6 +16,7 @@
 
   # install dev tools
   tmux new -A -s dotfiles-setup
+  eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
   brew install asdf hub mosh neovim the_silver_searcher
 
   # install rails dependencies
