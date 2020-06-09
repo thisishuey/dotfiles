@@ -66,6 +66,7 @@
   ln -s ~/.dotfiles/vim/editorconfig.symlink ~/.editorconfig
   ln -s ~/.dotfiles/vim/init.vim.symlink ~/.config/nvim/init.vim
   ln -s ~/.dotfiles/vim/vimrc.symlink ~/.vimrc
+  ln -s ~/.dotfiles/vim/vimrc_background.symlink ~/.vimrc_background
   
   # install node
   # install php
