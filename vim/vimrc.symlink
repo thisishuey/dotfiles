@@ -13,22 +13,17 @@ call plug#begin("~/.vim/plugged")
   Plug 'benmills/vimux'
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
-  Plug 'dense-analysis/ale'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'edkolev/promptline.vim'
   Plug 'edkolev/tmuxline.vim'
+  Plug 'fatih/vim-go'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'kchmck/vim-coffee-script'
-  " Plug 'ludovicchabant/vim-gutentags'
-  Plug 'majutsushi/tagbar'
   Plug 'mattn/emmet-vim'
   Plug 'maxmellon/vim-jsx-pretty'
   Plug 'mhinz/vim-startify'
-  Plug 'moll/vim-bbye'
-  " Plug 'ncm2/ncm2'
   Plug 'raimondi/delimitmate'
-  " Plug 'roxma/nvim-yarp'
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-bundler'
   Plug 'tpope/vim-commentary'
@@ -74,6 +69,7 @@ set nowrap
 set number
 set path=$PWD/**
 set relativenumber
+set shell=/bin/bash
 set shiftwidth=2
 set shortmess=I
 set signcolumn=yes
@@ -151,35 +147,10 @@ autocmd BufNewFile,BufRead *.tsx,*.jsx setlocal filetype=typescript.tsx
 highlight IncSearch cterm=bold ctermfg=19 ctermbg=15
 highlight Search cterm=bold ctermfg=15 ctermbg=19
 
-" html tags match vim-jsx-pretty syntax
-highlight htmlTag ctermfg=08
-highlight htmlEndTag ctermfg=08
-
 " airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = "base16"
-
-" ale
-highlight ALEError cterm=none ctermfg=00 ctermbg=01
-highlight ALEWarning cterm=none ctermfg=00 ctermbg=03
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {
-  \ "*": [ "prettier" ],
-  \ "ruby": [ "rubocop" ]
-\ }
-let g:ale_sign_error = "●"
-let g:ale_sign_warning = "●"
-
-" emmet
-let g:user_emmet_settings = {
-  \ "javascript.jsx": {
-    \ "extends": "jsx"
-  \ }
-\ }
-
-" ncm2
-" autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " NERDTree
 let NERDTreeDeleteBuffer = 1
@@ -202,7 +173,10 @@ let g:promptline_preset = {
 \ }
 let g:promptline_theme = "airline"
 
-" sessions
+" python
+let g:python3_host_prog = "/usr/bin/python3"
+
+" vim-session
 let g:session_autoload = "no"
 let g:session_default_name = "** Default **"
 let g:session_default_overwrite = 1
