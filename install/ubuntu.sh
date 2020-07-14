@@ -7,7 +7,7 @@
   # sudo apt update
   # sudo apt upgrade
   # sudo apt install fish gcc
-  # sudo chsh -s /home/linuxbrew/.linuxbrew/bin/fish $(whoami)
+  # sudo chsh -s /usr/bin/fish $(whoami)
   # rm -rf ~/.bash* ~/.profile
   # sudo reboot
 
