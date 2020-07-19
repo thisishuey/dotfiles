@@ -10,6 +10,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N "" -C "huey-dev"
 
 # setup dotfiles
 git clone https://github.com/thisishuey/dotfiles.git $HOME/.dotfiles
+mkdir -p $HOME/.config/fish/functions
 mkdir -p $HOME/.config/nvim
 ln -s $HOME/.dotfiles/asdf/tool-versions.symlink $HOME/.tool-versions
 ln -s $HOME/.dotfiles/fish/config.fish.symlink $HOME/.config/fish/config.fish
