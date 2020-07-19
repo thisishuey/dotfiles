@@ -10,10 +10,23 @@ See https://dotfiles.github.io for more information.
 
 ### Pre Install
 
-### Install
+Run through the following commands to update and upgrade apt and setup Fish Shell:
 
 ```
-curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/ubuntu.sh | bash
+tmux new -A -s dotfiles-setup
+sudo apt update
+sudo apt full-upgrade
+sudo apt install fish
+sudo chsh -s /usr/bin/fish $(whoami)
+sudo reboot
+```
+
+### Install
+
+Once the system has rebooted, log in and run the follwoing command to kick off the install script:
+
+```
+curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/debian.sh | bash
 ```
 
 ### SSH Key for Github

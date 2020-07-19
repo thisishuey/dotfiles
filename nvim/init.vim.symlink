@@ -1,0 +1,5 @@
+source $HOME/.dotfiles/nvim/plugins/plugins.vim
+source $HOME/.dotfiles/nvim/coc/extensions.vim
+source $HOME/.dotfiles/nvim/options.vim
+source $HOME/.dotfiles/nvim/variables.vim
+source $HOME/.dotfiles/nvim/autocmds.vim

@@ -1,0 +1,29 @@
+set -g allow-rename off
+set -g base-index 1
+set -g renumber-windows on
+set -g set-titles on
+set -sa terminal-overrides ',xterm-256color:RGB'
+set -g visual-activity on
+
+setw -g automatic-rename on
+setw -g mode-keys vi
+setw -g monitor-activity on
+setw -g mouse on
+
+bind-key C-b last-window
+
+bind-key v split-window -h
+bind-key s split-window -v
+
+bind-key J resize-pane -D 5
+bind-key K resize-pane -U 5
+bind-key H resize-pane -L 5
+bind-key L resize-pane -R 5
+
+source $HOME/.dotfiles/tmux/tmuxline.conf
+
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+run '~/.tmux/plugins/tpm/tpm'
