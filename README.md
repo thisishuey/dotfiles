@@ -54,7 +54,7 @@ git push --set-upstream origin master
 
 ### Post Install
 
-After initial install you should be able to use mosh to access the site (be sure that you've opened UDP ports 60000-60009for mosh access). Once you've connected via mosh you can run the following to finish setup:
+After initial install you should be able to use mosh to access the site, be sure that you've opened UDP ports 60000-61000 (or at least 60000-60004) for mosh access. Once you've connected via mosh you can run the following to finish setup:
 
 ```
 sudo apt update
