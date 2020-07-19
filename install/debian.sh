@@ -4,6 +4,8 @@ sudo apt install mosh neovim silversearcher-ag
 git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.7.8
 mkdir -p $HOME/.config/fish/completions
 cp $HOME/.asdf/completions/asdf.fish $HOME/.config/fish/completions
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # ssh-keygen
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N "" -C "huey-dev"
