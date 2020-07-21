@@ -1,4 +1,4 @@
-fish_vi_key_bindings
+# fish_vi_key_bindings
 
 function fish_prompt
   env FISH_VERSION=$FISH_VERSION PROMPTLINE_LAST_EXIT_CODE=$status bash ~/.dotfiles/fish/promptline.sh left
@@ -7,10 +7,12 @@ function fish_right_prompt
   env FISH_VERSION=$FISH_VERSION PROMPTLINE_LAST_EXIT_CODE=$status bash ~/.dotfiles/fish/promptline.sh right
 end
 
-set --export GOROOT $HOME/.asdf/installs/golang/1.14.4/go
-set --export GOPATH $HOME/go
+set -x GOROOT $HOME/.asdf/installs/golang/1.14.4/go
+set -x GOPATH $HOME/go
 
 set PATH $GOPATH/bin $GOROOT/bin /snap/bin $PATH
+# set -x GO111MODULE on
+# set -x GIT_TERMINAL_PROMPT 1
 
-set --export ASDF_DIR $HOME/.asdf
+set -x ASDF_DIR $HOME/.asdf
 source $ASDF_DIR/asdf.fish
