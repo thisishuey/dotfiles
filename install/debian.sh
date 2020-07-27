@@ -6,7 +6,7 @@ mkdir -p $HOME/.config/fish/completions
 cp $HOME/.asdf/completions/asdf.fish $HOME/.config/fish/completions
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-       
+
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # ssh-keygen
@@ -21,6 +21,7 @@ ln -s $HOME/.dotfiles/fish/config.fish.symlink $HOME/.config/fish/config.fish
 ln -s $HOME/.dotfiles/fish/fish_mode_prompt.fish.symlink $HOME/.config/fish/functions/fish_mode_prompt.fish
 ln -s $HOME/.dotfiles/git/gitconfig.symlink $HOME/.gitconfig
 ln -s $HOME/.dotfiles/tmux/tmux.conf.symlink $HOME/.tmux.conf
+ln -s $HOME/.dotfiles/nvim/coc/coc-settings.json.symlink $HOME/.config/nvim/coc-settings.json
 ln -s $HOME/.dotfiles/nvim/editorconfig.symlink $HOME/.editorconfig
 ln -s $HOME/.dotfiles/nvim/init.vim.symlink $HOME/.config/nvim/init.vim
 
