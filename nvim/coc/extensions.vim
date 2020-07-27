@@ -1,6 +1,7 @@
 let g:coc_global_extensions = [
   \ 'coc-emmet',
   \ 'coc-eslint',
+  \ 'coc-explorer',
   \ 'coc-git',
   \ 'coc-html',
   \ 'coc-json',
@@ -14,3 +15,5 @@ let g:coc_global_extensions = [
   \ 'coc-yaml',
   \ 'coc-yank'
 \ ]
+
+source $HOME/.dotfiles/nvim/coc/coc-explorer.vim

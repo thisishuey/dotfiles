@@ -7,4 +7,12 @@ function fish_right_prompt
   env FISH_VERSION=$FISH_VERSION PROMPTLINE_LAST_EXIT_CODE=$status bash $HOME/.dotfiles/fish/promptline_right.sh right
 end
 
+if status --is-interactive
+  and test -f $HOME/.config/base16-shell/profile_helper.fish
+  set BASE16_SHELL "$HOME/.config/base16-shell/"
+  source "$BASE16_SHELL/profile_helper.fish"
+end
+
+set -x FZF_DEFAULT_COMMAND 'ag --nocolor --ignore node_modules -g ""'
+
 source $HOME/.asdf/asdf.fish
