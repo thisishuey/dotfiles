@@ -24,8 +24,3 @@ ln -s $HOME/.dotfiles/tmux/tmux.conf.symlink $HOME/.tmux.conf
 ln -s $HOME/.dotfiles/nvim/coc/coc-settings.json.symlink $HOME/.config/nvim/coc-settings.json
 ln -s $HOME/.dotfiles/nvim/editorconfig.symlink $HOME/.editorconfig
 ln -s $HOME/.dotfiles/nvim/init.vim.symlink $HOME/.config/nvim/init.vim
-
-asdf plugin-add nodejs
-asdf plugin-add yarn
-bash $HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring
-asdf install
