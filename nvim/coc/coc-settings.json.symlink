@@ -1,5 +1,5 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "explorer.icon.enableNerdfont": true,
-  "git.signOffset": 1
+  "git.enableGutters": 0
 }
