@@ -57,7 +57,9 @@ git push --set-upstream origin master
 After initial install you should be able to use mosh to access the site, be sure that you've opened UDP ports 60000-61000 (or at least 60000-60004) for mosh access. Once you've connected via mosh you can run the following to finish setup:
 
 ```
+asdf plugin-add golang
 asdf plugin-add nodejs
+asdf plugin-add python
 asdf plugin-add yarn
 bash $HOME/.asdf/plugins/nodejs/bin/import-release-team-keyring
 asdf install
