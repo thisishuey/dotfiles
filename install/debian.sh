@@ -1,6 +1,7 @@
 # install dev tools
 tmux new -A -s dotfiles-setup
-sudo apt install -y neovim silversearcher-ag
+sudo apt-get install -y neovim silversearcher-ag
+sudo apt-get install --no-install-recommends make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
 git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.7.8
 mkdir -p $HOME/.config/fish/completions
 cp $HOME/.asdf/completions/asdf.fish $HOME/.config/fish/completions
