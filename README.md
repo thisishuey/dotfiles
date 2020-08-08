@@ -16,7 +16,7 @@ Run through the following commands to update and upgrade apt and setup Fish Shel
 tmux new -A -s dotfiles-setup
 sudo apt update
 sudo apt full-upgrade
-sudo apt install fish
+sudo apt install fish mosh
 sudo chsh -s /usr/bin/fish $(whoami)
 sudo reboot
 ```
