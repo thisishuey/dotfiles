@@ -6,6 +6,7 @@ git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.7.8
 mkdir -p $HOME/.config/fish/completions
 cp $HOME/.asdf/completions/asdf.fish $HOME/.config/fish/completions
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 
 # ssh-keygen
 ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa -q -N "" -C "huey-dev"

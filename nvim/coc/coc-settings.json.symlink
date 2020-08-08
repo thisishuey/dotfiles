@@ -1,5 +1,8 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "explorer.icon.enableNerdfont": true,
-  "git.enableGutters": 0
+  "diagnostic.errorSign": "●",
+  "diagnostic.hintSign": "●",
+  "diagnostic.infoSign": "●",
+  "diagnostic.warningSign": "●⚠",
+  "explorer.icon.enableNerdfont": true
 }
