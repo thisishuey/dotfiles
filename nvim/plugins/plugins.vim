@@ -3,7 +3,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin(stdpath('data') . '/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
