@@ -23,7 +23,7 @@ sudo reboot
 
 ### Install
 
-Once the system has rebooted, log in and run the follwoing command to kick off the install script:
+Once the system has rebooted, log in and run the following command to kick off the install script:
 
 ```
 curl -o- https://raw.githubusercontent.com/thisishuey/dotfiles/master/install/debian.sh | bash
