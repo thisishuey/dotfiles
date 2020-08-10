@@ -13,12 +13,15 @@ if status --is-interactive
   source "$BASE16_SHELL/profile_helper.fish"
 end
 
-set -x FZF_DEFAULT_COMMAND 'ag --nocolor --ignore node_modules -g ""'
-
 if test -d $HOME/.asdf/installs/golang/1.14.4/go
   set -x GOROOT $HOME/.asdf/installs/golang/1.14.4/go
   set -x GOPATH $HOME/Development/go
   set PATH $GOPATH/bin $GOROOT/bin $PATH
 end
+
+set -x FZF_DEFAULT_COMMAND "ag --nocolor --ignore node_modules -g ''"
+
+alias la="ls -Ahlv"
+alias lt="ls -Ahltr"
 
 source $HOME/.asdf/asdf.fish
