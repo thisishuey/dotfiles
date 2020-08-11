@@ -4,5 +4,5 @@
   "diagnostic.hintSign": "●",
   "diagnostic.infoSign": "●",
   "diagnostic.warningSign": "●⚠",
-  "explorer.icon.enableNerdfont": true
+  "git.enableGutters": false
 }

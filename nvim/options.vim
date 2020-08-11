@@ -1,3 +1,4 @@
+set autowrite
 set cursorline
 set hidden
 set ignorecase

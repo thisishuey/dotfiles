@@ -8,4 +8,5 @@ let g:coc_explorer_global_presets = {
   \ },
 \ }
 
+nmap <BS> :CocCommand explorer --preset floating<CR>
 nmap <leader>ef :CocCommand explorer --preset floating<CR>
