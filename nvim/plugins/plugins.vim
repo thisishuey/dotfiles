@@ -3,8 +3,11 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+source $HOME/.dotfiles/nvim/plugins/sheerun/vim-polyglot.vim
+
 call plug#begin('~/.local/share/nvim/plugged')
 
+  Plug 'blueyed/smarty.vim'
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'editorconfig/editorconfig-vim'
@@ -42,3 +45,4 @@ source $HOME/.dotfiles/nvim/plugins/neoclide/coc.vim
 source $HOME/.dotfiles/nvim/plugins/raimondi/delimitmate.vim
 source $HOME/.dotfiles/nvim/plugins/vim-airline/vim-airline.vim
 source $HOME/.dotfiles/nvim/plugins/xolox/vim-session.vim
+
