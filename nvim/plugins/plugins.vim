@@ -19,7 +19,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/gv.vim'
   Plug 'mhinz/vim-startify'
-  Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'raimondi/delimitmate'
   Plug 'ryanoasis/vim-devicons'
   Plug 'sheerun/vim-polyglot'
