@@ -13,15 +13,25 @@ if status --is-interactive
   source "$BASE16_SHELL/profile_helper.fish"
 end
 
-if test -d $HOME/.asdf/installs/golang/1.14.4/go
-  set -x GOROOT $HOME/.asdf/installs/golang/1.14.4/go
+if test -d $HOME/.asdf/installs/golang/1.15.2/go
+  set -x GOROOT $HOME/.asdf/installs/golang/1.15.2/go
   set -x GOPATH $HOME/Development/go
   set PATH $GOPATH/bin $GOROOT/bin $PATH
 end
 
+eval (gh completion -s fish)
+
+set -gx EDITOR nvim
 set -x FZF_DEFAULT_COMMAND "ag --nocolor --ignore node_modules -g ''"
 
 alias la="ls -Ahlv --group-directories-first"
 alias lt="ls -Ahltr"
 
 source $HOME/.asdf/asdf.fish
+
+if test -d $HOME/miniconda3
+  # >>> conda initialize >>>
+  # !! Contents within this block are managed by 'conda init' !!
+  eval /home/ubuntu/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+  # <<< conda initialize <<<
+end

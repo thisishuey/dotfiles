@@ -1,8 +1,10 @@
 set -g allow-rename off
 set -g base-index 1
+set -g default-shell /usr/bin/fish
+set -g default-terminal "tmux-256color"
 set -g renumber-windows on
 set -g set-titles on
-set -sa terminal-overrides ',xterm-256color:RGB'
+set -ga terminal-overrides ",*256col*:Tc"
 set -g visual-activity on
 
 setw -g automatic-rename on

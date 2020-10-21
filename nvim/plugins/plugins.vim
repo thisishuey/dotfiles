@@ -29,6 +29,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-vinegar'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'xolox/vim-misc'
@@ -43,6 +44,7 @@ source $HOME/.dotfiles/nvim/plugins/haya14busa/incsearch.vim
 source $HOME/.dotfiles/nvim/plugins/mhinz/vim-startify.vim
 source $HOME/.dotfiles/nvim/plugins/neoclide/coc.vim
 source $HOME/.dotfiles/nvim/plugins/raimondi/delimitmate.vim
+source $HOME/.dotfiles/nvim/plugins/tpope/vim-fugitive.vim
 source $HOME/.dotfiles/nvim/plugins/vim-airline/vim-airline.vim
 source $HOME/.dotfiles/nvim/plugins/xolox/vim-session.vim
 
