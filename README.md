@@ -13,11 +13,8 @@ See https://dotfiles.github.io for more information.
 Run through the following commands to update and upgrade apt and setup Fish Shell:
 
 ```
-tmux new -A -s dotfiles-setup
 sudo apt update
 sudo apt full-upgrade
-sudo apt install fish mosh
-sudo chsh -s /usr/bin/fish $(whoami)
 sudo reboot
 ```
 
