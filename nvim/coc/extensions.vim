@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
   \ 'coc-lists',
   \ 'coc-prettier',
   \ 'coc-snippets',
+  \ 'coc-solargraph',
   \ 'coc-tslint-plugin',
   \ 'coc-tsserver',
   \ 'coc-vimlsp',
