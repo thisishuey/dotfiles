@@ -2,6 +2,7 @@ let g:coc_global_extensions = [
   \ 'coc-emmet',
   \ 'coc-eslint',
   \ 'coc-explorer',
+  \ 'coc-flow',
   \ 'coc-git',
   \ 'coc-go',
   \ 'coc-html',
