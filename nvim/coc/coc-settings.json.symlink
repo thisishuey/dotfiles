@@ -1,9 +1,12 @@
 {
   "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "codeLens.enable": true,
   "diagnostic.errorSign": "●",
   "diagnostic.hintSign": "●",
   "diagnostic.infoSign": "●",
   "diagnostic.warningSign": "●⚠",
   "explorer.icon.enableNerdfont": true,
-  "git.enableGutters": false
+  "git.enableGutters": false,
+  "javascript.validate.enable": false,
+  "solargraph.useBundler": true
 }

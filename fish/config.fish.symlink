@@ -19,7 +19,9 @@ if test -d $HOME/.asdf/installs/golang/1.15.2/go
   set PATH $GOPATH/bin $GOROOT/bin $PATH
 end
 
-eval (gh completion -s fish)
+if type -q qh
+  eval (gh completion -s fish)
+end
 
 set -gx EDITOR nvim
 set -x FZF_DEFAULT_COMMAND "ag --nocolor --ignore node_modules -g ''"

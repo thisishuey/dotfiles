@@ -26,6 +26,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'tpope/vim-dadbod'
   Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rails'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-surround'
