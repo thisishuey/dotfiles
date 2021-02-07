@@ -40,6 +40,7 @@ call plug#end()
 
 source $HOME/.dotfiles/nvim/plugins/chriskepson/base16-vim.vim
 source $HOME/.dotfiles/nvim/plugins/edkolev/promptline.vim
+source $HOME/.dotfiles/nvim/plugins/edkolev/tmuxline.vim
 source $HOME/.dotfiles/nvim/plugins/fatih/vim-go.vim
 source $HOME/.dotfiles/nvim/plugins/haya14busa/incsearch.vim
 source $HOME/.dotfiles/nvim/plugins/mhinz/vim-startify.vim
