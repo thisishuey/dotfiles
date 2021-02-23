@@ -9,12 +9,4 @@ let g:promptline_preset = {
   \ }
 \ }
 
-let g:promptline_symbols = {
-  \ 'left' : '',
-  \ 'left_alt': '',
-  \ 'right' : '',
-  \ 'right_alt' : '',
-  \ 'dir_sep' : '/'
-\ }
-
 let g:promptline_theme = "airline"
