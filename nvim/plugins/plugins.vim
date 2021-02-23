@@ -15,6 +15,7 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'edkolev/tmuxline.vim'
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'haya14busa/incsearch.vim'
+  Plug 'jremmen/vim-ripgrep'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/gv.vim'

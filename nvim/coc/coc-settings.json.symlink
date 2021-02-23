@@ -8,5 +8,6 @@
   "explorer.icon.enableNerdfont": true,
   "git.enableGutters": false,
   "javascript.validate.enable": false,
+  "solargraph.diagnostics": true,
   "solargraph.useBundler": true
 }
