@@ -26,14 +26,26 @@ end
 set -gx EDITOR nvim
 set -x FZF_DEFAULT_COMMAND "ag --nocolor --ignore node_modules -g ''"
 
+switch (uname)
+  case Darwin
+    alias ls="gls --color"
+  case '*'
+end
+
 alias la="ls -Ahlv --group-directories-first"
 alias lt="ls -Ahltr"
 
-source $HOME/.asdf/asdf.fish
+if test -f $HOME/.asdf/asdf.fish
+  source $HOME/.asdf/asdf.fish
+end
 
 if test -d $HOME/miniconda3
   # >>> conda initialize >>>
   # !! Contents within this block are managed by 'conda init' !!
   eval /home/ubuntu/miniconda3/bin/conda "shell.fish" "hook" $argv | source
   # <<< conda initialize <<<
+end
+
+if test -f /opt/homebrew/bin/brew
+  eval (/opt/homebrew/bin/brew shellenv)
 end

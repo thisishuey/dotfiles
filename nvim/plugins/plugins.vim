@@ -16,7 +16,6 @@ call plug#begin('~/.local/share/nvim/plugged')
   Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
   Plug 'haya14busa/incsearch.vim'
   Plug 'jremmen/vim-ripgrep'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   Plug 'junegunn/fzf.vim'
   Plug 'junegunn/gv.vim'
   Plug 'mhinz/vim-startify'
@@ -44,6 +43,7 @@ source $HOME/.dotfiles/nvim/plugins/edkolev/promptline.vim
 source $HOME/.dotfiles/nvim/plugins/edkolev/tmuxline.vim
 source $HOME/.dotfiles/nvim/plugins/fatih/vim-go.vim
 source $HOME/.dotfiles/nvim/plugins/haya14busa/incsearch.vim
+source $HOME/.dotfiles/nvim/plugins/junegunn/fzf.vim
 source $HOME/.dotfiles/nvim/plugins/mhinz/vim-startify.vim
 source $HOME/.dotfiles/nvim/plugins/neoclide/coc.vim
 source $HOME/.dotfiles/nvim/plugins/raimondi/delimitmate.vim
